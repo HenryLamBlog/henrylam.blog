@@ -35,6 +35,7 @@
             margin: 0 10px;
             text-decoration: none;
             color: #333;
+            cursor: pointer;
         }
 
         nav a:hover {
@@ -61,6 +62,25 @@
             background-color: #f4f4f4;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50, // Adjust for header height
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -69,12 +89,7 @@
 
         <header>
             <h1>Henry Lam</h1>
-            <p>I am a Computer Science major student currently studying at Hong Kong University of Science and Technology. 
-                With a passion for coding and technology, I am constantly exploring new programming languages and technologies to expand my skills and knowledge. 
-                Beyond academics, I find joy in gaming, where I immerse myself in virtual worlds and intricate strategies. 
-                I am driven by the ever-evolving nature of technology and aspire to contribute meaningfully to the tech industry in the future.
-
-            </p>
+            <p>I am a Computer Science major student currently studying at Hong Kong University of Science and Technology. With a passion for coding and technology, I am constantly exploring new programming languages and technologies to expand my skills and knowledge. Beyond academics, I find joy in gaming, where I immerse myself in virtual worlds and intricate strategies. I am driven by the ever-evolving nature of technology and aspire to contribute meaningfully to the tech industry in the future.</p>
         </header>
 
         <nav>
@@ -85,10 +100,7 @@
 
         <div class="main-content" id="about">
             <h2>About Me</h2>
-            <p>I am a Computer Science major student currently studying at Hong Kong University of Science and Technology. 
-                With a passion for coding and technology, I am constantly exploring new programming languages and technologies to expand my skills and knowledge. 
-                Beyond academics, I find joy in gaming, where I immerse myself in virtual worlds and intricate strategies. 
-                I am driven by the ever-evolving nature of technology and aspire to contribute meaningfully to the tech industry in the future.</p>
+            <p>I am a Computer Science major student currently studying at Hong Kong University of Science and Technology. With a passion for coding and technology, I am constantly exploring new programming languages and technologies to expand my skills and knowledge. Beyond academics, I find joy in gaming, where I immerse myself in virtual worlds and intricate strategies. I am driven by the ever-evolving nature of technology and aspire to contribute meaningfully to the tech industry in the future.</p>
         </div>
 
         <div class="main-content" id="projects">
@@ -96,12 +108,12 @@
             <div class="project">
                 <h3>Project 1</h3>
                 <p>Colorization of Grayscale Images</p>
-                <img src="project1.jpg" alt="Project 1">
+                <img src="Automatic-Colorization.png" alt="Colorization Image">
             </div>
             <div class="project">
                 <h3>Project 2</h3>
-                <p>Maze Game implmenting BFS Algorithm</p>
-                <img src="project2.jpg" alt="Project 2">
+                <p>Maze Game implementing BFS Algorithm</p>
+                <img src="b3394ce0-d041-45cf-b311-9d8ebcb38a04.png" alt="Maze Game Image">
             </div>
             <!-- Add more projects as needed -->
         </div>
