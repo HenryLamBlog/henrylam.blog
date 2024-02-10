@@ -1308,7 +1308,7 @@ body {
 .navbar-fixed-top + .container {
   padding-top: 50px; /* Adjust as needed */
 }
-
+/* 
 /* Optional: Adjust the appearance of the toggle button */
 .navbar-toggler {
   border-color: rgba(0, 0, 0, 0.1); /* Adjust as needed */
@@ -1322,8 +1322,45 @@ body {
 /* Optional: Adjust the appearance of the links in the navbar */
 .navbar-nav .nav-link {
   color: #ff7b1d; /* Adjust as needed */
+} */
+
+/* Sticky Navigation Bar */
+.navbar {
+  background-color: #f26c4f; /* Background color of the navbar */
 }
 
+.navbar-brand h1 {
+  font-size: 24px; /* Adjust the font size of the brand */
+  color: #000000; /* Color of the brand text */
+  margin: 0; /* Remove any default margin */
+}
+
+.navbar-toggler {
+  border-color: transparent; /* Transparent border for the toggler */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Color of the toggler icon */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px; /* Adjust the spacing between nav items */
+}
+
+.navbar-nav .nav-link {
+  color: #ffb62f; /* Color of the nav links */
+  font-size: 18px; /* Font size of the nav links */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #333333; /* Color of the nav links on hover */
+}
+
+@media (max-width: 767.98px) {
+  .navbar-nav {
+      margin-top: 10px; /* Adjust the spacing of nav items in mobile view */
+  }
+}
 
 
 /*# sourceMappingURL=style.css.map */
