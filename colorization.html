@@ -138,6 +138,16 @@
             <li>Conditional Generative Adversarial Network</li>
         </ul>
         <p></p>
+        <h2>Dataset Information</h2>
+        <p>Our dataset consists of 7,129 images depicting various scenes such as streets, buildings, mountains, glaciers, and trees. The dataset includes both color and grayscale versions of these images, facilitating direct comparisons across different methods.</p>
+        <p>Most images in the dataset have dimensions of 150 × 150 pixels, although some are smaller. We divided the dataset randomly, with 80% of the images designated as training data and the remaining 20% as testing data.</p>
+        <p>To ensure unbiased evaluation, the same distribution of training and testing images is maintained across all three methods. However, for SVR and PWM, only a subset of images is utilized for training due to scalability issues with larger training sets.</p>
+        <h3>LAB Conversion</h3>
+        <p>Accurately measuring color similarity and associating saturated colors with corresponding grayscale levels are crucial in image colorization.</p>
+        <p>In the classic RGB color space, every pixel is represented by three color values: Red, Green, and Blue. Hence, in an 8-bit image, each channel denoted (R, G, B) ranges from 0 to 255. Grayscale images, on the other hand, have only the intensity value for each pixel, resulting in a monochromatic image representation without any color information.</p>
+        <img src="images/labcolor.gif" alt="LAB 3D-space">
+        <p>By utilizing LAB color space, it has the ability to separate the luminance or lightness component (L channel) from the color components (a and b channels). The L channel solely represents the grayscale axis, capturing only the intensity or brightness information of the image from 0 to 100. On the other hand, the a and b channels encode the orthogonal color axes, representing the green-red and blue-yellow color information from -128 to 128, respectively.</p>
+        <p>Furthermore, the LAB color space’s underlying metric is designed to approximate human perception of color distances as accurately as possible. This means that the differences in color within the LAB space correspond more closely to how humans perceive color variations, aligning colorizations with human visual expectations. This property is critical in achieving believable and visually pleasing colorizations, as the color differences are represented in a way that corresponds well with human perception, enhancing the overall quality of the colorized images.</p>
 
         <!-- Include more details about the methods -->
 
