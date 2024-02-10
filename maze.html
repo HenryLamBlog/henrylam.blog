@@ -140,63 +140,54 @@
     <div class="project-details">
         <!-- Your content goes here -->
         <h1>Maze Game implementing BFS algorithm</h1>
-        <h2>Introduction to the Tom and Jerry Maze Game</h2>
-    <p>"Tom and Jerry" is an iconic American cartoon film that chronicles the endless pursuit of a hapless cat, Tom, after a clever and spunky mouse named Jerry. </p>
-    <p>Welcome to the Tom and Jerry Maze Game, a fun project inspired by the timeless rivalry between the clever mouse Jerry and the scheming cat Tom. In this game, you'll take on the role of Jerry, navigating through a maze to reach the exit while evading Tom's relentless pursuit.</p>
-    <p>Here's how the game works:</p>
-    <ol>
-      <li><strong>Objective:</strong> Your goal as Jerry is to reach the exit of the maze before Tom catches you.</li>
-      <li><strong>Maze Structure:</strong> The maze is represented as a grid of interconnected pathways and barriers, reminiscent of the chaotic environment in the classic cartoon series.</li>
-      <li><strong>Tom's Strategy:</strong> Tom uses the Breadth-First Search (BFS) algorithm to constantly calculate the shortest path to reach Jerry. You'll need to outsmart him by finding alternate routes and using clever tactics to stay one step ahead.</li>
-      <li><strong>Your Controls:</strong> Use the arrow keys or WASD keys to move Jerry up, down, left, or right through the maze.</li>
-      <li><strong>Gameplay:</strong> Navigate through the maze, avoiding dead ends and obstacles, to reach the exit marked by a green square. If Tom catches you before reaching the exit, you lose the game.</li>
-      <li><strong>Victory:</strong> If you successfully reach the exit before Tom catches you, you'll be greeted with a congratulatory message, celebrating your victory over the wily cat.</li>
-    </ol>
-    <p>Are you ready to embark on this thrilling adventure and outwit Tom in a race against time? Let the maze games begin!</p>
- 
-        
-        <p>Bringing the excitement of this classic chase to life, the TnJ1 Maze Game offers an interactive experience set within the whimsical world of these beloved characters.</p>
-    <p>Here are the key aspects of the TnJ1 Maze Game:</p>
-    <ol>
-      <li><strong>Play Board Dimensions:</strong> The electronic play board spans 300 x 300 pixels, providing a vast canvas for Tom and Jerry's escapades.</li>
-      <li><strong>Square-Shaped Grid:</strong> The maze game unfolds within a square-shaped grid, comprised of 30 x 30 PX-Squares, each filled with dark grey color to delineate the maze's pathways.</li>
-      <li><strong>Maze Graph Representation:</strong> The intricate maze structure is translated into a 30 x 30 matrix list, known as the MazeMap (Fig.1 [B]), serving as the blueprint for Tom and Jerry's adventure.</li>
-      <li><strong>Vertex Representation:</strong> Each PX-Square serves as a vertex in the maze graph, with a standard size of 10 x 10 pixels, facilitating seamless navigation for our protagonists.</li>
-      <li><strong>Vertex Characteristics:</strong> The state of each vertex is expressed through Boolean values, where Vertex[r,c] denotes the presence of a barrier (1) or a clear path (0), showcased through dark grey and white colors respectively.</li>
-      <li><strong>Entry-Point:</strong> A singular Entry-Point, located at Vertex[0,0], marks the commencement of Tom and Jerry's journey, situated along the left-side border of the maze.</li>
-      <li><strong>Exit-Point:</strong> Mirroring the thrill of pursuit, a solitary Exit-Point awaits at Vertex[30,30], positioned along the right-side border, beckoning our intrepid duo towards freedom.</li>
-      <li><strong>Path Diversity:</strong> Each maze design boasts a minimum of two viable paths for Tom and Jerry to navigate, fostering dynamic gameplay and strategic decision-making as they chart their course from Entry-Point to Exit-Point.</li>
-    </ol>
-    <p>With its immersive maze design and homage to the timeless rivalry between Tom and Jerry, the TnJ1 Maze Game promises an engaging and exhilarating experience for players of all ages. Embark on this thrilling adventure and see if you can outsmart the wily cat or outmaneuver the cunning mouse!</p>
-  
-    <h2>Main Menu</h2>
-    <p>When launching the game, the main menu consists of name tags and a Tom and Jerry picture at the top. At the bottom, there are buttons:</p>
-    <ul>
-        <li>Open Maze: Launches the maze editor.</li>
-        <li>Shortest Path: Highlights the shortest path in the maze.</li>
-        <li>Maze Game: Launches the maze game.</li>
-    </ul>
+  <h2>Introduction to the Tom and Jerry Maze Game</h2>
+  <p>"Tom and Jerry" is an iconic American cartoon film that chronicles the endless pursuit of a hapless cat, Tom, after a clever and spunky mouse named Jerry. Bringing the excitement of this classic chase to life, this fun project is inspired by the timeless rivalry between Jerry and Tom.</p>
+  <p>Here's how the game works:</p>
+  <ol>
+    <li><strong>Objective:</strong> Your goal as Jerry is to reach the exit of the maze before Tom catches you.</li>
+    <li><strong>Maze Structure:</strong> The maze is represented as a grid of interconnected pathways and barriers, reminiscent of the chaotic environment in the classic cartoon series.</li>
+    <li><strong>Tom's Strategy:</strong> Tom uses the Breadth-First Search (BFS) algorithm to constantly calculate the shortest path to reach Jerry. You'll need to outsmart him by finding alternate routes and using clever tactics to stay one step ahead.</li>
+    <li><strong>Your Controls:</strong> Use the arrow keys or WASD keys to move Jerry up, down, left, or right through the maze.</li>
+    <li><strong>Gameplay:</strong> Navigate through the maze, avoiding dead ends and obstacles, to reach the exit marked by a green square. If Tom catches you before reaching the exit, you lose the game.</li>
+    <li><strong>Victory:</strong> If you successfully reach the exit before Tom catches you, you'll be greeted with a congratulatory message, celebrating your victory over the wily cat.</li>
+  </ol>
+  <p>Are you ready to embark on this thrilling adventure and outwit Tom in a race against time? Let the maze games begin!</p>
 
-    <h2>Maze Editor</h2>
-    <p>The maze editor allows users to edit the maze grid, set entry and exit points, and perform actions like generating a new maze, saving, and finding a path.</p>
+  <h2>Key Features and Functionalities</h2>
+  <h2>Main Menu</h2>
+  <p>Upon launching the game, the main menu consists of name tags, a picture of Tom and Jerry, and buttons to access different functionalities.</p>
+  <ul>
+    <li><strong>Open Maze:</strong> Launches the maze editor.</li>
+    <li><strong>Shortest Path:</strong> Highlights the shortest path in the maze.</li>
+    <li><strong>Maze Game:</strong> Launches the maze game.</li>
+  </ul>
 
-    <h2>Shortest Path</h2>
-    <p>The shortest path feature highlights the shortest path in the maze and displays the results in a new window.</p>
+  <h2>Maze Editor</h2>
+  <p>The maze editor allows users to customize the maze grid, set entry and exit points, and perform actions like generating a new maze, saving, and finding a path.</p>
 
-    <h2>Maze Game</h2>
-    <p>In the maze game, players control Jerry with W, A, S, D keys to navigate to the exit while avoiding Tom. The game displays messages for winning or losing.</p>
+  <h2>Shortest Path</h2>
+  <p>This feature highlights the shortest path in the maze and provides a visual representation of the solution.</p>
 
-    <h2>Function A: Maze Editor</h2>
-    <p>Explains the maze editor functionality including editing, saving, and finding a path.</p>
+  <h2>Maze Game</h2>
+  <p>In the maze game, players control Jerry and navigate through the maze using the arrow keys or WASD keys. The objective is to reach the exit while evading Tom's pursuit.</p>
 
-    <h2>Function B: Shortest Path Algorithm</h2>
-    <p>Describes the algorithm used to find the shortest path in the maze.</p>
+  <h2>Function A: Maze Editor</h2>
+  <p>Allows users to edit, save, and find a possible path in the maze.</p>
 
-    <h2>Live Demo</h2>
-    <p>Provides a live demonstration of the project with instructions on compiling and navigating through the main menu, maze editor, and maze game.</p>
+  <h2>Function B: Shortest Path Algorithm</h2>
+  <p>Utilizes the BFS algorithm to determine the shortest path from Tom to Jerry in the maze.</p>
 
-    <h3>Conclusion</h3>
-    <p>This summarizes the key features and functionalities of the project presentation and live demo.</p>
+  <h2>Function C: Playing the Game</h2>
+  <p>Play as Jerry and try to reach the exit before getting caught by Tom in the maze.</p>
+
+  <h2>Github</h2>
+  <p>Link to the project's GitHub repository.</p>
+
+  <h2>Live Demo</h2>
+  <p>Provides a live demonstration of the project with instructions on compiling and navigating through the main menu, maze editor, and maze game.</p>
+
+  <h3>Conclusion</h3>
+  <p>Conclude with a message thanking players for participating in the Tom and Jerry Maze Game, highlighting the excitement of the chase and the thrill of outsmarting Tom.</p>
 
     </div>
     <!-- Footer -->
