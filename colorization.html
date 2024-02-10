@@ -1,73 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorization of Grayscale Images</title>
-    <!-- Include any necessary CSS files -->
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Adjust the font family to match the theme */
-        body {
-            font-family: 'Space Mono', monospace;
-            background-color: #f8f9fa; /* Match the background color with your theme */
-            margin: 0; /* Remove default body margin */
-            overflow-x: hidden; /* Hide horizontal overflow */
-        }
-
-        /* Orange theme for left and right sides */
-        .orange-side {
-            background-color: #f26c4f;
-            height: 100%;
-            width: 50%;
-            position: fixed;
-            top: 0;
-            z-index: -1;
-        }
-
-        /* Adjust the spacing and margins used in the rest of your page */
-        .project-details {
-            padding: 20px;
-            margin: 0 auto;
-            max-width: 800px; /* Adjust as needed */
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Style the headings and paragraphs */
-        h1, h2, h3 {
-            color: #f26c4f; /* Adjust the color to match your theme */
-            font-family: 'Kaushan Script', cursive; /* Use the same font family */
-        }
-
-        p {
-            color: #666; /* Adjust the color to match your theme */
-        }
-
-        /* Style the PDF container */
-        .pdf-container {
-            margin-top: 20px;
-            padding: 20px;
-            box-sizing: border-box;
-            border: 1px solid #f26c4f; /* Adjust the border color to match your theme */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff; /* Match the background color with your theme */
-        }
-
-        /* Style the embedded PDF */
-        .pdf-container embed {
-            width: 100%;
-            height: 600px;
-        }
-    </style>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Colorization of Grayscale Images</title>
+        <!-- Include any necessary CSS files -->
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/icomoon.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            /* Adjust the font family to match the theme */
+            body {
+                font-family: 'Space Mono', monospace;
+                background-color: #f8f9fa; /* Match the background color with your theme */
+                margin: 0; /* Remove default body margin */
+                overflow-x: hidden; /* Hide horizontal overflow */
+            }
+    
+            /* Orange theme for left and right sides */
+            .orange-side {
+                background-color: #f26c4f;
+                height: 100%;
+                width: 50%;
+                position: fixed;
+                top: 0;
+                z-index: -1;
+            }
+    
+            /* Adjust the spacing and margins used in the rest of your page */
+            .project-details {
+                padding: 20px;
+                margin: 0 auto;
+                max-width: 800px; /* Adjust as needed */
+                position: relative;
+                z-index: 1;
+            }
+    
+            /* Style the headings and paragraphs */
+            h1, h2, h3 {
+                color: #f26c4f; /* Adjust the color to match your theme */
+                font-family: 'Kaushan Script', cursive; /* Use the same font family */
+            }
+    
+            p {
+                color: #666; /* Adjust the color to match your theme */
+            }
+    
+            /* Style the PDF container */
+            .pdf-container {
+                margin-top: 20px;
+                padding: 20px;
+                box-sizing: border-box;
+                border: 1px solid #f26c4f; /* Adjust the border color to match your theme */
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                background-color: #fff; /* Match the background color with your theme */
+            }
+    
+            /* Style the embedded PDF */
+            .pdf-container embed {
+                width: 100%;
+                height: 600px;
+            }
+    
+            /* Style the navigation links */
+            .navigation {
+                position: fixed;
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+                z-index: 999;
+            }
+    
+            .navigation a {
+                display: block;
+                color: #fff;
+                text-decoration: none;
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-size: 16px;
+            }
+    
+            .navigation a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Links -->
+        <div class="navigation">
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about-me">About Me</a>
+            <a href="#my-resume">My Resume</a>
+            <a href="#projects">Projects</a>
+        </div>
+        <nav class="navbar navbar-expand-sm sticky-top navbar-light" id="main-navbar">
+            <div class="container">
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="/">
+                    <h1>Henry Lam</h1>
+                </a>
+        
+                <!-- Navbar collapsed btn -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a id="about-nav" class="nav-link theme2" href="#fh5co-about">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="resume-nav" class="nav-link theme2" href="#fh5co-resume">My Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="projects-nav" class="nav-link theme2" href="#fh5co-work">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
     <!-- Include your header/navigation if needed -->
     <div class="orange-side"></div>
     <!-- Content specific to the Colorization of Grayscale Images project -->
