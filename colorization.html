@@ -21,13 +21,21 @@
             }
 
             /* Orange theme for left and right sides */
-            .orange-side {
-                background-color: #f26c4f;
+            .orange-side.left, .orange-side.right {
+                background-color: #ffb62f;
                 height: 100%;
                 width: 50%;
                 position: fixed;
                 top: 0;
                 z-index: -1;
+            }
+
+            .orange-side.left {
+                left: 0;
+            }
+
+            .orange-side.right {
+                right: 0;
             }
 
             /* Adjust the spacing and margins used in the rest of your page */
@@ -38,7 +46,6 @@
                 position: relative;
                 z-index: 9999;
             }
-
     
             /* Style the headings and paragraphs */
             h1, h2, h3 {
@@ -71,7 +78,7 @@
             .navigation {
                 position: fixed;
                 top: 50%;
-                right: 200px; /* Adjust to move the navigation links to the far right */
+                right: 2000px; /* Adjust to move the navigation links to the far right */
                 transform: translateY(-100%);
                 z-index: 999;
             }
