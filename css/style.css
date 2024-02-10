@@ -1301,7 +1301,7 @@ input[type="text"] {
 
 /* Adjust the padding to prevent content from being hidden behind the navbar */
 body {
-  padding-top: 500px; /* Adjust as needed */
+  padding-top: 100px; /* Adjust as needed */
 }
 
 /* Add a bit of space to the content below the fixed navbar */
