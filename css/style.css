@@ -1329,7 +1329,7 @@ input[type="text"] {
 }
 
 .navbar-nav .nav-item {
-  margin-left: 20px; /* Adjust the spacing between nav items */
+  margin-left: 40px; /* Adjust the spacing between nav items */
 }
 
 .navbar-nav .nav-link {
