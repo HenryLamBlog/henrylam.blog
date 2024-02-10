@@ -279,10 +279,10 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #about,
-#fh5co-resume,
+#resume,
 #fh5co-skills,
 #fh5co-started,
-#fh5co-work,
+#projects,
 #fh5co-blog,
 #fh5co-pricing,
 #fh5co-contact {
@@ -291,10 +291,10 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   #about,
-  #fh5co-resume,
+  #resume,
   #fh5co-skills,
   #fh5co-started,
-  #fh5co-work,
+  #projects,
   #fh5co-blog,
   #fh5co-pricing,
   #fh5co-contact {
