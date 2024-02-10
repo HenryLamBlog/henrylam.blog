@@ -12,23 +12,46 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .pdf-container {
-            width: 100%;
-            max-width: 800px; /* Adjust the maximum width as needed */
+        /* Adjust the font family to match the theme */
+        body {
+            font-family: 'Space Mono', monospace;
+        }
+    
+        /* Match the spacing and margins used in the rest of your page */
+        .project-details {
+            padding: 20px;
             margin: 0 auto;
+            max-width: 800px; /* Adjust as needed */
+        }
+    
+        /* Style the headings and paragraphs */
+        h1, h2, h3 {
+            color: #333; /* Adjust the color to match your theme */
+            font-family: 'Kaushan Script', cursive; /* Use the same font family */
+        }
+    
+        p {
+            color: #666; /* Adjust the color to match your theme */
+        }
+    
+        /* Style the PDF container */
+        .pdf-container {
+            margin-top: 20px;
             padding: 20px;
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
+            background-color: #f8f9fa; /* Match the background color with your theme */
         }
     
+        /* Style the embedded PDF */
         .pdf-container embed {
             width: 100%;
-            height: 600px; /* Adjust the height as needed */
+            height: 600px;
         }
     </style>
+    
     
 
 </head>
