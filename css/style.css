@@ -1301,7 +1301,7 @@ input[type="text"] {
 
 /* Adjust the padding to prevent content from being hidden behind the navbar */
 body {
-  padding-top: 100px; /* Adjust as needed */
+  padding-top: 500px; /* Adjust as needed */
 }
 
 /* Add a bit of space to the content below the fixed navbar */
@@ -1321,7 +1321,7 @@ body {
 
 /* Optional: Adjust the appearance of the links in the navbar */
 .navbar-nav .nav-link {
-  color: #333; /* Adjust as needed */
+  color: #ff7b1d; /* Adjust as needed */
 }
 
 
