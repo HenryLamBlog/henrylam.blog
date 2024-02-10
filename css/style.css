@@ -1291,86 +1291,51 @@ input[type="text"] {
 }
 /* Add this CSS to make the navbar fixed */
 /* Adjustments for the fixed navbar */
-#main-navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 9999;
-  background-color: #fff;
-}
-
-/* Adjust the padding to prevent content from being hidden behind the navbar */
-body {
-  padding-top: 0px; /* Adjust as needed */
-}
-
-/* Add a bit of space to the content below the fixed navbar */
-.navbar-fixed-top + .container {
-  padding-top: 0px; /* Adjust as needed */
-}
-/* 
-/* Optional: Adjust the appearance of the toggle button */
-/* .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.1); /* Adjust as needed */
-/*} */
-
-/* Optional: Adjust the appearance of the toggle icon */
-/* .navbar-toggler-icon {
-  background-color: #333; /* Adjust as needed */
-/* } */
-
-
-
-/* Sticky Navigation Bar */
 .navbar {
-  background-color: #f26c4f; /* Background color of the navbar */
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between;
+  background-color: #FF9000 !important; /* Background color of the navbar */
+  padding: 10px 20px; /* Adjust padding as needed */
+  z-index: 9999;
+  /*height: 80px; /* Set a fixed height for the navbar */
+}
+
+/* Center the brand */
+.navbar-brand {
+  display: flex;
+  align-items: center; /* Align items vertically */
 }
 
 .navbar-brand h1 {
   font-size: 24px; /* Adjust the font size of the brand */
-  color: #000000; /* Color of the brand text */
+  color: #ffffff; /* Color of the brand text */
   margin: 0; /* Remove any default margin */
 }
 
-.navbar-toggler {
-  border-color: transparent; /* Transparent border for the toggler */
-}
-
-.navbar-toggler-icon {
-  background-color: #fff; /* Color of the toggler icon */
-}
-
-/* Adjust the positioning of the navbar items */
+/* Adjust the navbar links */
 .navbar-nav {
-  margin-left: auto; /* Push the items to the right */
   display: flex;
-  align-items: center; /* Center vertically */
+  align-items: center; /* Align items vertically */
 }
 
-/* Adjust the padding to provide spacing between the navbar items */
 .navbar-nav .nav-item {
-  margin-left: 20px; /* Adjust as needed */
+  margin-left: 20px; /* Adjust the spacing between nav items */
 }
 
-/* Adjust the appearance of the navbar links */
 .navbar-nav .nav-link {
-  color: #ffb62f; /* Color of the nav links */
+  color: #ffffff; /* Color of the nav links */
   font-size: 18px; /* Font size of the nav links */
-  text-decoration: none; /* Remove underline */
-  padding: 15px; /* Add padding */
+  display: flex;
+  align-items: center; /* Align items vertically */
 }
 
-/* Change color of links on hover */
 .navbar-nav .nav-link:hover {
   color: #333333; /* Color of the nav links on hover */
 }
 
-
-@media (max-width: 767.98px) {
-  .navbar-nav {
-      margin-top: 10px; /* Adjust the spacing of nav items in mobile view */
-  }
+/* Align nav items to the right */
+.navbar-nav {
+  margin-left: auto; /* Push nav items to the right */
 }
-
-
 /*# sourceMappingURL=style.css.map */
