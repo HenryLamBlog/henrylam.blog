@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #000 !important;
 }
 
-#fh5co-about,
+#about,
 #fh5co-resume,
 #fh5co-skills,
 #fh5co-started,
@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, h6, figure {
   clear: both;
 }
 @media screen and (max-width: 768px) {
-  #fh5co-about,
+  #about,
   #fh5co-resume,
   #fh5co-skills,
   #fh5co-started,
@@ -373,11 +373,11 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 20px;
 }
 
-#fh5co-about .fh5co-social-icons {
+#about .fh5co-social-icons {
   margin: 0;
   padding: 0;
 }
-#fh5co-about .fh5co-social-icons li {
+#about .fh5co-social-icons li {
   padding: 0;
   list-style: none;
   display: -moz-inline-stack;
@@ -385,7 +385,7 @@ h1, h2, h3, h4, h5, h6, figure {
   zoom: 1;
   *display: inline;
 }
-#fh5co-about .fh5co-social-icons li a {
+#about .fh5co-social-icons li a {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
@@ -398,10 +398,10 @@ h1, h2, h3, h4, h5, h6, figure {
   -ms-border-radius: 2px;
   border-radius: 2px;
 }
-#fh5co-about .fh5co-social-icons li a i {
+#about .fh5co-social-icons li a i {
   font-size: 20px;
 }
-#fh5co-about .fh5co-social-icons li a:hover {
+#about .fh5co-social-icons li a:hover {
   background: #FF9000;
 }
 
