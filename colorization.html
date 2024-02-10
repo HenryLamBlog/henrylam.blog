@@ -25,7 +25,7 @@
                 margin: 0 auto;
                 max-width: 800px;
                 position: relative;
-                z-index: 1;
+                
             }
     
             /* Sticky Navigation Bar */
@@ -33,8 +33,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                background-color: #f26c4f !important; /* Background color of the navbar */
+                background-color: #ffb62f !important; /* Background color of the navbar */
                 padding: 10px 20px; /* Adjust padding as needed */
+                z-index: 9999;
             }
     
             .navbar-brand h1 {
@@ -89,7 +90,7 @@
                 margin-top: 20px;
                 padding: 20px;
                 box-sizing: border-box;
-                border: 1px solid #f26c4f; /* Adjust the border color to match your theme */
+                border: 1px solid #ffb62f; /* Adjust the border color to match your theme */
                 border-radius: 5px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 background-color: #fff; /* Match the background color with your theme */
@@ -124,13 +125,13 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a id="about-nav" class="nav-link theme2" href="#about">About Me</a>
+                        <a id="about-nav" class="nav-link theme2" href="index.html#about">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a id="resume-nav" class="nav-link theme2" href="#resume">My Resume</a>
+                        <a id="resume-nav" class="nav-link theme2" href="index.html#resume">My Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a id="projects-nav" class="nav-link theme2" href="#work">Projects</a>
+                        <a id="projects-nav" class="nav-link theme2" href="index.html#projects">Projects</a>
                     </li>
                 </ul>
             </div>
