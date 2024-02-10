@@ -126,13 +126,9 @@
         <p>In this project, we conducted a comparative analysis of colorization techniques for grayscale images, exploring methods such as Deep Learning, Support Vector Regression, and Probability-Based Methods.</p>
 
         <h2>Project Description</h2>
-        <p>After researching different machine learning algorithms for colorization of grayscale images, we implemented our different methods and compared them to see which one worked the best. In this paper, four different methods for image colorization have been compared to each other. The four techniques were support vector machines, Parzen windows, transfer learning, and a cGAN. When inspecting the images from the Parzen windows and SVR methods both have shown to have their individual issues with the colorization. The Parzen windows are described as patchy, whereas, the SVR is blocky. To compare the different models MAE, RMSE, PSNR, and SSIM have been utilized. The CNN deep learning model has performed the best in most of the metrics indicating that this is the area where additional research must be done. However, the other techniques might be more beneficial when limited data is available.</p>
+        <p>Four different methods for image colorization, namely support vector machines (SVM), Parzen windows (PWM), transfer learning, and conditional generative adversarial networks (cGAN) were implemented. The effectiveness of these methods was evaluated based on their ability to produce accurate and realistic colorized images, as well as their performance on various metrics such as mean absolute error (MAE), root mean square error (RMSE), peak signal-to-noise ratio (PSNR), and structural similarity index (SSIM).</p>
         
         <!-- Include more project details as needed -->
-
-        <h2>Setting and Outline of Work</h2>
-        <p>Following the project description above, we set to outline our work during the 1.5-week project period of the DTU course 34269. The dataset we have chosen is from Places365 [3]. There are 1.8 million training images from 365 scene categories in the Places365-Standard and 100 images per category in the validation set. These images are in 256x256 size.</p>
-
         <h3>Methods</h3>
         <p>The methods that we propose to use for the automatic image colorization are itemized below:</p>
         <ul>
@@ -147,21 +143,96 @@
         <h3>Comparison & Validation Methods</h3>
         <p>Quantitative metrics such as MAE, RMSE, SSIM, and PSNR can assess structural differences by converting images to the YCbCr color space and using the Luma channel as the input. We will also employ cross-validation techniques, such as k-fold validation, which can help ensure unbiased performance assessment by training and testing the models on different subsets of the dataset.</p>
 
-        <h2>Scheduling & Team Work</h2>
-        <p>To divide the work, Thomas will concentrate on the Support Vector Regression method, Magne will be responsible for the Probabilistic-Diffusion method, and Henry and Bart will collaborate on the Deep Learning Convolutional Neural Networks (CNNs) method.</p>
+        <h3>Key differences</h3>
+        <p>One of the key differences noted in this paper was the different requirements for training volume between the deep learning methods and the non-deep learning methods. The SVM, for instance, needed to be trained at a reduced value of already limited pictures, whereas the limited available images in the dataset actually reduced the effectiveness of the transfer learning network, potentially contributing towards its premature convergence.
+        </p>
+        <h3>Issues and Improvements</h3>
+        <p>When inspecting the images from the PWM and SVM methods, both have shown to have their individual issues with the colorization. The PWM is described as patchy, whereas the SVM is blocky. Moreover, images colorized by these methods have color issues upon their generation. For the Bayesian model, issues persist with patchy colors that potentially can be mitigated by smoothing methods. Whereas, for SVM potential avenues to be explored are differences in the segments selected, ensuring that the colors at the boundary do not spill over to the next. In general, we observe that a larger training dataset is not necessarily correlated with better results. Hence, it can be discussed if the methods are even appropriate for large datasets with varying scenery.
 
-        <h2>Group Members</h2>
+            The CNN deep learning model has performed the best in most of the metrics, indicating that this is the area where additional research must be done. However, the other techniques might be more beneficial when limited data is available. Additionally, the cGAN has not been fully implemented due to time constraints, and therefore, it is not considered in the final comparison.
+            
+            To enhance the colorization CNN model, the next steps include fine-tuning by training additional layers while keeping the VGG16 layers non-trainable, hyper-parameter tuning, applying data augmentation techniques, exploring different model architectures, and incorporating a larger and diverse dataset. These efforts aim to improve model performance, convergence, generalization, and ability to produce realistic and accurate colorized images.
+            
+            The scripts written to perform SVM scale poorly with the size of the training set. A weaker version of SVM scales linearly with the amount of data that exists, sklearn.svm.LinearSVR. This method was not tested, but if the quality of the images is similar with this method, then it could allow to use much larger training sets in this method. Additionally, successfully implementing Markov Random Fields would also improve the quality of the image colorization.
+            
+            A pixel-by-pixel version of the Bayesian Method of Parzen Windows has been shown to be slow on large datasets. Further, without any spatial coherence added through Graph-cut algorithms, the resulting images elucidate noise full sections. Combined there are two steps to go ahead: First, a fully integrated local/global threshold optimization along the current implementation. Secondly, it could be interesting to go from pixel level to section level for example using SLIC.
+            
+            To ensure that the cGAN is evaluated against the other methods, the model should be developed further. When the model functions as expected, then proper training and validation should be performed and compared to the other methods. However, one of the key considerations to expand upon is the amount of training data.</p>
+        
+        <h3>Comparison in Metrics Between Methods</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Mean Absolute Error A</th>
+                    <th>Mean Absolute Error B</th>
+                    <th>Root Mean Square Error A</th>
+                    <th>Root Mean Square Error B</th>
+                    <th>SSIM</th>
+                    <th>PSNR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SVR</td>
+                    <td>7.23</td>
+                    <td>4.42</td>
+                    <td>6.64</td>
+                    <td>15.6</td>
+                    <td>0.91</td>
+                    <td>29.9</td>
+                </tr>
+                <tr>
+                    <td>PWM</td>
+                    <td>8.61</td>
+                    <td>4.97</td>
+                    <td>9.37</td>
+                    <td>18.6</td>
+                    <td>0.81</td>
+                    <td>19.1</td>
+                </tr>
+                <tr>
+                    <td>PWM-STD</td>
+                    <td>2.58</td>
+                    <td>5.75</td>
+                    <td>4.49</td>
+                    <td>8.40</td>
+                    <td>0.10</td>
+                    <td>3.26</td>
+                </tr>
+                <tr>
+                    <td>CNN</td>
+                    <td>5.14</td>
+                    <td>8.83</td>
+                    <td>16.1</td>
+                    <td>7.25</td>
+                    <td>0.94</td>
+                    <td>23.0</td>
+                </tr>
+                <tr>
+                    <td>CNN-STD</td>
+                    <td>3.83</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>0.05</td>
+                    <td>3.26</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Conclusion and Next Steps</h2>
+        <p>In conclusion, the next steps for each of the methods introduced in this paper involve improving their performance, scalability, and accuracy, as well as exploring new techniques and methodologies to enhance their effectiveness in image colorization.</p>
+        
+        <h2>Group</h2>
         <ul>
             <li>Gummesen, Thomas Skøtt</li>
             <li>Lam, Hui Yin (Henry)</li>
             <li>Pepping, Bartholomeus Diederik Rasmussen </li>
-                <li>Magne Egede</li>
+            <li>Magne Egede</li>
         </ul>
 
-        <!-- Embedding the PDF -->
-        <div class="pdf-container">
-            <embed src="Comparative_Analysis_of_Colorization_Techniques_for_Grayscale_Images_34269.pdf" type="application/pdf" width="100%" height="600px" frameborder="0"/>
-        </div>
+
+        
     </div>
 
     <div id="fh5co-footer">
