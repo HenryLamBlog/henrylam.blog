@@ -1291,11 +1291,20 @@ input[type="text"] {
 }
 /* Add this CSS to make the navbar fixed */
 /* Adjustments for the fixed navbar */
+
+#main-navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  background-color: #fff;
+}
+
 .navbar {
   display: flex;
   align-items: center; /* Align items vertically */
   justify-content: space-between;
-  background-color: #FF9000 !important; /* Background color of the navbar */
+  background-color: #ffffff !important; /* Background color of the navbar */
   padding: 10px 20px; /* Adjust padding as needed */
   z-index: 9999;
   /*height: 80px; /* Set a fixed height for the navbar */
