@@ -29,38 +29,50 @@
             }
     
             /* Sticky Navigation Bar */
+            /* Adjust the navbar styles */
             .navbar {
                 display: flex;
-                align-items: center;
+                align-items: center; /* Align items vertically */
                 justify-content: space-between;
                 background-color: #FF9000 !important; /* Background color of the navbar */
                 padding: 10px 20px; /* Adjust padding as needed */
                 z-index: 9999;
+                height: 80px; /* Set a fixed height for the navbar */
             }
-    
+
+            /* Center the brand */
+            .navbar-brand {
+                display: flex;
+                align-items: center; /* Align items vertically */
+            }
+
             .navbar-brand h1 {
                 font-size: 24px; /* Adjust the font size of the brand */
                 color: #ffffff; /* Color of the brand text */
                 margin: 0; /* Remove any default margin */
             }
-    
+
+            /* Adjust the navbar links */
             .navbar-nav {
                 display: flex;
-                align-items: center;
+                align-items: center; /* Align items vertically */
             }
-    
+
             .navbar-nav .nav-item {
                 margin-left: 20px; /* Adjust the spacing between nav items */
             }
-    
+
             .navbar-nav .nav-link {
                 color: #ffffff; /* Color of the nav links */
                 font-size: 18px; /* Font size of the nav links */
+                display: flex;
+                align-items: center; /* Align items vertically */
             }
-    
+
             .navbar-nav .nav-link:hover {
                 color: #333333; /* Color of the nav links on hover */
             }
+
             
             /* Adjust the padding to prevent content from being hidden behind the navbar */
             body {
