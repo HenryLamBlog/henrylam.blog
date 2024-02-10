@@ -74,13 +74,16 @@
                 height: 600px;
             }
     
-            /* Style the navigation links */
+            /* Style the navigation container */
             .navigation {
                 position: fixed;
                 top: 50%;
-                right: 2000px; /* Adjust to move the navigation links to the far right */
-                transform: translateY(-100%);
+                transform: translateY(-50%);
+                right: 20px;
                 z-index: 999;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end; /* Align items to the end (top) of the container */
             }
 
             .navigation a {
@@ -92,6 +95,7 @@
                 font-size: 16px;
                 text-align: right; /* Align the text to the right */
             }
+
 
             .navigation a:hover {
                 text-decoration: underline;
