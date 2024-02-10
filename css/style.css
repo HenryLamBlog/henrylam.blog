@@ -1289,5 +1289,20 @@ input[type="text"] {
 .js .animate-box {
   opacity: 0;
 }
+/* Add this CSS to make the navbar fixed */
+#main-navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999; /* Adjust the z-index as needed */
+  background-color: #fff; /* Adjust the background color as needed */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add a shadow for better visibility */
+}
+
+/* Add padding to the body to prevent content from being hidden behind the navbar */
+body {
+  padding-top: 70px; /* Adjust the padding-top to match the height of your navbar */
+}
+
 
 /*# sourceMappingURL=style.css.map */
