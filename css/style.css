@@ -1309,7 +1309,7 @@ input[type="text"] {
 
 .navbar-brand h1 {
   font-size: 24px; /* Adjust the font size of the brand */
-  color: #ffffff; /* Color of the brand text */
+  color: #000000; /* Color of the brand text */
   margin: 0; /* Remove any default margin */
 }
 
@@ -1324,7 +1324,7 @@ input[type="text"] {
 }
 
 .navbar-nav .nav-link {
-  color: #ffffff; /* Color of the nav links */
+  color: #FF9000; /* Color of the nav links */
   font-size: 18px; /* Font size of the nav links */
   display: flex;
   align-items: center; /* Align items vertically */
