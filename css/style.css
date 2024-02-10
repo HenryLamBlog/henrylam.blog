@@ -1290,19 +1290,40 @@ input[type="text"] {
   opacity: 0;
 }
 /* Add this CSS to make the navbar fixed */
+/* Adjustments for the fixed navbar */
 #main-navbar {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 9999; /* Adjust the z-index as needed */
-  background-color: #fff; /* Adjust the background color as needed */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add a shadow for better visibility */
+  z-index: 9999;
+  background-color: #fff;
 }
 
-/* Add padding to the body to prevent content from being hidden behind the navbar */
+/* Adjust the padding to prevent content from being hidden behind the navbar */
 body {
-  padding-top: 70px; /* Adjust the padding-top to match the height of your navbar */
+  padding-top: 80px; /* Adjust as needed */
 }
+
+/* Add a bit of space to the content below the fixed navbar */
+.navbar-fixed-top + .container {
+  padding-top: 100px; /* Adjust as needed */
+}
+
+/* Optional: Adjust the appearance of the toggle button */
+.navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.1); /* Adjust as needed */
+}
+
+/* Optional: Adjust the appearance of the toggle icon */
+.navbar-toggler-icon {
+  background-color: #333; /* Adjust as needed */
+}
+
+/* Optional: Adjust the appearance of the links in the navbar */
+.navbar-nav .nav-link {
+  color: #333; /* Adjust as needed */
+}
+
 
 
 /*# sourceMappingURL=style.css.map */
