@@ -282,5 +282,17 @@
     <script src="js/google_map.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
+	<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if the URL contains the /about path
+            if (window.location.pathname === '/about') {
+                // Scroll to the About section
+                var aboutSection = document.getElementById('about');
+                if (aboutSection) {
+                    aboutSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
