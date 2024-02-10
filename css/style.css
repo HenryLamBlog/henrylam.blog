@@ -1310,19 +1310,16 @@ body {
 }
 /* 
 /* Optional: Adjust the appearance of the toggle button */
-.navbar-toggler {
+/* .navbar-toggler {
   border-color: rgba(0, 0, 0, 0.1); /* Adjust as needed */
-}
+/*} */
 
 /* Optional: Adjust the appearance of the toggle icon */
-.navbar-toggler-icon {
+/* .navbar-toggler-icon {
   background-color: #333; /* Adjust as needed */
-}
+/* } */
 
-/* Optional: Adjust the appearance of the links in the navbar */
-.navbar-nav .nav-link {
-  color: #ff7b1d; /* Adjust as needed */
-} */
+
 
 /* Sticky Navigation Bar */
 .navbar {
@@ -1343,18 +1340,31 @@ body {
   background-color: #fff; /* Color of the toggler icon */
 }
 
-.navbar-nav .nav-item {
-  margin-left: 20px; /* Adjust the spacing between nav items */
+/* Adjust the positioning of the navbar items */
+.navbar-nav {
+  margin-left: auto; /* Push the items to the right */
+  display: flex;
+  align-items: center; /* Center vertically */
 }
 
+/* Adjust the padding to provide spacing between the navbar items */
+.navbar-nav .nav-item {
+  margin-left: 20px; /* Adjust as needed */
+}
+
+/* Adjust the appearance of the navbar links */
 .navbar-nav .nav-link {
   color: #ffb62f; /* Color of the nav links */
   font-size: 18px; /* Font size of the nav links */
+  text-decoration: none; /* Remove underline */
+  padding: 15px; /* Add padding */
 }
 
+/* Change color of links on hover */
 .navbar-nav .nav-link:hover {
   color: #333333; /* Color of the nav links on hover */
 }
+
 
 @media (max-width: 767.98px) {
   .navbar-nav {
