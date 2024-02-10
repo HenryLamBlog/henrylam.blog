@@ -234,9 +234,16 @@
                 </tbody>
             </table>
         </div>
-        <h2>Conclusion and Next Steps</h2>
-        <p>In conclusion, the next steps for each of the methods introduced in this paper involve improving their performance, scalability, and accuracy, as well as exploring new techniques and methodologies to enhance their effectiveness in image colorization.</p>
-        
+        <h2>Conclusion</h2>
+        <p>Broadly, two different techniques were applied: deep learning and non-deep learning methods. The SVR required reduced training volume compared to other methods, but the limited available images reduced the effectiveness of the transfer learning network.</p>
+        <p>Images colorized by the Probabilistic-diffusion and SVR methods exhibited color issues upon generation. Larger training datasets did not always correlate with better results, raising questions about method appropriateness for large datasets.</p>
+        <p>The CNN deep learning model outperformed others on most metrics, indicating the need for further research. However, other techniques may be more beneficial with limited data. The cGAN, though not fully implemented, warrants further exploration.</p>
+        <h2>Next Steps</h2>
+        <p>For SVR, improving scalability and quality through sklearn.svm.LinearSVR and Markov Random Fields implementation is suggested.</p>
+        <p>PWM could benefit from pixel-to-section level approaches and coherence optimization.</p>
+        <p>CNN requires fine-tuning, hyperparameter tuning, data augmentation, and diverse dataset incorporation to enhance colorization.</p>
+        <p>cGAN evaluation against other methods and consideration of training data quantity are essential for further development.</p>
+
         <h2>Group</h2>
         <ul>
             <li>Gummesen, Thomas Skøtt</li>
