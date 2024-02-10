@@ -27,23 +27,6 @@
                 position: relative;
                 z-index: 9999;
             }
-            /* Orange theme for left and right sides */
-            .orange-side.left, .orange-side.right {
-                background-color: #ffb62f;
-                height: 100%;
-                width: 50%;
-                position: fixed;
-                top: 0;
-                z-index: -1;
-            }
-
-            .orange-side.left {
-                left: 100;
-            }
-
-            .orange-side.right {
-                right: 100;
-            }
 
             
     
@@ -74,37 +57,43 @@
                 height: 600px;
             }
     
-            /* Style the navigation container */
-            .navigation {
+            /* Adjustments for the fixed navbar */
+            #main-navbar {
                 position: fixed;
-                top: 50%;
-                transform: translateY(-50%);
-                right: 20px;
-                z-index: 999;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end; /* Align items to the end (top) of the container */
+                width: 100%;
+                top: 0;
+                z-index: 9999;
+                background-color: #fff;
             }
-
-            .navigation a {
-                display: block;
-                color: #fff;
-                text-decoration: none;
-                margin-bottom: 10px;
-                font-weight: bold;
-                font-size: 16px;
-                text-align: right; /* Align the text to the right */
+            
+            /* Adjust the padding to prevent content from being hidden behind the navbar */
+            body {
+                padding-top: 0px; /* Adjust as needed */
             }
-
-
-            .navigation a:hover {
-                text-decoration: underline;
+            
+            /* Add a bit of space to the content below the fixed navbar */
+            .navbar-fixed-top + .container {
+                padding-top: 0px; /* Adjust as needed */
             }
-
+            /* 
+            /* Optional: Adjust the appearance of the toggle button */
+            .navbar-toggler {
+                border-color: rgba(0, 0, 0, 0.1); /* Adjust as needed */
+            }
+            
+            /* Optional: Adjust the appearance of the toggle icon */
+            .navbar-toggler-icon {
+                background-color: #333; /* Adjust as needed */
+            }
+            
+            /* Optional: Adjust the appearance of the links in the navbar */
+            .navbar-nav .nav-link {
+                color: #ff7b1d; /* Adjust as needed */
+            } */
+            
             /* Sticky Navigation Bar */
             .navbar {
                 background-color: #f26c4f; /* Background color of the navbar */
-                z-index: 9999; /* Ensure the navbar appears on top of other elements */
             }
             
             .navbar-brand h1 {
