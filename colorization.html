@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorization of Grayscale Images</title>
+    <!-- Include any necessary CSS files -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Include your header/navigation if needed -->
+
+    <!-- Content specific to the Colorization of Grayscale Images project -->
+    <div class="project-details">
+        <h1>Comparative Analysis of Colorization Techniques for Grayscale Images</h1>
+        <p>In this project, we conducted a comparative analysis of colorization techniques for grayscale images, exploring methods such as Deep Learning, Support Vector Regression, and Probability-Based Methods.</p>
+
+        <h2>Project Description</h2>
+        <p>July 2023</p>
+        <p>After researching different machine learning algorithms for colorization of grayscale images, we implemented our different methods and compared them to see which one worked the best. In this paper, four different methods for image colorization have been compared to each other. The four techniques were support vector machines, Parzen windows, transfer learning, and a cGAN. Unfortunately, due to time constraints, the cGAN has not been fully implemented, therefore, it is not considered in the final comparison. When inspecting the images from the Parzen windows and SVR methods both have shown to have their individual issues with the colorization. The Parzen windows are described as patchy, whereas, the SVR is blocky. To compare the different models MAE, RMSE, PSNR, and SSIM have been utilized. The CNN deep learning model has performed the best in most of the metrics indicating that this is the area where additional research must be done. However, the other techniques might be more beneficial when limited data is available.</p>
+        
+        <!-- Include more project details as needed -->
+
+        <h2>Setting and Outline of Work</h2>
+        <p>Following the project description above, we set to outline our work during the 1.5-week project period of the DTU course 34269. The dataset we have chosen is from Places365 [3]. There are 1.8 million training images from 365 scene categories in the Places365-Standard and 100 images per category in the validation set. These images are in 256x256 size.</p>
+
+        <h3>Methods</h3>
+        <p>The methods that we propose to use for the automatic image colorization are itemized below:</p>
+        <ul>
+            <li>Deep Learning</li>
+            <li>Support Vector Regression</li>
+            <li>Probability-Based Method</li>
+        </ul>
+
+        <p>...
+
+        <!-- Include more details about the methods -->
+
+        <h3>Comparison & Validation Methods</h3>
+        <p>Quantitative metrics such as MAE, RMSE, SSIM, and PSNR can assess structural differences by converting images to the YCbCr color space and using the Luma channel as the input. We will also employ cross-validation techniques, such as k-fold validation, which can help ensure unbiased performance assessment by training and testing the models on different subsets of the dataset.</p>
+
+        <h2>Scheduling & Team Work</h2>
+        <p>To divide the work, Thomas will concentrate on the Support Vector Regression method, Magne will be responsible for the Probabilistic-Diffusion method, and Henry and Bart will collaborate on the Deep Learning Convolutional Neural Networks (CNNs) method.</p>
+
+        <h2>Group Members</h2>
+        <ul>
+            <li>Gummesen, Thomas Skøtt</li>
+            <li>Lam, Hui Yin (Henry)</li>
+            <li>Pepping, Bartholomeus Diederik Rasmussen, </li>
+                <li>Magne Egede</li>
+        </ul>
+
+        <!-- Embedding the PDF -->
+        <div class="pdf-container">
+            <embed src="Comparative_Analysis_of_Colorization_Techniques_for_Grayscale_Images_34269.pdf" type="application/pdf" width="100%" height="600px" />
+        </div>
+    </div>
+
+    <!-- Include your footer if needed -->
+
+    <!-- Include any necessary JavaScript files -->
+    <script src="script.js"></script>
+</body>
+</html>
