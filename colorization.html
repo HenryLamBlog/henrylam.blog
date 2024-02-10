@@ -71,11 +71,11 @@
             .navigation {
                 position: fixed;
                 top: 50%;
-                left: 20px;
+                right: 20px; /* Adjust to move the navigation links to the far right */
                 transform: translateY(-50%);
                 z-index: 999;
             }
-    
+
             .navigation a {
                 display: block;
                 color: #fff;
@@ -83,11 +83,13 @@
                 margin-bottom: 10px;
                 font-weight: bold;
                 font-size: 16px;
+                text-align: right; /* Align the text to the right */
             }
-    
+
             .navigation a:hover {
                 text-decoration: underline;
             }
+
             /* Sticky Navigation Bar */
             .navbar {
                 background-color: #f26c4f; /* Background color of the navbar */
