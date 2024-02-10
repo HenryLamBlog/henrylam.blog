@@ -82,7 +82,17 @@
                 height: 600px;
             }
     
-            
+            img.lab-gif {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 20px auto;
+            }
+            .lab-text {
+                text-align: center;
+                font-style: italic;
+                color: #888;
+            }
         
   
         </style>
@@ -145,32 +155,37 @@
         <h3>LAB Conversion</h3>
         <p>Accurately measuring color similarity and associating saturated colors with corresponding grayscale levels are crucial in image colorization.</p>
         <p>In the classic RGB color space, every pixel is represented by three color values: Red, Green, and Blue. Hence, in an 8-bit image, each channel denoted (R, G, B) ranges from 0 to 255. Grayscale images, on the other hand, have only the intensity value for each pixel, resulting in a monochromatic image representation without any color information.</p>
-        <img src="images/labcolor.gif" alt="LAB 3D-space">
+        <img src="images/labcolor.gif" alt="LAB 3D-space" class="lab-gif">
+        <p class="lab-text">LAB 3D-space</p>
         <p>By utilizing LAB color space, it has the ability to separate the luminance or lightness component (L channel) from the color components (a and b channels). The L channel solely represents the grayscale axis, capturing only the intensity or brightness information of the image from 0 to 100. On the other hand, the a and b channels encode the orthogonal color axes, representing the green-red and blue-yellow color information from -128 to 128, respectively.</p>
-        <p>Furthermore, the LAB color space’s underlying metric is designed to approximate human perception of color distances as accurately as possible. This means that the differences in color within the LAB space correspond more closely to how humans perceive color variations, aligning colorizations with human visual expectations. This property is critical in achieving believable and visually pleasing colorizations, as the color differences are represented in a way that corresponds well with human perception, enhancing the overall quality of the colorized images.</p>
+        
 
         <!-- Include more details about the methods -->
 
         <h2>Comparison & Validation Methods</h2>
         <p>Quantitative metrics such as MAE, RMSE, SSIM, and PSNR can assess structural differences by converting images to the YCbCr color space and using the Luma channel as the input. We will also employ cross-validation techniques, such as k-fold validation, which can help ensure unbiased performance assessment by training and testing the models on different subsets of the dataset.</p>
 
+        
+        <h3>Support Vector Regression</h3>
+        <p>The Support Vector Regression (SVR) method utilizes a subset of the 80% training data due to SVR's poor scalability with the number of samples. Different percentages of training images (5%, 10%, and 20%) are employed to compare the method's quality for varying numbers of training images. During training, each colored image undergoes smoothing with a 3×3 Gaussian kernel (σ = 1), followed by segmentation using the SLIC superpixel algorithm to group similar grayscale brightness segments. After segmentation, the images are converted to LAB color space, and the scales of the a and b channels are adjusted to range between -1 and 1. A 2D Fourier transformation is applied to the L channel around the center of each segment, generating arrays for each segment along with the average a and b for every training image.
+
+        The SVR model is trained using the sklearn.svm.SVR module, where the average a and b of each segment of each image are fitted against the array containing 2DFFT for each segment. The trained model is then used to predict the a and b channels of each segment in the test images. Attempts to implement Markov Random Field to smooth across adjacent segments were made but did not improve the results' quality and were consequently excluded from the process.</p>
+
+        <h3>Parzen Window Methods & Spatial Coherence</h3>
+        <p></p>
+
+        <h3>Convolutional Neural Network</h3>
+        <p></p>
+
+        <h3>General Adversarial Network</h3>
+        <p></p>
+
         <h2>Key differences</h2>
         <p>One of the key differences noted in this paper was the different requirements for training volume between the deep learning methods and the non-deep learning methods. The SVM, for instance, needed to be trained at a reduced value of already limited pictures, whereas the limited available images in the dataset actually reduced the effectiveness of the transfer learning network, potentially contributing towards its premature convergence.
         </p>
-        <h3>Colorization Methods Evaluation:</h3>
-        <p>When inspecting the images from the PWM and SVM methods, both have shown to have their individual issues with the colorization. The PWM is described as patchy, whereas the SVM is blocky. Moreover, images colorized by these methods have color issues upon their generation. For the Bayesian model, issues persist with patchy colors that potentially can be mitigated by smoothing methods. Whereas, for SVM potential avenues to be explored are differences in the segments selected, ensuring that the colors at the boundary do not spill over to the next. In general, we observe that a larger training dataset is not necessarily correlated with better results. Hence, it can be discussed if the methods are even appropriate for large datasets with varying scenery.</p>
 
-        <h3>Performance of Deep Learning Model:</h3>
-        <p>The CNN deep learning model has performed the best in most of the metrics, indicating that this is the area where additional research must be done. However, the other techniques might be more beneficial when limited data is available. Additionally, the cGAN has not been fully implemented due to time constraints, and therefore, it is not considered in the final comparison.</p>
-
-        <h3>Enhancements for Colorization CNN Model:</h3>
-        <p>To enhance the colorization CNN model, the next steps include fine-tuning by training additional layers while keeping the VGG16 layers non-trainable, hyper-parameter tuning, applying data augmentation techniques, exploring different model architectures, and incorporating a larger and diverse dataset. These efforts aim to improve model performance, convergence, generalization, and ability to produce realistic and accurate colorized images.</p>
-
-        <h3>Improvement Strategies for SVM and Bayesian Methods:</h3>
-        <p>The scripts written to perform SVM scale poorly with the size of the training set. A weaker version of SVM scales linearly with the amount of data that exists, sklearn.svm.LinearSVR. This method was not tested, but if the quality of the images is similar with this method, then it could allow to use much larger training sets in this method. Additionally, successfully implementing Markov Random Fields would also improve the quality of the image colorization. A pixel-by-pixel version of the Bayesian Method of Parzen Windows has been shown to be slow on large datasets. Further, without any spatial coherence added through Graph-cut algorithms, the resulting images elucidate noise full sections. Combined there are two steps to go ahead: First, a fully integrated local/global threshold optimization along the current implementation. Secondly, it could be interesting to go from pixel level to section level for example using SLIC.</p>
-
-        <h2>Evaluation and Development of cGAN:</h2>
-        <p>To ensure that the cGAN is evaluated against the other methods, the model should be developed further. When the model functions as expected, then proper training and validation should be performed and compared to the other methods. However, one of the key considerations to expand upon is the amount of training data.</p>
+        <h2>Results</h2>
+        <p></p>
 
         <h2>Comparison in Metrics Between Methods</h2>
         <div class="table-responsive">
