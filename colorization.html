@@ -19,7 +19,14 @@
                 margin: 0;
                 overflow-x: hidden;
             }
-
+            /* Adjust the spacing and margins used in the rest of your page */
+            .project-details {
+                padding: 20px;
+                margin: 0 auto;
+                max-width: 800px;
+                position: relative;
+                z-index: 9999;
+            }
             /* Orange theme for left and right sides */
             .orange-side.left, .orange-side.right {
                 background-color: #ffb62f;
@@ -38,14 +45,7 @@
                 right: 100;
             }
 
-            /* Adjust the spacing and margins used in the rest of your page */
-            .project-details {
-                padding: 20px;
-                margin: 0 auto;
-                max-width: 800px;
-                position: relative;
-                z-index: 9999;
-            }
+            
     
             /* Style the headings and paragraphs */
             h1, h2, h3 {
@@ -104,6 +104,7 @@
             /* Sticky Navigation Bar */
             .navbar {
                 background-color: #f26c4f; /* Background color of the navbar */
+                z-index: 9999; /* Ensure the navbar appears on top of other elements */
             }
             
             .navbar-brand h1 {
