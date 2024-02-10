@@ -129,37 +129,40 @@
         <p>Four different methods for image colorization, namely support vector machines (SVM), Parzen windows (PWM), transfer learning, and conditional generative adversarial networks (cGAN) were implemented. The effectiveness of these methods was evaluated based on their ability to produce accurate and realistic colorized images, as well as their performance on various metrics such as mean absolute error (MAE), root mean square error (RMSE), peak signal-to-noise ratio (PSNR), and structural similarity index (SSIM).</p>
         
         <!-- Include more project details as needed -->
-        <h3>Methods</h3>
+        <h2>Methods</h2>
         <p>The methods that we propose to use for the automatic image colorization are itemized below:</p>
         <ul>
             <li>Deep Learning</li>
             <li>Support Vector Regression</li>
-            <li>Probability-Based Method</li>
+            <li>Convolutional Neural Network</li>
+            <li>Conditional Generative Adversarial Network</li>
         </ul>
         <p></p>
 
         <!-- Include more details about the methods -->
 
-        <h3>Comparison & Validation Methods</h3>
+        <h2>Comparison & Validation Methods</h2>
         <p>Quantitative metrics such as MAE, RMSE, SSIM, and PSNR can assess structural differences by converting images to the YCbCr color space and using the Luma channel as the input. We will also employ cross-validation techniques, such as k-fold validation, which can help ensure unbiased performance assessment by training and testing the models on different subsets of the dataset.</p>
 
-        <h3>Key differences</h3>
+        <h2>Key differences</h2>
         <p>One of the key differences noted in this paper was the different requirements for training volume between the deep learning methods and the non-deep learning methods. The SVM, for instance, needed to be trained at a reduced value of already limited pictures, whereas the limited available images in the dataset actually reduced the effectiveness of the transfer learning network, potentially contributing towards its premature convergence.
         </p>
-        <h3>Issues and Improvements</h3>
-        <p>When inspecting the images from the PWM and SVM methods, both have shown to have their individual issues with the colorization. The PWM is described as patchy, whereas the SVM is blocky. Moreover, images colorized by these methods have color issues upon their generation. For the Bayesian model, issues persist with patchy colors that potentially can be mitigated by smoothing methods. Whereas, for SVM potential avenues to be explored are differences in the segments selected, ensuring that the colors at the boundary do not spill over to the next. In general, we observe that a larger training dataset is not necessarily correlated with better results. Hence, it can be discussed if the methods are even appropriate for large datasets with varying scenery.
+        <h3>Colorization Methods Evaluation:</h3>
+        <p>When inspecting the images from the PWM and SVM methods, both have shown to have their individual issues with the colorization. The PWM is described as patchy, whereas the SVM is blocky. Moreover, images colorized by these methods have color issues upon their generation. For the Bayesian model, issues persist with patchy colors that potentially can be mitigated by smoothing methods. Whereas, for SVM potential avenues to be explored are differences in the segments selected, ensuring that the colors at the boundary do not spill over to the next. In general, we observe that a larger training dataset is not necessarily correlated with better results. Hence, it can be discussed if the methods are even appropriate for large datasets with varying scenery.</p>
 
-            The CNN deep learning model has performed the best in most of the metrics, indicating that this is the area where additional research must be done. However, the other techniques might be more beneficial when limited data is available. Additionally, the cGAN has not been fully implemented due to time constraints, and therefore, it is not considered in the final comparison.
-            
-            To enhance the colorization CNN model, the next steps include fine-tuning by training additional layers while keeping the VGG16 layers non-trainable, hyper-parameter tuning, applying data augmentation techniques, exploring different model architectures, and incorporating a larger and diverse dataset. These efforts aim to improve model performance, convergence, generalization, and ability to produce realistic and accurate colorized images.
-            
-            The scripts written to perform SVM scale poorly with the size of the training set. A weaker version of SVM scales linearly with the amount of data that exists, sklearn.svm.LinearSVR. This method was not tested, but if the quality of the images is similar with this method, then it could allow to use much larger training sets in this method. Additionally, successfully implementing Markov Random Fields would also improve the quality of the image colorization.
-            
-            A pixel-by-pixel version of the Bayesian Method of Parzen Windows has been shown to be slow on large datasets. Further, without any spatial coherence added through Graph-cut algorithms, the resulting images elucidate noise full sections. Combined there are two steps to go ahead: First, a fully integrated local/global threshold optimization along the current implementation. Secondly, it could be interesting to go from pixel level to section level for example using SLIC.
-            
-            To ensure that the cGAN is evaluated against the other methods, the model should be developed further. When the model functions as expected, then proper training and validation should be performed and compared to the other methods. However, one of the key considerations to expand upon is the amount of training data.</p>
-        
-        <h3>Comparison in Metrics Between Methods</h3>
+        <h3>Performance of Deep Learning Model:</h3>
+        <p>The CNN deep learning model has performed the best in most of the metrics, indicating that this is the area where additional research must be done. However, the other techniques might be more beneficial when limited data is available. Additionally, the cGAN has not been fully implemented due to time constraints, and therefore, it is not considered in the final comparison.</p>
+
+        <h3>Enhancements for Colorization CNN Model:</h3>
+        <p>To enhance the colorization CNN model, the next steps include fine-tuning by training additional layers while keeping the VGG16 layers non-trainable, hyper-parameter tuning, applying data augmentation techniques, exploring different model architectures, and incorporating a larger and diverse dataset. These efforts aim to improve model performance, convergence, generalization, and ability to produce realistic and accurate colorized images.</p>
+
+        <h3>Improvement Strategies for SVM and Bayesian Methods:</h3>
+        <p>The scripts written to perform SVM scale poorly with the size of the training set. A weaker version of SVM scales linearly with the amount of data that exists, sklearn.svm.LinearSVR. This method was not tested, but if the quality of the images is similar with this method, then it could allow to use much larger training sets in this method. Additionally, successfully implementing Markov Random Fields would also improve the quality of the image colorization. A pixel-by-pixel version of the Bayesian Method of Parzen Windows has been shown to be slow on large datasets. Further, without any spatial coherence added through Graph-cut algorithms, the resulting images elucidate noise full sections. Combined there are two steps to go ahead: First, a fully integrated local/global threshold optimization along the current implementation. Secondly, it could be interesting to go from pixel level to section level for example using SLIC.</p>
+
+        <h2>Evaluation and Development of cGAN:</h2>
+        <p>To ensure that the cGAN is evaluated against the other methods, the model should be developed further. When the model functions as expected, then proper training and validation should be performed and compared to the other methods. However, one of the key considerations to expand upon is the amount of training data.</p>
+
+        <h2>Comparison in Metrics Between Methods</h2>
         <div class="table-responsive">
             <table class="table table-bordered">
                 <thead>
