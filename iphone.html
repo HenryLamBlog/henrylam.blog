@@ -96,16 +96,29 @@
         
         .container ul {
             flex: 1; /* Take remaining space */
-            list-style-type: none;
+            list-style-type: disc; /* Revert back to bullet points */
             margin-right: 20px; /* Adjust as needed */
+        }
+        
+        .image-container {
+            position: relative; /* Enable relative positioning */
         }
         
         .parts-pic {
             width: 40%;
             height: auto;
-            margin-left: auto; /* Align image to the right */
-            display: block;
         }
+        
+        .parts-text {
+            text-align: center;
+            font-style: italic;
+            color: #888;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); /* Center horizontally */
+        }
+        
                 
     </style>
 </head>
@@ -170,9 +183,12 @@
                 <li>iPhone tools</li>
             </ul>
         
-            <img src="images/iphone_parts.jpg" alt="iPhone parts" class="parts-pic">
+            <div class="image-container">
+                <img src="images/iphone_parts.jpg" alt="iPhone parts" class="parts-pic">
+                <p class="parts-text">iPhone parts</p>
+            </div>
         </div>
-        <p class="lab-text">iPhone parts</p>
+        
         
         
         <h2>Sourcing Components</h2>
