@@ -189,12 +189,17 @@
       Chart.defaults.global.defaultFontFamily = "Arial";
       Chart.defaults.global.defaultFontSize = 14;
 
-      const totalHoursInSprint = burndownData[0];
-      const idealHoursPerDay = totalHoursInSprint / 10;
-      i = 0;
+      const totalDaysInSprint = 60; // 60 days from September 28 to November 26
+      const idealHoursPerDay = burndownData[0] / totalDaysInSprint;
+      let i = 0;
 
       var speedData = {
-        labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10"],
+        labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10",
+                 "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20",
+                 "Day 21", "Day 22", "Day 23", "Day 24", "Day 25", "Day 26", "Day 27", "Day 28", "Day 29", "Day 30",
+                 "Day 31", "Day 32", "Day 33", "Day 34", "Day 35", "Day 36", "Day 37", "Day 38", "Day 39", "Day 40",
+                 "Day 41", "Day 42", "Day 43", "Day 44", "Day 45", "Day 46", "Day 47", "Day 48", "Day 49", "Day 50",
+                 "Day 51", "Day 52", "Day 53", "Day 54", "Day 55", "Day 56", "Day 57", "Day 58", "Day 59", "Day 60"],
         datasets: [
           {
             label: "Burndown",
@@ -211,18 +216,9 @@
             lineTension: 0,
             borderDash: [5, 5],
             fill: false,
-            data: [
-              Math.round(totalHoursInSprint - (idealHoursPerDay * i++) + sumArrayUpTo(scopeChange, 0)), // 1
-              Math.round(totalHoursInSprint - (idealHoursPerDay * i++) + sumArrayUpTo(scopeChange, 1)), // 2
-              Math.round(totalHoursInSprint - (idealHoursPerDay * i++) + sumArrayUpTo(scopeChange, 2)), // 3
-              Math.round(totalHoursInSprint - (idealHoursPerDay * i++) + sumArrayUpTo(scopeChange, 3)), // 4
-              Math.round(totalHoursInSprint - (idealHoursPerDay * i++) + sumArrayUpTo(scopeChange, 4)), // 5
-              Math.round(totalHoursInSprint - (idealHoursPerDay * i++) + sumArrayUpTo(scopeChange, 5)), // 6
-              Math.round(totalHoursInSprint - (idealHoursPerDay * i++) + sumArrayUpTo(scopeChange, 6)), // 7
-              Math.round(totalHoursInSprint - (idealHoursPerDay * i++) + sumArrayUpTo(scopeChange, 7)), // 8
-              Math.round(totalHoursInSprint - (idealHoursPerDay * i++) + sumArrayUpTo(scopeChange, 8)), // 9
-              Math.round(totalHoursInSprint - (idealHoursPerDay * i++) + sumArrayUpTo(scopeChange, 9))  // 10
-            ]
+            data: Array.from({ length: totalDaysInSprint }, (_, index) =>
+              Math.round(burndownData[0] - (idealHoursPerDay * (index + 1)) + sumArrayUpTo(scopeChange, index))
+            )
           },
         ]
       };
@@ -381,12 +377,16 @@
     <div id="chart_div"></div>
     <h2>Burndown Chart</h2>
     <div style="width:800px;"><canvas id="burndownChart"></canvas></div>
+    <div style="width:800px;"><canvas id="burndownChart"></canvas></div>
     <script>
         showBurnDown(
         "burndownChart",
-        //   1    2    3    4    5    6    7    8    9   10
-        [ 200, 160, 160, 140, 90, 90, 80, 0, 0, 0 ], // burndown data
-        [ 0, 0, 0, 0, 0, 32, 0, 0, 0, 0 ]   // scope change
+        // burndown data
+        [200, 160, 160, 140, 90, 90, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        // scope change
+        [0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         );
     </script>
 
@@ -396,8 +396,7 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/5KlIDg70PxQ" frameborder="0" allowfullscreen></iframe>
 </div>
 <p></p>
-<h2>Group</h2>
-<p>Lee Tsz Kin, Chan Chun Yuen, Lam Hui Yin</p>
+
 
   <h3>Conclusion</h3>
     <p>Embarking on this project has been an incredibly rewarding journey, blending nostalgia with the excitement of gaming. As we delved into the world of Tom and Jerry, we found ourselves immersed in the challenges and adventures of Jerry's escape from Tom's relentless pursuit.</p>
@@ -405,7 +404,8 @@
     <p>Working as a group, we utilized tools like Gantt charts and Burndown charts to stay organized and meet our project milestones. Group meetings became opportunities to brainstorm ideas, troubleshoot challenges, and celebrate our progress. Additionally, leveraging GitHub as our version control system allowed us to collaborate seamlessly and learn valuable lessons in version control and collaboration.</p>
     <p>Overall, this project has been a testament to the power of teamwork, creativity, and a shared passion for gaming. It has not only provided us with practical coding experience but also allowed us to relive cherished memories from our favorite childhood cartoon. As we bid farewell to our Tom and Jerry Maze Game, we carry with us a sense of accomplishment and the knowledge gained from this enriching experience.</p>
 
-
+    <h2>Group</h2>
+    <p>Lee Tsz Kin, Chan Chun Yuen, Lam Hui Yin</p>
     </div>
     <!-- Footer -->
     <div id="fh5co-footer">
