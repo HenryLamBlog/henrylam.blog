@@ -73,7 +73,7 @@
             height: 600px;
         }
         img.result-pic {
-            width: 80%;
+            width: 60%;
             height: auto;
             display: block;
             margin: 20px auto;
@@ -89,6 +89,24 @@
             font-style: italic;
             color: #888;
         }
+
+        .container {
+            overflow: auto;
+        }
+        
+        .container ul {
+            float: left;
+            width: 50%;
+            list-style-type: none;
+        }
+        
+        .parts-pic {
+            width: 30%;
+            height: auto;
+            float: right;
+            margin-left: 10px;
+        }
+        
     </style>
 </head>
 <body>
@@ -124,8 +142,8 @@
         <h2>The Journey Begins</h2>
         <p>The journey began with research – delving into the intricate anatomy of the iPhone and understanding each component's role in its functionality. From the vibrant display to the powerful processor, every element plays a crucial part in delivering the seamless user experience that defines the iPhone.</p>
         <p>Through extensive research and study, I gained a comprehensive understanding of the internal components that make up an iPhone, including:</p>
-        <div style="overflow: auto;">
-            <ul style="float: left; width: 50%;">
+        <div class="container">
+            <ul>
                 <li>iPhone motherboard</li>
                 <li>iPhone display</li>
                 <li>iPhone battery</li>
@@ -133,7 +151,7 @@
                 <li>iPhone speaker</li>
             </ul>
         
-            <ul style="float: left; width: 50%;">
+            <ul>
                 <li>iPhone buttons</li>
                 <li>iPhone housing</li>
                 <li>iPhone screws</li>
@@ -142,7 +160,7 @@
             </ul>
         </div>
         
-        <img src="images/iphone_parts.jpg" alt="iPhone parts" class="result-pic" style="float: right; margin-left: 10px;">
+        <img src="images/iphone_parts.jpg" alt="iPhone parts" class="parts-pic">
         <p class="lab-text">iPhone parts</p>
         
         <h2>Sourcing Components</h2>
@@ -164,7 +182,7 @@
         <p>This marked significant progress in the assembly process, bringing me one step closer to completing my iPhone from parts. Each meticulous step filled me with a sense of accomplishment, knowing that I was creating something truly remarkable from scratch.</p>
         <h2>Culmination</h2>
         <p>Finally, the moment of truth arrived – the culmination of hours of research, dedication, and meticulous craftsmanship. With bated breath, I powered on the device, a surge of anticipation coursing through me. And as the screen flickered to life, illuminating the room with its vibrant glow, a sense of triumph washed over me.</p>
-        <img src="images/assembled_iphone.jpg" alt="Assembled iPhone" class="result-pic">
+        <img src="images/assembled.png" alt="Assembled iPhone" class="result-pic">
         <p class="lab-text">Assembled iPhone</p>
         <p>In that moment, I realized the true beauty of the journey – the joy of exploration, the thrill of discovery, and the satisfaction of creation. As I held the assembled iPhone in my hands, I marveled at the convergence of technology and craftsmanship, a testament to human ingenuity and innovation.</p>
         <h2>Conclusion</h2>
