@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3D Box Shooter Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <style>
+        /* Adjust the background color to the orange theme */
+        body {
+            font-family: 'Open Sans', monospace;
+            background-color: #f8f9fa;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        /* Adjust the spacing and margins used in the rest of your page */
+        .project-details {
+            padding: 100px;
+            margin: 0 auto;
+            width: 60%;
+            position: relative;
+        }
+        /* Sticky Navigation Bar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #FF9000 !important;
+            padding: 10px 20px;
+            z-index: 9999;
+        }
+        .navbar-brand h1 {
+            font-size: 24px;
+            color: #ffffff;
+            margin: 0;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        /* Style the headings and paragraphs */
+        h1, h2, h3 {
+            color: #3a170f;
+            font-family: 'Open Sans', monospace;
+        }
+        p {
+            color: #666;
+        }
+        /* Style the PDF container */
+        .pdf-container {
+            margin-top: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #FF9000;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        /* Style the embedded PDF */
+        .pdf-container embed {
+            width: 100%;
+            height: 600px;
+        }
+        img.result-pic {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        img.lab-gif {
+            width: 30%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        .lab-text {
+            text-align: center;
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm sticky-top navbar-light" id="main-navbar">
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="/">
+                <h1>Henry Lam</h1>
+            </a>
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a id="about-nav" class="nav-link theme2" href="index.html#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="resume-nav" class="nav-link theme2" href="index.html#resume">My Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="projects-nav" class="nav-link theme2" href="index.html#projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Content specific to the Colorization of Grayscale Images project -->
+    <div class="project-details">
+        <!-- Your content goes here -->
+        <h1>Embarking on the process of Game Development: Creating 3D Box Shooter</h1>
+        <p>Venturing into the realm of game development has been an exhilarating journey, filled with challenges and triumphs. One of the pivotal assignments I've tackled is the creation of 3D Box Shooter, a Unity3D project designed to showcase my understanding of complex game systems and custom script writing in C#. Let me walk you through the intricacies of this project and the creative decisions that shaped its development.</p>
+
+        <h2>Building the Foundation</h2>
+        <p>At the core of 3D Box Shooter lies the intricate interplay of custom-written scripts in C# and dynamic modifications to game objects and components. The project began with the meticulous construction of the game's architecture, laying the groundwork for its immersive gameplay experience. Through a series of instructional videos and hands-on exercises, I delved deep into Unity3D's visual editor, harnessing its power to bring my game to life.</p>
+
+        <h2>Crafting Engaging Gameplay</h2>
+        <p>With the foundation in place, I embarked on the task of creating an engaging second level that would captivate players and keep them immersed in the gaming experience. Drawing inspiration from the first level, I introduced compelling modifications, ranging from visual enhancements to gameplay mechanics. From new target types with unique behaviors to revamped user interface elements, each addition was meticulously crafted to elevate the gameplay and provide players with a fresh challenge.</p>
+
+        <h2>Navigating Level Transitions</h2>
+        <p>Transitioning between levels seamlessly was a crucial aspect of the project. I devised a system whereby players could progress to the second level upon achieving an attainable score threshold, fostering a sense of accomplishment and progression. Implementing a "Next Level" button akin to the "Play Again" functionality required the creation of custom scripts and meticulous attention to detail to ensure a smooth transition between levels.</p>
+
+        <h2>Optimizing for Accessibility</h2>
+        <p>In an effort to make 3D Box Shooter accessible to a wider audience, I created a WebGL build of the project, allowing players to experience the game directly through their web browsers. The resulting files were neatly organized within a dedicated "WebGL" folder, facilitating easy access and distribution of the game across various platforms.</p>
+
+        <h2>Embracing Creative Freedom</h2>
+        <p>While adhering to the assignment's requirements, I seized the opportunity to inject my own creative flair into the project. From redesigning Level 1 to updating the game's sound effects and visual aesthetics, I endeavored to make 3D Box Shooter a captivating and immersive experience for players.</p>
+
+        <h2>Reflecting on the Journey</h2>
+        <p>As I reflect on the journey of creating 3D Box Shooter, I am reminded of the immense learning and growth that accompanied each stage of development. From grappling with complex scripting concepts to refining the game's visual and auditory elements, every challenge served as a stepping stone towards mastery in game development.</p>
+
+        <p>In conclusion, the creation of 3D Box Shooter has been a testament to the power of creativity, determination, and technical skill. As I continue to hone my craft and explore new horizons in game development, I am filled with excitement for the endless possibilities that lie ahead. The journey may be fraught with challenges, but it is also brimming with opportunities for innovation and discovery.</p>
+
+    </div>
+    <!-- Footer -->
+    <div id="fh5co-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; <span style="font-size: 15px;"><a href="http://henrylam.blog">henrylam.blog</a></span><br><span style="font-size: 12px;">Made by Henry Lam</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+    </div>
+    <!-- Include any necessary JavaScript files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="js/google_map.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
