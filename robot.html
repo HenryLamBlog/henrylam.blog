@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robot-Controlled Vehicle</title>
-    <!-- Include any necessary CSS files -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
@@ -17,46 +15,154 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <style>
-        /* Additional styles can be added here */
+        /* Adjust the background color to the orange theme */
+        body {
+            font-family: 'Open Sans', monospace;
+            background-color: #f8f9fa;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        /* Adjust the spacing and margins used in the rest of your page */
+        .project-details {
+            padding: 100px;
+            margin: 0 auto;
+            width: 60%;
+            position: relative;
+        }
+        /* Sticky Navigation Bar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #FF9000 !important;
+            padding: 10px 20px;
+            z-index: 9999;
+        }
+        .navbar-brand h1 {
+            font-size: 24px;
+            color: #ffffff;
+            margin: 0;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        /* Style the headings and paragraphs */
+        h1, h2, h3 {
+            color: #3a170f;
+            font-family: 'Open Sans', monospace;
+        }
+        p {
+            color: #666;
+        }
+        /* Style the PDF container */
+        .pdf-container {
+            margin-top: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #FF9000;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        /* Style the embedded PDF */
+        .pdf-container embed {
+            width: 100%;
+            height: 600px;
+        }
+        img.result-pic {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        img.lab-gif {
+            width: 30%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        .lab-text {
+            text-align: center;
+            font-style: italic;
+            color: #888;
+        }
+        /* Responsive styles for smaller devices */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            .project-details {
+                padding: 50px;
+                width: 90%;
+            }
+            .navbar-brand h1 {
+                font-size: 20px;
+            }
+            .navbar-nav .nav-link {
+                font-size: 16px;
+            }
+            img.result-pic,
+            img.lab-gif {
+                width: 100%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm sticky-top navbar-light" id="main-navbar">
-        <!-- Navbar content -->
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="/">
+                <h1>Henry Lam</h1>
+            </a>
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a id="about-nav" class="nav-link theme2" href="index.html#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="resume-nav" class="nav-link theme2" href="index.html#resume">My Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="projects-nav" class="nav-link theme2" href="index.html#projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-        
     <!-- Content specific to the Colorization of Grayscale Images project -->
     <div class="project-details">
-        <!-- Your project details here -->
+        <!-- Your content goes here -->
+        <h1>Robot-Controlled Vehicle</h1>
     </div>
-
     <!-- Footer -->
     <div id="fh5co-footer">
-        <!-- Footer content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; <span style="font-size: 15px;"><a href="http://henrylam.blog">henrylam.blog</a></span><br><span style="font-size: 12px;">Made by Henry Lam</span></p>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Scroll to top button -->
     <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
     </div>
-
-    <!-- Include necessary JavaScript files -->
-    <!-- jQuery -->
+    <!-- Include any necessary JavaScript files -->
     <script src="js/jquery.min.js"></script>
-    <!-- jQuery Easing -->
     <script src="js/jquery.easing.1.3.js"></script>
-    <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Waypoints -->
     <script src="js/jquery.waypoints.min.js"></script>
-    <!-- Stellar Parallax -->
     <script src="js/jquery.stellar.min.js"></script>
-    <!-- Easy PieChart -->
     <script src="js/jquery.easypiechart.min.js"></script>
-    <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-    <!-- Main -->
+    <script src="js/google_map.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
