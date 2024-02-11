@@ -111,6 +111,58 @@
             }
         }
     </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Task ID');
+      data.addColumn('string', 'Task Name');
+      data.addColumn('string', 'Resource');
+      data.addColumn('date', 'Start Date');
+      data.addColumn('date', 'End Date');
+      data.addColumn('number', 'Duration');
+      data.addColumn('number', 'Percent Complete');
+      data.addColumn('string', 'Dependencies');
+
+      data.addRows([
+        ['FunctionA_Item1', 'Implement Maze Generator/Editor', 'Function A',
+         new Date(2023, 10, 20), new Date(2023, 10, 23), null, 0, null],
+        ['FunctionA_Item2', 'Maze GUI', 'Function A',
+         new Date(2023, 10, 22), new Date(2023, 10, 24), null, 0, null],
+        ['FunctionA_Item3', 'Main Menu GUI', 'Function A',
+         new Date(2023, 10, 21), new Date(2023, 10, 23), null, 0, null],
+        ['FunctionB_Item1', 'BFS library function for path solver', 'Function B',
+         new Date(2023, 10, 19), new Date(2023, 10, 23), null, 0, null],
+        ['FunctionB_Item2', 'BFS node data structure for backtracking', 'Function B',
+         new Date(2023, 10, 21), new Date(2023, 10, 24), null, 0, null],
+        ['FunctionB_Item3', 'BFS library function for exporting to .csv', 'Function B',
+         new Date(2023, 10, 23), new Date(2023, 10, 24), null, 0, null],
+        ['FunctionC_Item1', 'Create Maze Game', 'Function C',
+         new Date(2023, 10, 20), new Date(2023, 10, 25), null, 0, null],
+        ['FunctionC_Item2', 'Implement Jerry movement', 'Function C',
+         new Date(2023, 10, 22), new Date(2023, 10, 24), null, 0, null],
+        ['FunctionC_Item3', 'Implement Tom to use function B', 'Function C',
+         new Date(2023, 10, 21), new Date(2023, 10, 24), null, 0, null],
+        ['FunctionD_Item1', 'Write Test Case', 'Function D',
+         new Date(2023, 10, 25), new Date(2023, 10, 26), null, 0, null]
+      ]);
+
+      var options = {
+        height: 400,
+        gantt: {
+          trackHeight: 30
+        }
+      };
+
+      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
 </head>
 <body>
     <!-- Navbar -->
@@ -243,64 +295,7 @@
         </li>
         <li>No further meetings scheduled</li>
     </ul>
-    <h2>Gantt Chart</h2>
-    <table>
-        <tr>
-            <th>Task</th>
-            <th>Start Date</th>
-            <th>End Date</th>
-        </tr>
-        <tr>
-            <td>Implement Maze Generator/Editor (Function A - Item1)</td>
-            <td>Nov 20</td>
-            <td>Nov 23</td>
-        </tr>
-        <tr>
-            <td>Maze GUI (Function A - Item2)</td>
-            <td>Nov 22</td>
-            <td>Nov 24</td>
-        </tr>
-        <tr>
-            <td>Main Menu GUI (Function A - Item3)</td>
-            <td>Nov 21</td>
-            <td>Nov 23</td>
-        </tr>
-        <tr>
-            <td>BFS library function for path solver (Function B - Item1)</td>
-            <td>Nov 19</td>
-            <td>Nov 23</td>
-        </tr>
-        <tr>
-            <td>BFS node data structure for backtracking in path solver (Function B - Item2)</td>
-            <td>Nov 21</td>
-            <td>Nov 24</td>
-        </tr>
-        <tr>
-            <td>BFS library function for exporting the shortest path to .csv (Function B - Item3)</td>
-            <td>Nov 23</td>
-            <td>Nov 24</td>
-        </tr>
-        <tr>
-            <td>Create Maze Game (Function C - Item1)</td>
-            <td>Nov 20</td>
-            <td>Nov 25</td>
-        </tr>
-        <tr>
-            <td>Implement Jerry movement (Function C - Item2)</td>
-            <td>Nov 22</td>
-            <td>Nov 24</td>
-        </tr>
-        <tr>
-            <td>Implement Tom to use function B (Function C - Item3)</td>
-            <td>Nov 21</td>
-            <td>Nov 24</td>
-        </tr>
-        <tr>
-            <td>Write Test Case (Function D - Item 1)</td>
-            <td>Nov 25</td>
-            <td>Nov 26</td>
-        </tr>
-    </table>
+    <div id="chart_div"></div>
 
   <h2>Live Demo</h2>
 <p>Experience the Tom and Jerry Maze Game in action through our live demonstration:</p>
