@@ -1,6 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
     var typedText = document.getElementById('typed-text').firstElementChild;
-    var textArray = ['Computer Science Major', 'Programmer', 'Gamer', 'Tech Enthusiast', 'Creative Thinker', 'Problem Solver', 'Team Player', 'AI Scholar'];
+    // var textArray = ['Computer Science Major', 'Programmer', 'Gamer', 'Tech Enthusiast', 'Creative Thinker', 'Problem Solver', 'Team Player', 'AI Scholar','Web Developer'];
+    var textArray = [
+        'Computer Science Major',
+        'Programmer',
+        'Gamer',
+        'Tech Enthusiast',
+        'Creative Thinker',
+        'Problem Solver',
+        'Team Player',
+        'AI Scholar',
+        'Computational Imaging and Spectroscopy Participant',
+        'Blockchain Enthusiast and Contributor',
+        'Sound & Visual Support Specialist',
+        'Data Science Practitioner',
+        'Robotics Design Expert',
+        'Game Development Enthusiast',
+        'Google Suite and Microsoft Office User',
+        'Adobe Creative Cloud User',
+        'Python Data Science Learner',
+        'Machine Learning Practitioner',
+        'C++ Programmer',
+        'Java Developer',
+        'AP Scholar with Honors',
+        'IELTS Achiever (8.0/9.0)'
+    ];
+    
     var textIndexes = [];
     var index = 0;
     var text = '';
