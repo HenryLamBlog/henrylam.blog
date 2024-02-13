@@ -1354,5 +1354,6 @@ input[type="text"] {
 /*# sourceMappingURL=style.css.map */
 
 #typed-text {
+  height: 36px; /* Fixed height to prevent layout shift */
   overflow: hidden; /* Hide overflowing text */
 }
