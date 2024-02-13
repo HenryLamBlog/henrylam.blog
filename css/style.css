@@ -1318,7 +1318,7 @@ input[type="text"] {
 
 .navbar-brand h1 {
   font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
-  font-size: 24px; /* Adjust the font size of the brand */
+  font-size: 26px; /* Adjust the font size of the brand */
   color: #000000; /* Color of the brand text */
   margin: 0; /* Remove any default margin */
 }
