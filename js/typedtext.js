@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'Data Science Learner',
         'Robotics Enjoyer',
         'Game Developer',
+        'Graphic Designer',
         'Google Suite Expert',
         'Microsoft Office Specialist',
         'Adobe Creative Cloud User',
