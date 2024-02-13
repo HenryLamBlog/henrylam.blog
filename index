@@ -84,7 +84,7 @@
                         <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                             <div class="profile-thumb" style="background:url(images/me.jpg); background-size: cover;"></div>
                             <h1><span>Henry Lam</span></h1>
-                            <h3><span>Computer Science Major / Programmer / Gamer</span></h3>
+                            <h3 id="typed-text"><span></span></h3>
                         </div>
                     </div>
                 </div>
@@ -299,5 +299,6 @@
     <script src="js/google_map.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
+	<script src="js/typedtext.js"></script>
 </body>
 </html>
