@@ -1,14 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
     var typedText = document.getElementById('typed-text').firstElementChild;
-    var textArray = ['Computer Science Major', 'Programmer', 'Gamer','Tech Enthusiast','Creative Thinker','Problem Solver','Team Player','AI Scholar'];
+    var textArray = ['Computer Science Major', 'Programmer', 'Gamer', 'Tech Enthusiast', 'Creative Thinker', 'Problem Solver', 'Team Player', 'AI Scholar'];
+    var textIndexes = [];
     var index = 0;
     var text = '';
     var typingSpeed = 150; // milliseconds per character
 
+    // Create an array of indexes for randomizing the text order
+    for (var i = 0; i < textArray.length; i++) {
+        textIndexes.push(i);
+    }
+    shuffleArray(textIndexes);
+
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
     function type() {
-        if (index < textArray.length) {
-            if (text.length < textArray[index].length) {
-                text += textArray[index].charAt(text.length);
+        if (index < textIndexes.length) {
+            var arrayIndex = textIndexes[index];
+            var currentText = textArray[arrayIndex];
+            if (text.length < currentText.length) {
+                text += currentText.charAt(text.length);
                 typedText.textContent = text;
                 setTimeout(type, typingSpeed);
             } else {
@@ -23,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             typedText.textContent = text;
             setTimeout(erase, typingSpeed / 2);
         } else {
-            index = (index + 1) % textArray.length;
+            index = (index + 1) % textIndexes.length;
             setTimeout(type, typingSpeed);
         }
     }
