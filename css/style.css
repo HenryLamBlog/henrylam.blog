@@ -1352,3 +1352,7 @@ input[type="text"] {
   margin-left: auto; /* Push nav items to the right */
 }
 /*# sourceMappingURL=style.css.map */
+
+#typed-text {
+  overflow: hidden; /* Hide overflowing text */
+}
