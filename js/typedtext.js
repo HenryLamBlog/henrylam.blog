@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     var typedText = document.getElementById('typed-text').firstElementChild;
-    var textArray = ['Computer Science Major', 'Programmer', 'Gamer'];
+    var textArray = ['Computer Science Major', 'Programmer', 'Gamer','Tech Enthusiast','Creative Thinker','Problem Solver','Team Player','AI Scholar'];
     var index = 0;
     var text = '';
     var typingSpeed = 150; // milliseconds per character
