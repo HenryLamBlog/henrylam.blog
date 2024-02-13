@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'Innovative Thinker',
         'Problem Solver',
         'Team Player',
-        'AI Scholar',
+        'Artificial Intelligence Scholar',
         'Blockchain Contributor',
         'Web Developer',
         'Data Science Learner',
