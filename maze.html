@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Maze Game implementing BFS algorithm</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/icomoon.css">
@@ -26,11 +28,15 @@
     <style>
         /* Adjust the background color to the orange theme */
         body {
-            font-family: 'Open Sans', monospace;
-            background-color: #f8f9fa;
-            margin: 0;
-            overflow-x: hidden;
-        }
+          /*font-family: 'Open Sans', monospace;*/
+          font-family: 'Lato', sans-serif;
+          font-weight: 300;
+          font-size: 20px;
+          color: #4d4d4d;
+          background-color: #f8f9fa;
+          margin: 0;
+          overflow-x: hidden;
+      }
         /* Adjust the spacing and margins used in the rest of your page */
         .project-details {
             padding: 100px;
@@ -61,27 +67,14 @@
         }
         /* Style the headings and paragraphs */
         h1, h2, h3 {
-            color: #3a170f;
-            font-family: 'Open Sans', monospace;
-        }
+          color: #3a170f;
+          font-family: 'Lato', monospace;
+          font-weight: 700;
+      }
         p {
             color: #666;
         }
-        /* Style the PDF container */
-        .pdf-container {
-            margin-top: 20px;
-            padding: 20px;
-            box-sizing: border-box;
-            border: 1px solid #FF9000;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-        }
-        /* Style the embedded PDF */
-        .pdf-container embed {
-            width: 100%;
-            height: 600px;
-        }
+        
         img.result-pic {
             width: 40%;
             height: auto;

@@ -14,7 +14,7 @@ body {
   /*font-family: "Open Sans", sans-serif;*/
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.7;
   color: #4d4d4d;
   background: #fff;
@@ -190,7 +190,9 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-header .display-tc h3,
 .fh5co-cover .display-tc h3 {
-  font-size: 16px;
+  font-family: "Lato", cursive;
+  font-weight: 300;
+  font-size: 18px;
 }
 @media screen and (max-width: 768px) {
   #fh5co-header .display-tc h3,
