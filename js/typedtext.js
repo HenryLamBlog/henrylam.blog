@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'Blockchain Contributor',
         'Web Developer',
         'Data Science Learner',
-        'Robotics Designer',
+        'Robotics Enjoyer',
         'Game Developer',
         'Google Suite Expert',
         'Microsoft Office Specialist',
