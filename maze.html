@@ -31,7 +31,7 @@
           /*font-family: 'Open Sans', monospace;*/
           font-family: 'Lato', sans-serif;
           font-weight: 300;
-          font-size: 20px;
+          font-size: 18px;
           color: #4d4d4d;
           background-color: #f8f9fa;
           margin: 0;
@@ -139,11 +139,11 @@
         gantt: {
           trackHeight: 30,
           labelStyle: {
-            fontName: 'Open Sans'
+            fontName: 'Lato'
           },
           tooltip: {
             textStyle: {
-              fontName: 'Open Sans'
+              fontName: 'Lato'
             }
           }
         }
@@ -154,7 +154,7 @@
       chart.draw(data, options);
     }
   </script>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script>
     /**
@@ -174,8 +174,8 @@
 
       var speedCanvas = document.getElementById(elementId);
 
-      Chart.defaults.global.defaultFontFamily = "Arial";
-      Chart.defaults.global.defaultFontSize = 14;
+      Chart.defaults.global.defaultFontFamily = "Lato";
+      Chart.defaults.global.defaultFontSize = 16;
 
       const totalDaysInSprint = 60; // 60 days from September 28 to November 26
       const idealHoursPerDay = burndownData[0] / totalDaysInSprint;
