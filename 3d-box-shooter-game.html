@@ -164,8 +164,24 @@
                   </li>
                 </ol>
                 
+            <!-- <h2>Play the Game</h2>
+            <iframe src="https://i.simmer.io/@henrylamblog/~3e060bc9-96db-eee0-25cd-13388cceb169" style="width:960px;height:600px"></iframe> -->
             <h2>Play the Game</h2>
-            <iframe src="https://i.simmer.io/@henrylamblog/~3e060bc9-96db-eee0-25cd-13388cceb169" style="width:960px;height:600px"></iframe>
+            <button id="startButton">Start Game</button>
+            <div id="gameContainer"></div>
+
+            <script>
+                document.getElementById('startButton').addEventListener('click', function() {
+                    var iframe = document.createElement('iframe');
+                    iframe.src = "https://i.simmer.io/@henrylamblog/~3e060bc9-96db-eee0-25cd-13388cceb169";
+                    iframe.style.width = "960px";
+                    iframe.style.height = "600px";
+                    document.getElementById('gameContainer').appendChild(iframe);
+                    // Remove the start button after the game starts
+                    document.getElementById('startButton').style.display = 'none';
+                });
+            </script>
+
                 <h2>Reflecting on the Journey</h2>
         <p>As I reflect on the journey of creating 3D Box Shooter, I am reminded of the immense learning and growth that accompanied each stage of development. From grappling with complex scripting concepts to refining the game's visual and auditory elements, every challenge served as a stepping stone towards mastery in game development.</p>
 
