@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Distinguishing People With Masks</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <style>
+        /* Adjust the background color to the orange theme */
+        body {
+            /*font-family: 'Open Sans', monospace;*/
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 18px;
+            color: #4d4d4d;
+            background-color: #f8f9fa;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        /* Adjust the spacing and margins used in the rest of your page */
+        .project-details {
+            padding: 100px;
+            margin: 0 auto;
+            width: 60%;
+            position: relative;
+        }
+        /* Sticky Navigation Bar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #FF9000 !important;
+            padding: 10px 20px;
+            z-index: 9999;
+        }
+        .navbar-brand h1 {
+            font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
+            font-size: 26px;
+            color: #ffffff;
+            margin: 0;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        /* Style the headings and paragraphs */
+        h1, h2, h3 {
+            color: #3a170f;
+            font-family: 'Lato', monospace;
+            font-weight: 700;
+        }
+        p {
+            color: #666;
+        }
+        img.result-pic {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        img.lab-gif {
+            width: 30%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        .lab-text {
+            text-align: center;
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K03ESX8LJE"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K03ESX8LJE');
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm sticky-top navbar-light" id="main-navbar">
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="/">
+                <h1>Henry Lam</h1>
+            </a>
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a id="about-nav" class="nav-link theme2" href="index.html#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="resume-nav" class="nav-link theme2" href="index.html#resume">My Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="projects-nav" class="nav-link theme2" href="index.html#projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Content specific to the Colorization of Grayscale Images project -->
+    <div class="project-details">
+        <!-- Your content goes here -->
+        <h1>Distinguishing People With Masks: A Machine Learning Project</h1>
+    <p>The COVID-19 pandemic has reshaped our world in countless ways, with one of the most visible changes being the widespread adoption of face masks. As we navigate through our daily lives, we have become adept at quickly recognizing whether someone is wearing a mask or not. But have you ever wondered how a computer perceives this distinction?</p>
+
+    <p>In this blog post, we will explore the process of creating a machine learning project aimed at distinguishing people with masks. From the initial curiosity about how machines perceive facial features to the development of a model capable of making this distinction, we will delve into the intricacies of this fascinating project.</p>
+
+    <h2>The Motivation</h2>
+    <p>The inspiration for this project stemmed from everyday observations during the pandemic. Walking through crowded streets or entering public spaces, one could easily discern who was wearing a mask and who wasn't. However, as someone intrigued by technology and artificial intelligence, I began to wonder: How does a computer perceive this distinction?</p>
+
+    <p>For humans, recognizing whether someone is wearing a mask involves a combination of facial features, context, and intuition. But for a machine, this task presents unique challenges. Would the absence of a visible mouth confuse the algorithm? Could it learn to differentiate between masked and unmasked faces based solely on visual cues?</p>
+
+    <h2>The Approach</h2>
+    <p>To tackle this challenge, I decided to leverage the power of machine learning. The project involved several key steps:</p>
+
+    <ol>
+        <li><strong>Data Collection:</strong> The first step was to gather a diverse dataset containing images of people both wearing and not wearing masks.</li>
+        <li><strong>Data Preprocessing:</strong> With the dataset in hand, the next step was to preprocess the images to standardize the format, remove noise, and augment the data for improved model performance.</li>
+        <li><strong>Model Development:</strong> For the model architecture, I experimented with several deep learning frameworks, ultimately settling on a convolutional neural network (CNN).</li>
+        <li><strong>Training and Evaluation:</strong> The trained model underwent rigorous testing using a separate validation dataset to assess its performance.</li>
+    </ol>
+
+    <h2>The Results</h2>
+    <p>After extensive experimentation and refinement, the machine learning model achieved impressive results in distinguishing people with masks. With a high degree of accuracy, the model could reliably classify images as either masked or unmasked, demonstrating its ability to generalize across different individuals and environmental conditions.</p>
+
+    <p>The success of the project highlights the potential of machine learning in addressing real-world challenges, especially in the context of public health and safety. By automating the process of identifying individuals wearing masks, such technology could complement existing efforts to mitigate the spread of infectious diseases.</p>
+
+    <h2>Conclusion</h2>
+    <p>The journey of creating a machine learning project to distinguish people with masks has been both enlightening and rewarding. It underscores the remarkable capabilities of artificial intelligence in understanding and interpreting complex visual information.</p>
+
+    <p>As we continue to navigate the ever-evolving landscape of technology and public health, projects like these serve as a testament to the transformative potential of data-driven approaches. By harnessing the power of machine learning, we can develop innovative solutions that enhance our understanding of the world and empower us to address pressing challenges effectively.</p>
+
+    <p>In conclusion, while the pandemic may have prompted us to wear masks, it has also inspired us to explore new frontiers in technology and artificial intelligence, paving the way for a brighter, more resilient future.</p>
+
+
+    </div>
+    <!-- Footer -->
+    <div id="fh5co-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; <span style="font-size: 16px;"><a href="http://henrylam.blog">henrylam.blog</a></span><br><span style="font-size: 12px;">Made by Henry Lam</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+    </div>
+    <!-- Include any necessary JavaScript files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="js/google_map.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
