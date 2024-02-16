@@ -1366,6 +1366,19 @@ input[type="text"] {
     border-radius: 5px;
 }
 }
+@media (min-width: 992px){
+.container {
+    max-width: 960px;
+}}
+
+@media (min-width: 768px){
+.container {
+    max-width: 720px;
+}}
+@media (min-width: 576px){
+.container {
+    max-width: 540px;
+}}
 #main-text{
   padding: 0;
   background-color: #FFFFFF;
@@ -1373,7 +1386,8 @@ input[type="text"] {
 }
 
 .main-container {
-  /* max-width: 800px; Adjust the maximum width as needed */
+  /* max-width: 800px;  */
+  
   width: 100%;
   padding: 100px;
   padding-right: 15px;
