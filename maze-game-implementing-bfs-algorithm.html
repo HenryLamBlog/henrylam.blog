@@ -93,6 +93,10 @@
             font-style: italic;
             color: #888;
         }
+        #chart_div {
+          width: 100%;
+          height: auto;
+      }
         
     </style>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -368,11 +372,9 @@
         </li>
         <li>No further meetings scheduled</li>
     </ul>
+    <h2>Gantt Chart</h2>
+    <div id="chart_div"></div>
     <p></p>
-  <h2>Gantt Chart</h2>
-    <div id="chart_div" style="width: 100%; height: auto;"></div>
-    <p></p>
-
     <h2>Burndown Chart</h2>
     <div style="width:100%;"><canvas id="burndownChart"></canvas></div>
     <script>
