@@ -1357,7 +1357,7 @@ input[type="text"] {
   height: 36px; /* Fixed height to prevent layout shift */
   overflow: hidden; /* Hide overflowing text */
 }
-@media (min-width: 992px){
+/* @media (min-width: 992px){
 #main-col {
     padding: 30px 30px;
     background-color: #FFFFFF;
@@ -1373,7 +1373,7 @@ input[type="text"] {
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
-}}
+}} */
 
 @media (max-width: 992px){
 #main-text{
