@@ -1357,7 +1357,23 @@ input[type="text"] {
   height: 36px; /* Fixed height to prevent layout shift */
   overflow: hidden; /* Hide overflowing text */
 }
-
+@media (min-width: 992px){
+#main-col {
+    padding: 30px 30px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}}
+@media (min-width: 768px){
+.offset-md-2 {
+    margin-left: 16.666667%;
+}}
+@media (min-width: 768px){
+.col-md-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}}
 
 @media (max-width: 992px){
 #main-text{
