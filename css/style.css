@@ -1366,10 +1366,16 @@ input[type="text"] {
     border-radius: 5px;
 }
 }
+#main-text{
+  padding: 0;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
 
 .main-container {
   /* max-width: 800px; Adjust the maximum width as needed */
   width: 100%;
+  padding: 100px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
