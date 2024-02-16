@@ -1357,3 +1357,15 @@ input[type="text"] {
   height: 36px; /* Fixed height to prevent layout shift */
   overflow: hidden; /* Hide overflowing text */
 }
+
+@media screen and (max-width: 768px) {
+  .project-details {
+      padding: 50px;
+      width: 90%;
+  }
+  img.result-pic,
+  img.parts-pic,
+  img.lab-gif {
+      width: 90%;
+  }
+}
