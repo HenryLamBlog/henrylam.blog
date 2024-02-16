@@ -1392,10 +1392,10 @@ input[type="text"] {
 .main-container  {
     max-width: 720px;
 }}
-@media (min-width: 576px){
+/* @media (min-width: 576px){
 .main-container  {
     max-width: 540px;
-}}
+}} */
 #main-text{
   padding: 0;
   /* background-color: #FFFFFF; */
