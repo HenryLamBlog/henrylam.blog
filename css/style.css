@@ -1367,16 +1367,16 @@ input[type="text"] {
 }
 }
 @media (min-width: 992px){
-.container {
+.main-container  {
     max-width: 960px;
 }}
 
 @media (min-width: 768px){
-.container {
+.main-container  {
     max-width: 720px;
 }}
 @media (min-width: 576px){
-.container {
+.main-container  {
     max-width: 540px;
 }}
 #main-text{
