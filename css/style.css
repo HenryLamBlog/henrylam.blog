@@ -1357,15 +1357,18 @@ input[type="text"] {
   height: 36px; /* Fixed height to prevent layout shift */
   overflow: hidden; /* Hide overflowing text */
 }
-/* 
-@media only screen and (max-width: 768px) {
-  .project-details {
-      padding: 50px;
-      width: 90%;
-  }
-  img.result-pic,
-  img.parts-pic,
-  img.lab-gif {
-      width: 90%;
-  }
-} */
+
+
+@media (max-width: 992px){
+#main-text{
+    padding: 0;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+}
+
+.main-container {
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 15px; /* Add padding to the left and right sides */
+}
