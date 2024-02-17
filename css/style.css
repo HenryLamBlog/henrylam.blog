@@ -1315,18 +1315,18 @@ input[type="text"] {
 .navbar-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Align links to the right */
-  /* margin-left: auto!important; Add some margin to separate from the edge */
-/* } */
+  justify-content: flex-end; 
+   margin-left: auto!important; 
+} 
 
-/* .navbar-nav .nav-link {
+.navbar-nav .nav-link {
   color: #FF9000;
   font-size: 18px;
-  margin-left: auto!important; /* Add margin between links */
-  /* text-decoration: none;
+  margin-left: auto!important;
+  text-decoration: none;
   transition: color 0.3s ease;
-} */
-/* 
+} 
+
 .navbar-nav .nav-link:hover {
   color: #333333;
 }  */
@@ -1352,12 +1352,50 @@ input[type="text"] {
 #main-navbar .navbar-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Align links to the right */
-/* }
+  justify-content: flex-end; 
+ }
 
 #main-navbar .navbar-nav .nav-link {
   color: #FF90
 }  */
+
+
+#main-navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 26px;
+  color: #000000;
+  margin: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto!important;
+  list-style: none; /* Remove bullet points */
+}
+
+.navbar-nav .nav-link {
+  color: #FF9000;
+  font-size: 18px;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #333333;
+}
 
 /*# sourceMappingURL=style.css.map */
 
