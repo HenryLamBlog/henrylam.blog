@@ -70,9 +70,12 @@
         border-color: #ffffff; /* Change the border color to white */
     }
 	.custom-toggler .navbar-toggler-icon {
-		
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,165,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	}
+	
+	.custom-toggler.navbar-toggler.collapsed .navbar-toggler-icon {
 		background-image: url("data:image/svg+xml,%3Csvg fill='%23ff9000' width='32px' height='32px' viewBox='0 0 256 256' id='Flat' xmlns='http://www.w3.org/2000/svg' stroke='%23ff9000' stroke-width='2.56'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M202.82861,197.17188a3.99991,3.99991,0,1,1-5.65722,5.65624L128,133.65723,58.82861,202.82812a3.99991,3.99991,0,0,1-5.65722-5.65624L122.343,128,53.17139,58.82812a3.99991,3.99991,0,0,1,5.65722-5.65624L128,122.34277l69.17139-69.17089a3.99991,3.99991,0,0,1,5.65722,5.65624L133.657,128Z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-	  }
+	}
 	
 	.navbar-brand{
 		display: flex;
@@ -97,36 +100,47 @@
 <body>
 	
 	  <!-- Navbar -->
-	  <nav class="navbar navbar-expand-sm navbar-custom navbar-light sticky-top" style="background-color: #ffffff;">
-		<div class="container">
-			<a class="navbar-brand" href="/"><h1>Henry Lam</h1></a>
-			
-			<!-- Toggle button for smaller devices -->
-			<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			
-			<!-- Navbar links -->
-			<div class="collapse navbar-collapse" id="navbar">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a id="about-nav" class="nav-link theme2" href="https://henrylam.blog/#about" onclick="closeNavbar()">About Me</a>
-					</li>
-					<li class="nav-item">
-						<a id="resume-nav" class="nav-link theme2" href="https://henrylam.blog/#resume" onclick="closeNavbar()">My Resume</a>
-					</li>
-					<li class="nav-item">
-						<a id="projects-nav" class="nav-link theme2" href="https://henrylam.blog/#projects" onclick="closeNavbar()">Projects</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	
-	
-	
-	
-	
+<nav class="navbar navbar-expand-sm navbar-custom navbar-light sticky-top" style="background-color: #ffffff;">
+    <div class="container">
+        <a class="navbar-brand" href="/"><h1>Henry Lam</h1></a>
+        
+        <!-- Toggle button for smaller devices -->
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a id="about-nav" class="nav-link theme2" href="https://henrylam.blog/#about" onclick="closeNavbar()">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a id="resume-nav" class="nav-link theme2" href="https://henrylam.blog/#resume" onclick="closeNavbar()">My Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a id="projects-nav" class="nav-link theme2" href="https://henrylam.blog/#projects" onclick="closeNavbar()">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Function to close the navbar collapse and navbar items after a short delay
+    function closeNavbar() {
+        setTimeout(function () {
+            $('.navbar-collapse').collapse('hide');
+            $('.navbar-collapse .nav-item').removeClass('show');
+        }, 100);
+    }
+
+    // Toggle the collapsed state of the navbar toggle button
+    $('.navbar-toggler').on('click', function () {
+        $(this).toggleClass('collapsed');
+    });
+</script>
+
 	
 	
 	
