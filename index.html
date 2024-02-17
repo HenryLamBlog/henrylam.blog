@@ -436,5 +436,14 @@
     <!-- Main -->
     <script src="js/main.js"></script>
 	<script src="js/typedtext.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.col-padding .work').on('mouseenter', function() {
+				$(this).find('.desc').css('opacity', '1');
+			}).on('mouseleave', function() {
+				$(this).find('.desc').css('opacity', '0');
+			});
+		});
+	</script>
 </body>
 </html>
