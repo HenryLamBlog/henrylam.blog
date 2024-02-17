@@ -143,7 +143,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-header .display-tc h1 span:before,
 .fh5co-cover .display-tc h1 span:before {
   position: absolute;
-  top: 40px;
+  top: 0px;
   left: 0;
   width: 30px;
   height: 4px;
@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-header .display-tc h1 span:after,
 .fh5co-cover .display-tc h1 span:after {
   position: absolute;
-  top: 40px;
+  top: 0px;
   right: 0;
   width: 30px;
   height: 4px;
