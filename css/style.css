@@ -1360,29 +1360,38 @@ input[type="text"] {
 }  */
 
 
-/* change the background color */
-.navbar-custom {
-  background-color: #fff;
+.navbar {
+  background-color: #fff; /* Set background color to white */
+  padding: 10px 20px; /* Adjust padding as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
 }
 
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-  color: #000;
+.navbar-brand {
+  font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
+  font-size: 26px;
+  color: #000; /* Set font color to black */
 }
 
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-  color: #ff9000;
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align links to the right */
 }
 
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:focus .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-  color: black;
+.navbar-nav .nav-link {
+  color: #FF9000; /* Set link color to orange */
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
+.navbar-nav .nav-link:hover {
+  color: #333; /* Change link color on hover */
+}
+
+.navbar-toggler-icon {
+  color: #FF9000; /* Set color to orange */
+}
 /*# sourceMappingURL=style.css.map */
 
 #typed-text {
