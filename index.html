@@ -101,14 +101,20 @@
 	</nav>
 	
 	<script>
-		// Function to close the navbar collapse and navbar items after a short delay
+		// Function to close the navbar collapse and navbar items
 		function closeNavbar() {
-
-				$('.navbar-collapse').collapse('hide');
-				$('.navbar-collapse .nav-item').removeClass('show');
-
+			$('.navbar-collapse').collapse('hide');
+			$('.navbar-collapse .nav-item').removeClass('show');
 		}
+	
+		// Add an event listener to each navbar link
+		$(document).ready(function () {
+			$('.navbar-nav .nav-link').on('click', function () {
+				closeNavbar(); // Call the closeNavbar function when a navbar link is clicked
+			});
+		});
 	</script>
+	
 	
 	
 	
