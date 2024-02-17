@@ -1372,13 +1372,13 @@ input[type="text"] {
 
 .navbar-brand {
   font-family: 'Kaushan Script', cursive;
-  font-size: 26px;
+  font-size: 26px !important; /* Ensure brand size remains consistent */
   color: #000000;
   margin: 0;
 }
 
 .navbar-toggler-icon {
-  color: #000000 !important;
+  color: #000000 !important; /* Set the toggler icon color to black */
 }
 
 .navbar-nav {
@@ -1398,6 +1398,7 @@ input[type="text"] {
 .navbar-nav .nav-link:hover {
   color: #333333;
 }
+
 
 
 /*# sourceMappingURL=style.css.map */
