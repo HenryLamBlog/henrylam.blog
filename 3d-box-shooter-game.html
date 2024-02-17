@@ -37,11 +37,14 @@
             font-family: 'Lato', sans-serif;
             font-weight: 300;
             font-size: 18px;
-            color: #4d4d4d;
+            color: #666;
             background-color: #f8f9fa;
             margin: 0;
             overflow-x: hidden;
-        }.custom-toggler.navbar-toggler {
+            line-height: 1.8; /* Increase line height for better readability */
+        }
+
+        .custom-toggler.navbar-toggler {
             border-color: #ff9000; /* Change the border color to white */
         }
         .navbar-brand{
@@ -71,15 +74,38 @@
             flex-basis: 100%;
             flex-grow: 1;
         }
-        /* Style the headings and paragraphs */
-        h1, h2, h3 {
+        /* Adjust font weights and sizes for headings */
+        h1 {
             color: #3a170f;
-            font-family: 'Lato', monospace;
-            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700; /* Change font weight to 700 */
+            font-size: 2.25em; /* Increase font size */
+            line-height: 1.6; /* Increase line height for better readability */
         }
+
+        h2 {
+            color: #3a170f;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700; /* Change font weight to 700 */
+            font-size: 1.7em; /* Increase font size */
+            line-height: 1.6; /* Increase line height for better readability */
+        }
+
+        h3 {
+            color: #3a170f;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700; /* Change font weight to 700 */
+            font-size: 1.4em; /* Increase font size */
+            line-height: 1.6; /* Increase line height for better readability */
+        }
+
+        /* Increase line spacing between paragraphs */
         p {
             color: #666;
+            font-size: 18px; /* Adjust paragraph font size */
+            line-height: 1.8; /* Increase line height for better readability */
         }
+
         img.result-pic {
             width: 80%;
             height: auto;
@@ -122,7 +148,7 @@
             left: 0;
             transform: rotate(0deg);
             transition: .25s ease-in-out;
-        }
+          }
                 
         .navbar-toggler.collapsed .toggler-icon {
             background: #ffffff;
