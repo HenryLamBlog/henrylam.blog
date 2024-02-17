@@ -128,19 +128,19 @@
 </nav>
 
 <script>
-    // Initialize toggle state
-    var isToggled = false;
+	$(document).ready(function () {
+		var isToggled = false;
 
-    // Function to handle the toggling of the navbar icon
-    $('.navbar-toggler').click(function() {
-        if (!isToggled) {
-            $(this).find('.initial-icon').removeClass('navbar-toggler-icon').addClass('new-icon');
-            isToggled = true;
-        } else {
-            $(this).find('.new-icon').removeClass('new-icon').addClass('navbar-toggler-icon');
-            isToggled = false;
-        }
-    });
+		$('.navbar-toggler').click(function () {
+			if (!isToggled) {
+				$(this).find('.initial-icon').removeClass('navbar-toggler-icon').addClass('new-icon');
+				isToggled = true;
+			} else {
+				$(this).find('.new-icon').removeClass('new-icon').addClass('navbar-toggler-icon');
+				isToggled = false;
+			}
+		});
+	});
 </script>
 
 
