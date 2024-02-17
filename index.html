@@ -133,11 +133,14 @@
         var $icon = $(this).find('.navbar-toggler-icon');
         if ($icon.hasClass('initial-icon')) {
             $icon.removeClass('initial-icon').addClass('new-icon');
-        } else {
+        } else if ($icon.hasClass('new-icon')) {
             $icon.removeClass('new-icon').addClass('initial-icon');
+        } else {
+            $icon.addClass('initial-icon');
         }
     });
 </script>
+
 
 	
 	
