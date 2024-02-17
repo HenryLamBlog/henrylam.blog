@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #fff;
   margin-right: -30px;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #fh5co-header .display-tc h1,
   .fh5co-cover .display-tc h1 {
     font-size: 34px;
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6, figure {
     height: 3px;
     margin-right: -15px;
   }
-} */
+}
 #fh5co-header .display-tc h2,
 .fh5co-cover .display-tc h2 {
   font-size: 20px;
@@ -194,12 +194,12 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: 300;
   font-size: 18px;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #fh5co-header .display-tc h3,
   .fh5co-cover .display-tc h3 {
     font-size: 14px;
   }
-} */
+}
 #fh5co-header .display-tc .profile-thumb,
 .fh5co-cover .display-tc .profile-thumb {
   background-size: cover !important;
@@ -237,11 +237,11 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-bottom: 40px;
   float: left;
 }
-/* @media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
   #fh5co-features .feature-left {
     margin-bottom: 30px;
   }
-} */
+}
 #fh5co-features .feature-left .icon {
   display: table;
   text-align: center;
@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 7em 0;
   clear: both;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #about,
   #resume,
   #fh5co-skills,
@@ -303,7 +303,7 @@ h1, h2, h3, h4, h5, h6, figure {
   #fh5co-contact {
     padding: 3em 0;
   }
-} */
+}
 
 #fh5co-started {
   border-bottom: none;
@@ -323,11 +323,11 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 90%;
   float: left;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .info {
     margin-bottom: 3em;
   }
-} */
+}
 .info li {
   width: 100%;
   float: left;
@@ -448,7 +448,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 50%;
   margin-left: 0px;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .timeline:before {
     margin-left: -64px;
   }
@@ -462,7 +462,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .timeline .timeline-heading {
     margin-bottom: 30px;
   }
-} */
+}
 .timeline .timeline-heading > div h3 {
   display: inline-block;
   padding: 7px 15px;
@@ -476,7 +476,7 @@ h1, h2, h3, h4, h5, h6, figure {
   -ms-border-radius: 4px;
   border-radius: 4px;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .timeline .timeline-heading > div h3 {
     float: left;
     margin-bottom: 0;
@@ -490,7 +490,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .timeline > li {
     margin-bottom: 4em;
   }
-} */
+}
 .timeline > li:before, .timeline > li:after {
   content: " ";
   display: table;
@@ -508,7 +508,7 @@ h1, h2, h3, h4, h5, h6, figure {
   -ms-border-radius: 4px;
   border-radius: 4px;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .timeline > li > .timeline-panel {
     width: 85% !important;
   }
@@ -523,7 +523,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .timeline > li > .timeline-panel:after {
     top: 31px;
   }
-} */
+}
 .timeline > li > .timeline-badge {
   color: #fff;
   width: 44px;
@@ -543,7 +543,7 @@ h1, h2, h3, h4, h5, h6, figure {
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .timeline > li > .timeline-badge {
     margin-left: -10px !important;
   }
@@ -552,7 +552,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .timeline > li > .timeline-badge {
     margin-left: -10px !important;
   }
-} */
+}
 .timeline > li > .timeline-badge i {
   display: table-cell;
   vertical-align: middle;
@@ -562,11 +562,11 @@ h1, h2, h3, h4, h5, h6, figure {
 .timeline > li.timeline-unverted {
   text-align: right;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .timeline > li.timeline-unverted {
     text-align: left;
   }
-} */
+}
 .timeline > li.timeline-inverted > .timeline-panel {
   float: right;
 }
@@ -604,7 +604,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-top: 5px;
 }
 
-/* @media (max-width: 992px) {
+@media (max-width: 992px) {
   ul.timeline:before {
     left: 90px;
   }
@@ -638,7 +638,7 @@ h1, h2, h3, h4, h5, h6, figure {
     left: -14px;
     right: auto;
   }
-} */
+}
 .progress-wrap {
   width: 100%;
   float: left;
@@ -720,7 +720,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: table;
   overflow: hidden;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .work {
     height: 400px;
   }
@@ -729,7 +729,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .work {
     height: 270px;
   }
-} */
+}
 .work .desc {
   display: table-cell;
   vertical-align: middle;
@@ -756,7 +756,7 @@ h1, h2, h3, h4, h5, h6, figure {
   -webkit-transform: translate3d(0, 15px, 0);
   transform: translate3d(0, 15px, 0);
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .work .desc {
     opacity: 1;
     background: rgba(255, 255, 255, 0.6);
@@ -769,7 +769,7 @@ h1, h2, h3, h4, h5, h6, figure {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-} */
+}
 .work:hover .desc {
   opacity: 1;
 }
@@ -817,11 +817,11 @@ h1, h2, h3, h4, h5, h6, figure {
   float: left;
   margin-bottom: 40px;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .fh5co-blog {
     width: 100%;
   }
-} */
+}
 .fh5co-blog .blog-bg {
   display: block;
   width: 100%;
@@ -831,7 +831,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   height: 300px;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .fh5co-blog .blog-bg {
     height: 400px;
   }
@@ -840,7 +840,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .fh5co-blog .blog-bg {
     height: 270px;
   }
-} */
+}
 .fh5co-blog .blog-text {
   margin-bottom: 30px;
   position: relative;
@@ -855,11 +855,11 @@ h1, h2, h3, h4, h5, h6, figure {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .fh5co-blog .blog-text {
     padding: 10px;
   }
-} */
+}
 .fh5co-blog .blog-text span {
   display: inline-block;
   margin-bottom: 20px;
@@ -877,11 +877,11 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   margin-left: 10px;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .fh5co-blog .blog-text .stuff li {
     font-size: 14px;
   }
-} */
+}
 .fh5co-blog .blog-text .stuff li:first-child {
   margin-left: 0;
 }
@@ -923,11 +923,11 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-consult .video, #fh5co-consult .choose {
   display: inline-block;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #fh5co-consult .video, #fh5co-consult .choose {
     width: 100% !important;
   }
-} */
+}
 #fh5co-consult .video {
   display: table;
   width: 50%;
@@ -944,30 +944,30 @@ h1, h2, h3, h4, h5, h6, figure {
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #fh5co-consult .video {
     display: none;
   }
-} */
+}
 #fh5co-consult .choose {
   width: 50%;
   padding: 4em;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #fh5co-consult .choose {
     width: 100%;
     padding: 4em 1em;
   }
-} */
+}
 
 .fh5co-video {
   overflow: hidden;
 }
-/* @media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .fh5co-video {
     height: 450px;
   }
-} */
+}
 .fh5co-video .overlay {
   position: absolute;
   top: 0;
@@ -1044,11 +1044,11 @@ input[type="text"] {
   height: 500px;
   position: relative;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #map {
     height: 200px;
   }
-} */
+}
 
 .gototop {
   position: fixed;
@@ -1369,11 +1369,11 @@ input[type="text"] {
   overflow: hidden; /* Hide overflowing text */
 }
 
-/* @media (min-width: 576px){
+@media (min-width: 576px){
 .navbar-expand-sm .navbar-nav {
     -ms-flex-direction: row;
     flex-direction: row;
-}} */
+}}
 @media (max-width: 992px){
 #main-text{
     padding: 0;
