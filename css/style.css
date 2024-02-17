@@ -1361,29 +1361,6 @@ input[type="text"] {
 
 
 /* change the background color */
-.navbar-custom {
-  background-color: #fff;
-}
-
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-  color: #000;
-  font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
-  font-size: 26px;
-}
-
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-  color: #ff9000;
-}
-
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:focus .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-  color: black;
-}
 
 /*# sourceMappingURL=style.css.map */
 
