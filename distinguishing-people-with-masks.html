@@ -197,14 +197,19 @@ text-decoration-line: none !important;
     <p>For humans, recognizing whether someone is wearing a mask involves a combination of facial features, context, and intuition. But for a machine, this task presents unique challenges. Would the absence of a visible mouth confuse the algorithm? Could it learn to differentiate between masked and unmasked faces based solely on visual cues?</p>
 
     <h2>The Approach</h2>
+
     <p>To tackle this challenge, I decided to leverage the power of machine learning. The project involved several key steps:</p>
 
-    <ol>
-        <li><strong>Data Collection:</strong> The first step was to gather a diverse dataset containing images of people both wearing and not wearing masks.</li>
-        <li><strong>Data Preprocessing:</strong> With the dataset in hand, the next step was to preprocess the images to standardize the format, remove noise, and augment the data for improved model performance.</li>
-        <li><strong>Model Development:</strong> For the model architecture, I experimented with several deep learning frameworks, ultimately settling on a convolutional neural network (CNN).</li>
-        <li><strong>Training and Evaluation:</strong> The trained model underwent rigorous testing using a separate validation dataset to assess its performance.</li>
-    </ol>
+    <h3>Dataset Description:</h3>
+    <p>For this project, I utilized the Face Mask Detection Dataset, which comprises 7,553 RGB images categorized into two folders: "with_mask" and "without_mask." The images are named according to their labels, indicating whether they depict faces with masks or without masks. Specifically, there are 3,725 images of faces with masks and 3,828 images of faces without masks. This dataset provides a comprehensive representation of masked and unmasked faces, allowing for robust model training and evaluation.</p>
+
+    <h3>Data Preparation:</h3>
+    <p>After acquiring the dataset, the next crucial step was data preparation. I meticulously organized the images and split them into training, validation, and testing sets. Following best practices in machine learning, I allocated 70% of the data for training, ensuring that the model learns from a diverse array of examples. The remaining 30% was divided equally between the validation and testing sets, enabling us to assess the model's performance and generalize its learnings to unseen data.</p>
+
+    <p>By adhering to this rigorous data preparation process, I aimed to create a balanced and representative dataset that would serve as the foundation for our machine learning endeavors.</p>
+
+    <p>With the dataset primed and ready, we ventured into the realm of model development, where the true magic of machine learning unfolds.</p>
+
 
     <h2>The Results</h2>
     <p>After extensive experimentation and refinement, the machine learning model achieved impressive results in distinguishing people with masks. With a high degree of accuracy, the model could reliably classify images as either masked or unmasked, demonstrating its ability to generalize across different individuals and environmental conditions.</p>
