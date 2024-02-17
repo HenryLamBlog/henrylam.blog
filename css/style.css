@@ -1316,13 +1316,13 @@ input[type="text"] {
   display: flex;
   align-items: center;
   justify-content: flex-end; /* Align links to the right */
-  margin-right: 20px; /* Add some margin to separate from the edge */
+  margin-left: auto!important; /* Add some margin to separate from the edge */
 }
 
 .navbar-nav .nav-link {
   color: #FF9000;
   font-size: 18px;
-  margin-left: 20px; /* Add margin between links */
+  margin-left: auto!important; /* Add margin between links */
   text-decoration: none;
   transition: color 0.3s ease;
 }
