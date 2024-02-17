@@ -1332,7 +1332,7 @@ input[type="text"] {
 }  */
 
 
-#main-navbar {
+/* #main-navbar {
   position: fixed;
   width: 100%;
   top: 0;
@@ -1353,11 +1353,11 @@ input[type="text"] {
   display: flex;
   align-items: center;
   justify-content: flex-end; /* Align links to the right */
-}
+/* }
 
 #main-navbar .navbar-nav .nav-link {
   color: #FF90
-}
+}  */
 
 /*# sourceMappingURL=style.css.map */
 
