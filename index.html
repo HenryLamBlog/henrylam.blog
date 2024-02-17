@@ -152,7 +152,12 @@
 		margin-top: 5px; /* Add space between each content block */
 	}
 	
-
+	.img-fluid {
+		width: 100%;
+		height: 100%;
+		object-fit: cover; /* This property ensures the image covers the entire container */
+	  }
+	  
 </style>
 <body>
 	
@@ -314,31 +319,8 @@
 			</div>
 		</div>
 	</div>
-	<div id="projects" class="fh5co-bg-dark">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Projects</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 text-center col-padding animate-box">
-					<div class="work">
-						<a href="https://henrylam.blog/colorization-of-grayscale-images">
-							<img src="images/Automatic-Colorization.png" class="img-fluid" alt="Colorization of Grayscale Images">
-							<div class="overlay">
-								<div class="overlay-title">Colorization of Grayscale Images</div>
-								<div class="overlay-description">Computational Imagery</div>
-							</div>
-						</a>
-					</div>
-				</div>
-				<!-- Repeat the same structure for other projects -->
-			</div>
-		</div>
-	</div>
 	
-<!-- 	
+	
 	<div id="projects" class="fh5co-bg-dark">
 		<div class="container">
 			<div class="row animate-box">
@@ -349,7 +331,8 @@
 			<div class="row">
 				<div class="col-md-3 text-center col-padding animate-box">
 					<div class="work">
-						<a href="https://henrylam.blog/colorization-of-grayscale-images" style="background-image: url(images/Automatic-Colorization.png);background-size: cover; background-position: center;">
+						<a href="https://henrylam.blog/colorization-of-grayscale-images" >
+							<img src="images/Automatic-Colorization.png" alt="Colorization of Grayscale Images" class="img-fluid">
 							<div class="overlay">
 								<div class="overlay-title">Colorization of Grayscale Images</div>
 								<div class="overlay-description">Computational Imagery</div>
@@ -359,7 +342,8 @@
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
 					<div class="work">
-						<a href="https://henrylam.blog/maze-game-implementing-bfs-algorithm" style="background-image: url(images/short_path.png);background-size: cover; background-position: center;">
+						<a href="https://henrylam.blog/maze-game-implementing-bfs-algorithm">
+							<img src="images/short_path.png" alt="Maze Game" class="img-fluid">
 							<div class="overlay">
 								<div class="overlay-title">Maze Game</div>
 								<div class="overlay-description">BFS Algorithm</div>
@@ -369,7 +353,8 @@
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
 					<div class="work">
-						<a href="https://henrylam.blog/robot-controlled-vehicle" style="background-image: url(images/robot.JPG);background-size: cover; background-position: center;">
+						<a href="https://henrylam.blog/robot-controlled-vehicle">
+							<img src="images/robot.png" alt="Robot-Controlled Vehicle" class="img-fluid">
 							<div class="overlay">
 								<div class="overlay-title">Robot-Controlled Vehicle</div>
 								<div class="overlay-description">Lab</div>
@@ -379,7 +364,8 @@
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
 					<div class="work">
-						<a href="https://henrylam.blog/assembling-iphone-from-parts" style="background-image: url(images/iphone.PNG);background-size: cover; background-position: center;">
+						<a href="https://henrylam.blog/assembling-iphone-from-parts">
+							<img src="images/iphone.PNG" alt="Assembling iPhone from parts" class="img-fluid">
 							<div class="overlay">
 								<div class="overlay-title">Assembling iPhone from parts</div>
 								<div class="overlay-description">Hardware</div>
@@ -389,7 +375,8 @@
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
 					<div class="work">
-						<a href="https://henrylam.blog/3d-box-shooter-game" style="background-image: url(images/box.png);background-size: cover; background-position: center;">
+						<a href="https://henrylam.blog/3d-box-shooter-game">
+							<img src="images/box.png" alt="3D Box Shooter Game" class="img-fluid">
 							<div class="overlay">
 								<div class="overlay-title">3D Box Shooter Game</div>
 								<div class="overlay-description">Game Development</div>
@@ -399,7 +386,8 @@
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
 					<div class="work">
-						<a href="https://henrylam.blog/roller-madness" style="background-image: url(images/roller_madness2.png);background-size: cover; background-position: center;">
+						<a href="https://henrylam.blog/roller-madness">
+							<img src="images/roller_madness2.png" alt="Roller Madness Game" class="img-fluid">
 							<div class="overlay">
 								<div class="overlay-title">Roller Madness Game</div>
 								<div class="overlay-description">Game Development</div>
@@ -409,7 +397,8 @@
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
 					<div class="work">
-						<a href="https://henrylam.blog/distinguishing-people-with-masks" style="background-image: url(images/masks.png);background-size: cover; background-position: center;">
+						<a href="https://henrylam.blog/distinguishing-people-with-masks">
+							<img src="images/masks.png" alt="Distinguishing individuals with masks" class="img-fluid">
 							<div class="overlay">
 								<div class="overlay-title">Distinguishing individuals with masks</div>
 								<div class="overlay-description">Machine Learning</div>
@@ -419,7 +408,8 @@
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
 					<div class="work">
-						<a href="#" style="background-image: url(images/carbon2.jpg);background-size: cover; background-position: center;">
+						<a href="#" >
+							<img src="images/carbon.png" alt="Carbon Credit Tokenization" class="img-fluid">
 							<div class="overlay">
 								<div class="overlay-title">Carbon Credit Tokenization</div>
 								<div class="overlay-description">Report</div>
@@ -430,7 +420,7 @@
 			</div>
 		</div>
 	</div>
-	 -->
+	
 
 	<div id="fh5co-footer">
 		<div class="container">
