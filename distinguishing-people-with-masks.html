@@ -193,7 +193,8 @@ text-decoration-line: none !important;
 
     <h2>The Motivation</h2>
     <p>The inspiration for this project stemmed from everyday observations during the pandemic. Walking through crowded streets or entering public spaces, one could easily discern who was wearing a mask and who wasn't. However, as someone intrigued by technology and artificial intelligence, I began to wonder: How does a computer perceive this distinction?</p>
-
+    <img src="images/masksupdate_blog.jpg" alt="People wearing masks" class="result-pic">
+    <p class="lab-text">People wearing masks</p>
     <p>For humans, recognizing whether someone is wearing a mask involves a combination of facial features, context, and intuition. But for a machine, this task presents unique challenges. Would the absence of a visible mouth confuse the algorithm? Could it learn to differentiate between masked and unmasked faces based solely on visual cues?</p>
 
     <h2>The Approach</h2>
@@ -202,7 +203,7 @@ text-decoration-line: none !important;
 
     <h3>Dataset Description:</h3>
     <p>For this project, I utilized the Face Mask Detection Dataset, which comprises 7,553 RGB images categorized into two folders: "with_mask" and "without_mask." The images are named according to their labels, indicating whether they depict faces with masks or without masks. Specifically, there are 3,725 images of faces with masks and 3,828 images of faces without masks. This dataset provides a comprehensive representation of masked and unmasked faces, allowing for robust model training and evaluation.</p>
-
+    <img src="images/dataset-cover.jpg" alt="Masks cover" class="result-pic">
     <p>I gathered the dataset from <a href="https://www.kaggle.com/omkargurav/face-mask-dataset" target="_blank">Kaggle</a>. If you also want to try out this dataset, follow the provided link and proceed with the download instructions to access the dataset for your machine learning projects.</p>
 
     <h3>Data Preparation:</h3>
@@ -217,6 +218,10 @@ text-decoration-line: none !important;
     <p>After extensive experimentation and refinement, the machine learning model achieved impressive results in distinguishing people with masks. With a high degree of accuracy, the model could reliably classify images as either masked or unmasked, demonstrating its ability to generalize across different individuals and environmental conditions.</p>
 
     <p>The success of the project highlights the potential of machine learning in addressing real-world challenges, especially in the context of public health and safety. By automating the process of identifying individuals wearing masks, such technology could complement existing efforts to mitigate the spread of infectious diseases.</p>
+    <img src="images/maskON.png" alt="Correct prediction with mask" class="result-pic">
+    <p class="lab-text">Correct prediction with mask</p>
+    <img src="images/maskOFF.png" alt="Correct prediction without mask" class="result-pic">
+    <p class="lab-text">Correct prediction without mask</p>
     <h2>Improvements</h2>
     <p>However, the model that had great success at recognizing individuals with and without masks. It had some difficulty differentiating multiple people at once if they had mashs on or not. Therefore, next time we could improve the model by increasing the size and diversity of our training dataset, helping to equip our model to generalize across different scenarios, thereby enhancing its performance and robustness.</p>
     <h2>Conclusion</h2>
