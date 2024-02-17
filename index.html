@@ -128,21 +128,16 @@
 </nav>
 
 <script>
-	$(document).ready(function () {
-		var isToggled = false;
-
-		$('.navbar-toggler').click(function () {
-			if (!isToggled) {
-				$(this).find('.initial-icon').removeClass('navbar-toggler-icon').addClass('new-icon');
-				isToggled = true;
-			} else {
-				$(this).find('.new-icon').removeClass('new-icon').addClass('navbar-toggler-icon');
-				isToggled = false;
-			}
-		});
-	});
+    // Function to handle the toggling of the navbar icon
+    $('.navbar-toggler').click(function() {
+        var $icon = $(this).find('.navbar-toggler-icon');
+        if ($icon.hasClass('initial-icon')) {
+            $icon.removeClass('initial-icon').addClass('new-icon');
+        } else {
+            $icon.removeClass('new-icon').addClass('initial-icon');
+        }
+    });
 </script>
-
 
 	
 	
