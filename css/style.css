@@ -1347,9 +1347,9 @@ input[type="text"] {
   color: #333333; /* Color of the nav links on hover */
 }
 
-/* Align nav items to the right */
-.navbar-nav {
-  margin-left: auto; /* Push nav items to the right */
+
+.ml-auto, .mx-auto {
+  margin-left: auto!important;
 }
 /*# sourceMappingURL=style.css.map */
 
@@ -1374,7 +1374,11 @@ input[type="text"] {
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
 }} */
-
+@media (min-width: 576px){
+.navbar-expand-sm .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+}}
 @media (max-width: 992px){
 #main-text{
     padding: 0;
