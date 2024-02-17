@@ -1296,72 +1296,6 @@ input[type="text"] {
 /* Add this CSS to make the navbar fixed */
 /* Adjustments for the fixed navbar */
 
-/* #main-navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 9999;
-  background-color: #fff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand h1 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 26px;
-  color: #000000;
-  margin: 0;
-}
-
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; 
-   margin-left: auto!important; 
-} 
-
-.navbar-nav .nav-link {
-  color: #FF9000;
-  font-size: 18px;
-  margin-left: auto!important;
-  text-decoration: none;
-  transition: color 0.3s ease;
-} 
-
-.navbar-nav .nav-link:hover {
-  color: #333333;
-}  */
-
-
-/* #main-navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 9999;
-  background-color: #fff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#main-navbar .navbar-brand h1 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 26px;
-  color: #000000;
-  margin: 0;
-}
-
-#main-navbar .navbar-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; 
- }
-
-#main-navbar .navbar-nav .nav-link {
-  color: #FF90
-}  */
-
-
-/* change the background color */
 
 /*# sourceMappingURL=style.css.map */
 
@@ -1413,7 +1347,7 @@ input[type="text"] {
 .video-container {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 80%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio (56.25 / 100) */
 }
 .video-container iframe {
