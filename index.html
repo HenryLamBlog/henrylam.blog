@@ -101,11 +101,15 @@
 	</nav>
 	
 	<script>
-		// Function to close the navbar collapse after a short delay
+		// Function to close the navbar collapse and navbar items after a short delay
 		function closeNavbar() {
-			$('.navbar-collapse').collapse('hide');
+			setTimeout(function () {
+				$('.navbar-collapse').collapse('hide');
+				$('.navbar-collapse .nav-item').removeClass('show');
+			}, 100);
 		}
 	</script>
+	
 	
 	
 	
