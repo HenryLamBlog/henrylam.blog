@@ -16,34 +16,41 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <style>
-        /* Adjust the background color to the orange theme */
+    <link rel="manifest" href="favicon/site.webmanifest"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-K03ESX8LJE"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-K03ESX8LJE');
+        </script>
+        <style>
+            /* Adjust the background color to the orange theme */
         body {
             /*font-family: 'Open Sans', monospace;*/
             font-family: 'Lato', sans-serif;
             font-weight: 300;
             font-size: 18px;
-            color: #4d4d4d;
+            color: #666;
             background-color: #f8f9fa;
             margin: 0;
             overflow-x: hidden;
+            line-height: 1.8; /* Increase line height for better readability */
         }
-        /* Adjust the spacing and margins used in the rest of your page */
-        .project-details {
-            padding: 100px;
-            margin: 0 auto;
-            width: 60%;
-            position: relative;
+
+        .custom-toggler.navbar-toggler {
+            border-color: #ff9000; /* Change the border color to white */
         }
-        /* Sticky Navigation Bar */
-        .navbar {
+        .navbar-brand{
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #FF9000 !important;
-            padding: 10px 20px;
-            z-index: 9999;
+            align-items: center; /* Vertically center the content */
+            height: 60px; /* Set the height of the navbar */
+            margin-right: auto;
         }
         .navbar-brand h1 {
             font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
@@ -51,20 +58,51 @@
             color: #ffffff;
             margin: 0;
         }
-        .navbar-nav .nav-link {
+    
+        .navbar-nav .nav-item .nav-link {
+            font-family: 'Lato', sans-serif;
             color: #ffffff;
             font-size: 18px;
-            display: flex;
             align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
         }
-        /* Style the headings and paragraphs */
-        h1, h2, h3 {
+        
+        .navbar-collapse {
+            flex-basis: 100%;
+            flex-grow: 1;
+        }
+        /* Adjust font weights and sizes for headings */
+        h1 {
             color: #3a170f;
-            font-family: 'Lato', monospace;
-            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700; /* Change font weight to 700 */
+            font-size: 2.25em; /* Increase font size */
+            line-height: 1.6; /* Increase line height for better readability */
         }
+
+        h2 {
+            color: #3a170f;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700; /* Change font weight to 700 */
+            font-size: 1.7em; /* Increase font size */
+            line-height: 1.6; /* Increase line height for better readability */
+        }
+
+        h3 {
+            color: #3a170f;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700; /* Change font weight to 700 */
+            font-size: 1.4em; /* Increase font size */
+            line-height: 1.6; /* Increase line height for better readability */
+        }
+
+        /* Increase line spacing between paragraphs */
         p {
             color: #666;
+            font-size: 18px; /* Adjust paragraph font size */
+            line-height: 1.8; /* Increase line height for better readability */
         }
         img.result-pic {
             width: 80%;
@@ -82,51 +120,68 @@
             text-align: center;
             font-style: italic;
             color: #888;
-        }
-    </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K03ESX8LJE"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        }/* Override Bootstrap link styles */
+  a {
+    text-decoration: none !important; /* Remove underline */
+text-decoration-line: none !important;
+    color: #ff9000; /* Change link color to black */
+}
 
-    gtag('config', 'G-K03ESX8LJE');
-    </script>
+/* Override Bootstrap link hover styles */
+a:hover {
+    color: #ff9000; /* Change link color on hover */
+text-decoration: none !important; /* Remove underline */
+text-decoration-line: none !important;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: .1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+        
+.navbar-toggler.collapsed .toggler-icon {
+    background: #ffffff;
+}
+
+</style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm sticky-top navbar-light" id="main-navbar">
-        <div class="container">
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="/">
-                <h1>Henry Lam</h1>
-            </a>
-            <!-- Links -->
-            <div class="collapse navbar-collapse" id="main-navbar">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a id="about-nav" class="nav-link theme2" href="https://henrylam.blog/#about">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="resume-nav" class="nav-link theme2" href="https://henrylam.blog/#resume">My Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="projects-nav" class="nav-link theme2" href="https://henrylam.blog/#projects">Projects</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <script>
-        function closeNavbar() {
-            // Collapse the navbar when a link is clicked
-            var navbarCollapse = document.getElementById('main-navbar');
-            if (navbarCollapse.classList.contains('show')) {
-                navbarCollapse.classList.remove('show');
-            }
-        }
-    </script>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm navbar-custom navbar-light fixed-top" style="background-color: #ff9000;">
+<div class="container">
+    <a class="navbar-brand" href="/"><h1>Henry Lam</h1></a>
+
+    <!-- Toggle button for smaller devices -->
+    <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a id="about-nav" class="nav-link theme2" href="https://henrylam.blog/#about">About Me</a>
+            </li>
+            <li class="nav-item">
+                <a id="resume-nav" class="nav-link theme2" href="https://henrylam.blog/#resume">Resume</a>
+            </li>
+            <li class="nav-item">
+                <a id="projects-nav" class="nav-link theme2" href="https://henrylam.blog/#projects">Projects</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
     <!-- Content specific to the Colorization of Grayscale Images project -->
     <div class="main-container">
         <div id="main-text">
