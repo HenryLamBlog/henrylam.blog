@@ -154,34 +154,26 @@
         }
 
 
-        #suggestions-row {
-            
-            background-color: #f8f9fa;
-        }
         
         .suggested-project {
-            
+            margin-top: 5%;
             margin-bottom: 30px;
-            border: 1px solid #f8f9fa;
-            border-radius: 15px;
             overflow: hidden;
-            transition: transform .2s ease-in-out;
+            border-radius: 15px; /* Adjust the border-radius to your preference */
+
         }
-        
         .suggested-project:hover {
-
+            
             transform: translateY(-5px);
+            transition: .5s ease;
 
         }
         
-        .img-col {
-
-
-            text-align: center;
-        }
+       
+        
         
         .project-img {
-            max-width: 40%;
+            width: 50%;
             height: auto;
             border-radius: 15px; /* Adjust the border-radius to your preference */
 		    overflow: hidden; /* Ensure the rounded corners are applied */
@@ -189,13 +181,25 @@
             object-fit: cover;
             aspect-ratio: 1; /* Maintain a 1:1 aspect ratio (square) */
 
+
         }
         
         .project-details {
+        
+            text-align: left;
 
-            background-color: #f8f9fa;
             
         }
+        .img-col {
+            padding-right: 0!important;
+            margin-right: -10%;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #fff;
+            margin: 30px 0; /* Add 30px white space above and below the <hr> element */
+          }
 
     </style>
     <!-- Google tag (gtag.js) -->
@@ -281,9 +285,11 @@
             <p>In summary, while challenges remain, the integration of blockchain technology into carbon credit systems offers a pathway towards more effective climate mitigation strategies and sustainable development goals.</p>
 
             <p>You can read our written report <a href="https://drive.google.com/file/d/1W6-yw5w0_51-KAirxSmTcplalFEY0Vo-/view?usp=sharing" target="_blank">here</a>.</p>
+
         </div>
-        <p></p>
-            <h2>Checkout My Other Projects:</h2>
+        <hr>
+            <h2>My Other Projects:</h2>
+            <p></p>
             <!-- Project 1 -->
             <div class="suggested-project">
                 <a href="https://henrylam.blog/colorization-of-grayscale-images" class="project-link">
@@ -293,8 +299,7 @@
                         </div>
                         <div class="col-md-8 col-12 project-details">
                             <h3 class="post-title">Colorization of Grayscale Images</h3>
-                            <p class="post-snippet">abcd</p>
-                            <!-- You can add other details like date, etc. -->
+                            <p class="post-snippet">A comparative analysis of colorization techniques for grayscale images</p>
                         </div>
                     </div>
                 </a>
@@ -308,7 +313,7 @@
                         </div>
                         <div class="col-md-8 col-12 project-details">
                             <h3 class="post-title">Maze Game</h3>
-                            <p class="post-snippet">Project 2 Description</p>
+                            <p class="post-snippet">Tom and Jerry Maze Game implementing BFS algorithm</p>
                         </div>
                     </div>
                 </a>
@@ -321,8 +326,8 @@
                             <img src="images/robot.JPG" alt="Robot Controlled Vehicle" class="project-img">
                         </div>
                         <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Robot Controlled Vehicle</h3>
-                            <p class="post-snippet">Project 3 Description</p>
+                            <h3 class="post-title">Robot-Controlled Vehicle</h3>
+                            <p class="post-snippet">A robot vehicle equipped with control circuits and sensors</p>
                         </div>
                     </div>
                 </a>
