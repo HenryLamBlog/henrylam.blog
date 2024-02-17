@@ -1427,7 +1427,7 @@ input[type="text"] {
   height: 20px;
   position: relative;
   transition: .5s ease-in-out;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .navbar-toggler,
