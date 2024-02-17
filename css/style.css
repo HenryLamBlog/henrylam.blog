@@ -1301,46 +1301,34 @@ input[type="text"] {
   top: 0;
   z-index: 9999;
   background-color: #fff;
-}
-
-.navbar {
-  display: flex;
-  align-items: center; /* Align items vertically */
-  justify-content: space-between;
-  background-color: #ffffff !important; /* Background color of the navbar */
-  padding: 10px 20px; /* Adjust padding as needed */
-  z-index: 9999;
-}
-
-/* Center the brand */
-.navbar-brand {
-  display: flex;
-  align-items: center; /* Align items vertically */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand h1 {
-  font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
-  font-size: 26px; /* Adjust the font size of the brand */
-  color: #000000; /* Color of the brand text */
-  margin: 0; /* Remove any default margin */
+  font-family: 'Kaushan Script', cursive;
+  font-size: 26px;
+  color: #000000;
+  margin: 0;
 }
 
-/* Adjust the navbar links */
 .navbar-nav {
   display: flex;
-  align-items: center; /* Align items vertically */
-  margin-left: auto; /* Push the links to the right */
+  align-items: center;
+  justify-content: flex-end; /* Align links to the right */
+  margin-right: 20px; /* Add some margin to separate from the edge */
 }
 
 .navbar-nav .nav-link {
-  color: #FF9000; /* Color of the nav links */
-  font-size: 18px; /* Font size of the nav links */
-  display: flex;
-  align-items: center; /* Align items vertically */
+  color: #FF9000;
+  font-size: 18px;
+  margin-left: 20px; /* Add margin between links */
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #333333; /* Color of the nav links on hover */
+  color: #333333;
 }
 /*# sourceMappingURL=style.css.map */
 
