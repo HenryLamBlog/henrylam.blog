@@ -1360,41 +1360,33 @@ input[type="text"] {
 }  */
 
 
-#main-navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 9999;
-  background-color: #fff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.navbar {
+  background-color: #fff; /* Set background color to white */
+  padding: 10px 20px; /* Adjust padding as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
 }
 
 .navbar-brand {
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
   font-size: 26px;
-  color: #000000;
-  margin: 0;
+  color: #000; /* Set font color to black */
 }
 
 .navbar-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-left: auto!important;
-  list-style: none; /* Remove bullet points */
+  justify-content: flex-end; /* Align links to the right */
 }
 
 .navbar-nav .nav-link {
-  color: #FF9000;
+  color: #FF9000; /* Set link color to orange */
   font-size: 18px;
-  margin-left: 20px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #333333;
+  color: #333; /* Change link color on hover */
 }
 
 /*# sourceMappingURL=style.css.map */
