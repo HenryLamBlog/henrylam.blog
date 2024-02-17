@@ -1369,11 +1369,11 @@ input[type="text"] {
   overflow: hidden; /* Hide overflowing text */
 }
 
-@media (min-width: 576px){
+/* @media (min-width: 576px){
 .navbar-expand-sm .navbar-nav {
     -ms-flex-direction: row;
     flex-direction: row;
-}}
+}} */
 @media (max-width: 992px){
 #main-text{
     padding: 0;
