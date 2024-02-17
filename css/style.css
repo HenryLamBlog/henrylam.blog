@@ -1345,9 +1345,10 @@ input[type="text"] {
 
 /* Responsive YouTube Video */
 .video-container {
-    position: relative;
+    position:relative;
+    align-items: center;
     overflow: hidden;
-    width: 80%;
+    width: 90%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio (56.25 / 100) */
 }
 .video-container iframe {
