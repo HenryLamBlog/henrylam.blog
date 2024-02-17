@@ -103,6 +103,7 @@
 	.navbar-collapse {
 		flex-basis: 100%;
 		flex-grow: 1;
+		padding-right: 15%;
 	}
 </style>
 <body>
@@ -120,30 +121,21 @@
             </button>
 
             <!-- Navbar links -->
-			<div class="collapse navbar-collapse" id="navbar">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a id="about-nav" class="nav-link theme2" href="https://henrylam.blog/#about" onclick="closeNavbar()">About Me</a>
-					</li>
-					<li class="nav-item">
-						<a id="resume-nav" class="nav-link theme2" href="https://henrylam.blog/#resume" onclick="closeNavbar()">My Resume</a>
-					</li>
-					<li class="nav-item">
-						<a id="projects-nav" class="nav-link theme2" href="https://henrylam.blog/#projects" onclick="closeNavbar()">Projects</a>
-					</li>
-				</ul>
-			</div>
-
-			<script>
-				function closeNavbar() {
-					// Collapse the navbar when a link is clicked
-					var navbarCollapse = document.getElementById('navbar');
-					if (navbarCollapse.classList.contains('show')) {
-						navbarCollapse.classList.remove('show');
-					}
-				}
-			</script>
-
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a id="about-nav" class="nav-link theme2" href="https://henrylam.blog/#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="resume-nav" class="nav-link theme2" href="https://henrylam.blog/#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="projects-nav" class="nav-link theme2" href="https://henrylam.blog/#projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 	
 	
