@@ -1389,6 +1389,9 @@ input[type="text"] {
   color: #333; /* Change link color on hover */
 }
 
+.navbar-toggler-icon {
+  color: #FF9000; /* Set color to orange */
+}
 /*# sourceMappingURL=style.css.map */
 
 #typed-text {
