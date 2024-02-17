@@ -113,6 +113,24 @@
         text-decoration: none !important; /* Remove underline */
         text-decoration-line: none !important;
         }
+
+        .toggler-icon {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: .1px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+          }
+                
+        .navbar-toggler.collapsed .toggler-icon {
+            background: #ffffff;
+        }
+  
     </style>
 </head>
 <body>
