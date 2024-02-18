@@ -3,7 +3,7 @@
     <information>
         <title>Maze Game</title>
         <vendor>Your Name</vendor>
-        <homepagehref>file:///Users/henrylam/Documents/GitHub/henrylam.blog/test.html</homepagehref>
+        <homepagehref>https://henrylam.blog/test</homepagehref>
         <description>Tom and Jerry Maze Game</description>
         <offline-allowed/>
     </information>
