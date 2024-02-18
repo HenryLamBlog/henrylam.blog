@@ -157,6 +157,51 @@
         background: #ffffff;
     }
         
+.suggested-project {
+  margin-top: 5%;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 15px; /* Adjust the border-radius to your preference */
+
+}
+.suggested-project:hover {
+  
+  transform: translateY(-5px);
+  transition: .5s ease;
+
+}
+
+
+
+
+.project-img {
+  width: 50%;
+  height: auto;
+  border-radius: 15px; /* Adjust the border-radius to your preference */
+  overflow: hidden; /* Ensure the rounded corners are applied */
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1; /* Maintain a 1:1 aspect ratio (square) */
+
+
+}
+
+.project-details {
+
+  text-align: left;
+
+  
+}
+.img-col {
+  padding-right: 0!important;
+  margin-right: -10%;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #fff;
+  margin: 30px 0; /* Add 30px white space above and below the <hr> element */
+}
     </style>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
@@ -474,6 +519,53 @@
                   <li>Lam Hui Yin (Henry)</li>
               </ul>
           </div>
+          <hr>
+            <h2>My Other Projects:</h2>
+            <p></p>
+            <!-- Project 1 -->
+            <div class="suggested-project">
+              <a href="https://henrylam.blog/robot-controlled-vehicle" class="project-link">
+                  <div class="row no-gutters">
+                      <div class="col-md-4 col-12 img-col">
+                          <img src="images/robot.JPG" alt="Robot Controlled Vehicle" class="project-img">
+                      </div>
+                      <div class="col-md-8 col-12 project-details">
+                          <h3 class="post-title">Robot-Controlled Vehicle</h3>
+                          <p class="post-snippet">A robot vehicle equipped with control circuits and sensors</p>
+                      </div>
+                  </div>
+              </a>
+           </div>  
+            <div class="suggested-project">
+                <a href="https://henrylam.blog/assembling-iphone-from-parts" class="project-link">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 col-12 img-col">
+                            <img src="images/iphone.PNG" alt="Assembling iPhone from parts" class="project-img">
+                        </div>
+                        <div class="col-md-8 col-12 project-details">
+                            <h3 class="post-title">Assembling iPhone from parts</h3>
+                            <p class="post-snippet">My story of building an iPhone from scratch</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 2 -->
+            <div class="suggested-project">
+                <a href="https://henrylam.blog/3d-box-shooter-game"class="project-link"></a>
+                    <div class="row no-gutters">
+                        <div class="col-md-4 col-12 img-col">
+                            <img src="images/box.png" alt="3D Box Shooter Game" class="project-img">
+                        </div>
+                        <div class="col-md-8 col-12 project-details">
+                            <h3 class="post-title">3D Box Shooter Game</h3>
+                            <p class="post-snippet">The process of creating my 3D Box Shooter Game</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 3 -->
+            
+        </div>   
     </div>
     <!-- Footer -->
     <div id="fh5co-footer">
