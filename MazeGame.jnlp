@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="." href="MazeGame.jnlp">
+    <information>
+        <title>Maze Game</title>
+        <vendor>Your Name</vendor>
+        <homepagehref>file:///Users/henrylam/Documents/GitHub/henrylam.blog/test.html</homepagehref>
+        <description>Tom and Jerry Maze Game</description>
+        <offline-allowed/>
+    </information>
+    <security>
+        <all-permissions/>
+    </security>
+    <resources>
+        <j2se version="1.8+"/>
+        <jar href="MazeGame.jar" main="true"/>
+    </resources>
+    <application-desc main-class="Main">
+        <argument>-J-Xms256m</argument>
+        <argument>-J-Xmx512m</argument>
+    </application-desc>
+</jnlp>

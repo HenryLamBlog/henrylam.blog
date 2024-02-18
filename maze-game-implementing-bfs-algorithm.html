@@ -203,6 +203,13 @@ hr {
   margin: 30px 0; /* Add 30px white space above and below the <hr> element */
 }
     </style>
+    <!-- Add Java Web Start configuration -->
+    <script src="https://www.java.com/js/deployJava.js"></script>
+    <script>
+        function launchGame() {
+            deployJava.launchWebStartApplication('MazeGame.jnlp', '1.8.0');
+        }
+    </script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
     google.charts.load('current', {'packages':['gantt']});
@@ -420,6 +427,13 @@ hr {
         <img src="images/maze_game.png" alt="Maze Game" class="result-pic">
               <p class="lab-text">Maze Game</p>
         <p>In the maze game, players control Jerry and navigate through the maze using the arrow keys or WASD keys. The objective is to reach the exit while evading Tom's pursuit.</p>
+
+
+        <h2>Play Maze Game</h2>
+        
+        <button onclick="launchGame()" >Launch Maze Game</button>
+        <p>Click the button above to launch the Tom and Jerry Maze Game and experience the thrill of outsmarting Tom</p>
+
 
         <h2>Summary of Project Meetings</h2>
         <h3>1st Project Scrum Meeting:</h3>
