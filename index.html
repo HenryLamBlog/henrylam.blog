@@ -144,20 +144,21 @@
 	text-decoration-line: none !important;
 	}
 	.info li {
-		overflow-wrap: break-word; /* Allow long words to break and wrap */
-		margin-bottom: 5px; /* Reduce the bottom margin */
+		overflow-wrap: break-word;
+		margin-bottom: 10px;
+		display: flex;
+		align-items: center;
 	}
 	
 	.info .first-block {
-		display: inline-block; /* Ensure "Name:" and "Email:" are in the same line */
-		width: 80px; /* Adjust the width as needed */
+		width: 80px;
+		color: #666; /* Optional: Adjust the color of "Name:" and "Email:" */
 	}
 	
 	.info .second-block {
-		display: inline-block; /* Ensure "Henry Lam" and "contactme@henrylam.blog" are in the same line */
-		width: calc(100% - 90px); /* Adjust the width to accommodate the content */
-		margin-left: 10px; /* Add a small margin between "Name:" and "Henry Lam" */
+		margin-left: 10px;
 	}
+	
 	
 	
 	.img-fluid {
