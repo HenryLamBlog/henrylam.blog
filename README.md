@@ -28,7 +28,7 @@ Feel free to explore the content, read the articles, and play the games!
 
 If you have suggestions or corrections or would like to contribute to this blog, please open an issue or submit a pull request.
 
-##Contacts
+## Contacts
 
 If you want to reach out to me, please contact me at [support@henrylam.blog](mailto:support@henrylam.blog).
 
