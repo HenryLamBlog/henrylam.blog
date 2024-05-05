@@ -26,11 +26,11 @@ Feel free to explore the content, read the articles, and play the games!
 
 ## Contributing
 
-If you have any suggestions, corrections, or would like to contribute to this blog, please feel free to open an issue or submit a pull request.
+If you have suggestions or corrections or would like to contribute to this blog, please open an issue or submit a pull request.
 
-## License
+##Contacts
 
-This project is licensed under the [MIT License](LICENSE).
+If you want to reach out to me, please contact me at [support@henrylam.blog](mailto:support@henrylam.blog).
 
 ---
 
