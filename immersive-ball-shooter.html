@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immersive Ball Shooter</title>
+    <title>Immersive Ball Shooter | Henry Lam</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
@@ -31,9 +31,8 @@
     gtag('config', 'G-K03ESX8LJE');
     </script>
     <style>
-        /* Adjust the background color to the orange theme */
+        /* Original styles - Reverted from theme system */
         body {
-            /*font-family: 'Open Sans', monospace;*/
             font-family: 'Lato', sans-serif;
             font-weight: 300;
             font-size: 18px;
@@ -41,20 +40,14 @@
             background-color: #f8f9fa;
             margin: 0;
             overflow-x: hidden;
-            line-height: 1.8; /* Increase line height for better readability */
+            line-height: 1.8;
         }
 
         .custom-toggler.navbar-toggler {
-            border-color: #ff9000; /* Change the border color to white */
-        }
-        .navbar-brand{
-            display: flex;
-            align-items: center; /* Vertically center the content */
-            height: 60px; /* Set the height of the navbar */
-            margin-right: auto;
+            border-color: #ff9000; 
         }
         .navbar-brand h1 {
-            font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
+            font-family: 'Kaushan Script', cursive; 
             font-size: 26px;
             color: #ffffff;
             margin: 0;
@@ -70,141 +63,208 @@
             margin-bottom: 0;
         }
         
-        .navbar-collapse {
-            flex-basis: 100%;
-            flex-grow: 1;
-        }
-        /* Adjust font weights and sizes for headings */
-        h1 {
+        h1, h2, h3, h4, h5, h6 {
             color: #3a170f;
             font-family: 'Lato', sans-serif;
-           
-            font-size: 2.25em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
+            margin-bottom: 1rem;
         }
+        h1 { font-size: 2.25em; line-height: 1.6; }
+        h2 { font-size: 1.7em; line-height: 1.6; }
+        h3 { font-size: 1.4em; line-height: 1.6; }
+        p { color: #666; font-size: 18px; line-height: 1.8; }
 
-        h2 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-           
-            font-size: 1.7em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
-        }
-
-        h3 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-           
-            font-size: 1.4em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
-        }
-
-        /* Increase line spacing between paragraphs */
-        p {
-            color: #666;
-            font-size: 18px; /* Adjust paragraph font size */
-            line-height: 1.8; /* Increase line height for better readability */
-        }
-        img.result-pic {
-            width: 80%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-        img.lab-gif {
-            width: 30%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-        .lab-text {
-            text-align: center;
-            font-style: italic;
-            color: #888;
-        }
-        /* Override Bootstrap link styles */
         a {
-            text-decoration: none !important; /* Remove underline */
-        text-decoration-line: none !important;
-            color: #ff9000; /* Change link color to black */
+            color: #ff9000;
+            text-decoration: none !important;
+        }
+        a:hover {
+            color: #e08000; /* Darker orange on hover */
+            text-decoration: none !important;
+        }
+        .navbar-custom {
+            background-color: #ff9000 !important;
+        }
+        .toggler-icon {
+            background: #ffffff;
+        }
+        hr { border: none; height: 1px; background-color: #ff9000; margin: 30px 0; }
+
+        .card, .feature-box, .method-card, .implementation-section, .results-container, .project-links, .nav-card, .suggested-project, .toc-nav {
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+        .feature-box h3, .method-icon, .result-number { color: #ff9000; }
+        
+        .toc-nav { padding: 20px; margin-bottom: 30px; }
+        .toc-header { color: #3a170f; border-bottom: 2px solid #ff9000; font-weight: bold; font-size: 1.2em; padding-bottom: 10px; margin-bottom: 15px; }
+        .toc-list { padding-left: 0; list-style: none;}
+        .toc-list .nav-link { color: #666; padding: 8px 5px; border-left: 3px solid transparent; transition: all 0.3s ease;}
+        .toc-list .nav-link:hover, .toc-list .nav-link.active {
+            color: #ff9000;
+            border-left-color: #ff9000;
+            background-color: #f8f9fa;
+        }
+
+        .section-title { margin-top: 40px; padding-bottom: 10px; border-bottom: 3px solid #ff9000; display: inline-block;}
+        .project-summary { font-size: 1.1em; line-height: 1.8; border-left: 4px solid #ff9000; padding-left: 15px; margin: 20px 0;}
+        .image-caption { text-align: center; font-style: italic; color: #888; margin-top: 10px;}
+        .lab-text { text-align: center; font-style: italic; color: #888;}
+
+        img.result-pic, img.lab-gif, .project-img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        img.result-pic {
+            width: 70%;
         }
 
         .project-img {
-          width: 50%;
-          height: auto;
-          border-radius: 15px; /* Adjust the border-radius to your preference */
-          overflow: hidden; /* Ensure the rounded corners are applied */
+            width: 120px;
+            height: 120px;
+            border-radius: 6px;
+            overflow: hidden;
           display: block;
           object-fit: cover;
-          aspect-ratio: 1; /* Maintain a 1:1 aspect ratio (square) */
-        
-        
         }
         
-        .project-details {
-        
-          text-align: left;
-        
-          
-        }
-        .img-col {
-          padding-right: 0!important;
-          margin-right: -10%;
-        }
-        hr {
-          border: none;
-          height: 1px;
-          background-color: #ff9000;
-          margin: 30px 0; /* Add 30px white space above and below the <hr> element */
-        }
-        
-        /* Override Bootstrap link hover styles */
-        a:hover {
-            color: #ff9000; /* Change link color on hover */
-        text-decoration: none !important; /* Remove underline */
-        text-decoration-line: none !important;
-        }
-
-        .toggler-icon {
-            display: block;
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            background: #ffffff;
-            border-radius: .1px;
-            opacity: 1;
-            left: 0;
-            transform: rotate(0deg);
-            transition: .25s ease-in-out;
-          }
-                
-        .navbar-toggler.collapsed .toggler-icon {
-            background: #ffffff;
-        }
         .suggested-project {
             margin-top: 5%;
             margin-bottom: 30px;
-            overflow: hidden;
-            border-radius: 15px; /* Adjust the border-radius to your preference */
-          
-          }
-          .suggested-project:hover {
-            
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            max-width: 800px;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
+        .suggested-project:hover {
             transform: translateY(-5px);
             transition: .5s ease;
-          
-          }
-          
-    </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K03ESX8LJE"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        }
+        
+        .project-details {
+            text-align: left;
+            padding-left: 15px;
+        }
+        
+        .img-col {
+            padding-right: 0 !important;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .suggested-project .row.no-gutters {
+            display: flex;
+            align-items: center;
+        }
+        
+        .suggested-project a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .suggested-project h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #3a170f;
+            font-weight: normal;
+        }
+        
+        .suggested-project p {
+            margin-bottom: 0;
+            color: #666;
+            font-size: 16px;
+        }
 
-    gtag('config', 'G-K03ESX8LJE');
-    </script>
+        /* Navigation section */
+        .navigation-section { margin-top: 60px; margin-bottom: 40px; }
+        .nav-card {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            display: block;
+            padding: 15px 0;
+            margin: 10px 0;
+            color: #3a170f;
+        }
+        .nav-card:hover {
+            color: #ff9000;
+            transform: translateY(-5px);
+            box-shadow: none;
+            text-decoration: none;
+        }
+        .prev-card { text-align: left; }
+        .next-card { text-align: right; }
+        .nav-direction { font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+        .nav-title { font-size: 1.2em; font-weight: bold; }
+
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; display: none; z-index: 99; }
+        .back-to-top-btn { 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2); 
+            transition: all 0.3s ease;
+            background-color: #ff9000;
+            color: #ffffff;
+        }
+        .back-to-top-btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background-color: #e08000;
+            color: #ffffff;
+        }
+
+        /* Main container spacing */
+        .main-container {
+            padding-top: 80px;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .col-lg-9 {
+                padding-top: 30px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .toc-nav {
+                display: none;
+            }
+            .col-lg-9 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .main-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .nav-card {
+                text-align: center;
+            }
+            
+            .project-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -235,100 +295,285 @@
             </div>
         </div>
     </nav>
-    <!-- Content specific to the Colorization of Grayscale Images project -->
+
+    <!-- Content specific to the project -->
     <div class="main-container">
-        <div id="main-text">
-        <!-- Your content goes here -->
-        <h1>Immersive Ball Shooter</h1>
-        <h2>Bringing 3D Gaming to Apple Vision Pro</h2>
-        <p>With the introduction of Apple Vision Pro, a groundbreaking platform for augmented reality experiences, developers like myself have been eager to explore its potential. As someone deeply passionate about creating immersive gaming experiences, I was inspired to dive into the world of AR and bring my vision to life.</p>
-        <h3>Gameplay and Code</h3>
-        <p>Immersive Ball Shooter Gameplay:</p>
-        <div class="video-container">
-            <iframe width="560" height="315"  src="https://www.youtube.com/embed/KS_Q6PqjLKY?si=KmAHmqzoTfWYzChD" frameborder="0" allowfullscreen></iframe>
+        <div class="row">
+            <!-- Sticky Table of Contents -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <nav id="toc" class="sticky-top toc-nav" style="top: 100px;">
+                    <div class="toc-header">Contents</div>
+                    <ul class="nav flex-column toc-list">
+                        <li class="nav-item"><a class="nav-link" href="#intro">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#design">Game Design</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#implementation">Implementation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features">Game Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#challenges">Challenges</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <div id="main-text" style="max-width: 850px; margin: 0 auto;">
+                    <!-- Project content -->
+                    <h1 id="intro" class="section-title">Immersive Ball Shooter Game</h1>
+
+                    <div class="project-summary">
+                        <p>A Unity3D game that challenges players to shoot moving targets while navigating through a dynamic 3D environment, featuring realistic physics, immersive sound effects, and engaging gameplay mechanics.</p>
+                    </div>
+
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>Building upon my previous experience with the Unity game engine in the Roller Madness project, I decided to take on a new challenge by creating an immersive 3D ball shooter game. This project allowed me to explore more advanced game development concepts while creating an engaging and fun gaming experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-image-container">
+                        <img src="images/immersive_ball_shooter.png" alt="Immersive Ball Shooter Game" class="result-pic">
+                        <div class="image-caption">In-game screenshot of the Immersive Ball Shooter</div>
+                    </div>
+
+                    <h2 id="design" class="section-title">Game Design</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>The design philosophy behind the Immersive Ball Shooter game was to create a simple yet engaging experience that would challenge players' hand-eye coordination and reflexes. The core gameplay loop revolves around:</p>
+                            <ul>
+                                <li>Shooting projectiles at moving targets</li>
+                                <li>Avoiding obstacles and hazards</li>
+                                <li>Collecting power-ups to enhance abilities</li>
+                                <li>Progressing through increasingly difficult levels</li>
+                            </ul>
+                        </div>
         </div>
-        <p></p>
-        <p>Code on GitHub: <a href="https://github.com/HenryLamBlog/Immersive-Ball-Shooter">https://github.com/HenryLamBlog/Immersive-Ball-Shooter</a></p>
 
-        <h2>Embarking on a New Journey</h2>
-        <p>My journey began with a simple yet ambitious idea: to develop an augmented reality game that seamlessly integrates with Apple Vision Pro. Drawing from my previous experience in game development, particularly with 3D box shooter games in Unity, I set out to reimagine this concept within the immersive world of AR.</p>
-        <h2>The Vision Unfolds</h2>
-        <p>Imagine stepping into a virtual world where reality blends seamlessly with the digital realm. With Immersive Ball Shooter, players are transported into a captivating AR environment where they can interact with dynamic elements while remaining fully aware of their surroundings.</p>
-        <h2>Bringing Unity to RealityKit and SwiftUI</h2>
-        <p>Transitioning from Unity to RealityKit and SwiftUI presented its own set of challenges and opportunities. While Unity offered robust tools for 3D game development, RealityKit provided a streamlined approach tailored specifically for AR experiences on Apple devices, complemented by SwiftUI for building intuitive user interfaces.</p>
-        <p>The core gameplay of Immersive Ball Shooter revolves around shooting green balls within a designated time frame. Leveraging spatial gestures and intuitive controls, players engage in an adrenaline-fueled challenge to achieve the highest score possible.</p>
-        <p>One of the key aspects of Immersive Ball Shooter is its scalability and adaptability. Players have the freedom to customize game settings, including ball count and time limits, to suit their preferences and skill levels. This flexibility ensures a dynamic and engaging experience for players of all backgrounds.</p>
-        <ul>
-            <li>Three time options: 15s, 30s, and 60s.</li>
-            <li>Players can choose between shooting 10, 25, or 50 green balls.</li>
+                    <h2 id="implementation" class="section-title">Implementation</h2>
+                    <p>The development of this game involved several key technical aspects:</p>
+                    
+                    <div class="accordion mt-4" id="implementationAccordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Physics System
+                                    </button>
+                                </h3>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#implementationAccordion">
+                                <div class="card-body">
+                                    <p>I utilized Unity's built-in physics engine to create realistic ball movement and collision responses. This involved:</p>
+                                    <ul>
+                                        <li>Fine-tuning mass, bounce, and friction parameters for different projectile types</li>
+                                        <li>Implementing collision detection and response systems</li>
+                                        <li>Creating realistic trajectory calculations for the ball launcher</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Input Controls
+                                    </button>
+                                </h3>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#implementationAccordion">
+                                <div class="card-body">
+                                    <p>Creating intuitive controls was essential for player engagement. I implemented:</p>
+                                    <ul>
+                                        <li>Mouse-controlled aiming with visual trajectory prediction</li>
+                                        <li>Power meter for adjusting shot strength</li>
+                                        <li>Keyboard shortcuts for switching between different ball types</li>
+                                        <li>Camera controls for adjusting the player's view</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Target System
+                                    </button>
+                                </h3>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#implementationAccordion">
+                                <div class="card-body">
+                                    <p>To create engaging gameplay, I developed a dynamic target system with:</p>
+                                    <ul>
+                                        <li>Multiple target types with different behaviors (stationary, moving, oscillating)</li>
+                                        <li>Point values based on target difficulty</li>
+                                        <li>Visual and audio feedback upon successful hits</li>
+                                        <li>Procedural generation of target layouts for level variety</li>
         </ul>
-        <p>In Immersive Ball Shooter, players must shoot green balls without missing, as shooting the wrong color balls will cause them to grow twice in size, presenting an additional challenge and adding to the excitement of the gameplay.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <h2>Challenges and Triumphs</h2>
-        <p>Developing Immersive Ball Shooter was a journey filled with learning, experimentation, and innovation. From refining spatial interactions to optimizing performance for AR environments, every step of the development process brought new insights and discoveries.</p>
-        <p>Learning and understanding Swift, along with SwiftUI and RealityKit, presented its own set of challenges. Swift's syntax and functional programming concepts required adaptation, but with perseverance and dedication, mastery was achieved. SwiftUI's declarative approach to building user interfaces offered unparalleled flexibility but demanded a shift in mindset for developers accustomed to imperative paradigms.</p>
+                    <h2 id="features" class="section-title">Game Features</h2>
+                    <div class="results-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Multiple Ball Types</h3>
+                                        <p>Players can switch between different projectile types, each with unique physics properties:</p>
+                                        <ul>
+                                            <li>Standard Ball: Balanced weight and bounce</li>
+                                            <li>Heavy Ball: Slower but more impactful</li>
+                                            <li>Bouncy Ball: High rebound for trick shots</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Power-ups</h3>
+                                        <p>Various collectible power-ups enhance gameplay:</p>
+                                        <ul>
+                                            <li>Multi-ball: Launch multiple projectiles</li>
+                                            <li>Time Slow: Reduce target movement speed</li>
+                                            <li>Point Boost: Increase score multiplier</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Level Progression</h3>
+                                        <p>The game features progressive difficulty:</p>
+                                        <ul>
+                                            <li>5 unique levels with increasing complexity</li>
+                                            <li>Unlock system based on score thresholds</li>
+                                            <li>Bonus challenges for skilled players</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Audio-Visual Experience</h3>
+                                        <p>Enhanced immersion through:</p>
+                                        <ul>
+                                            <li>Dynamic sound effects for different surfaces</li>
+                                            <li>Particle effects on collisions</li>
+                                            <li>Responsive UI with real-time feedback</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <h2>Looking Ahead</h2>
-        <p>As Immersive Ball Shooter makes its debut, I am excited to witness the impact it has on the AR gaming landscape. With Apple Vision Pro pushing the boundaries of augmented reality technology, the possibilities for immersive gaming experiences are limitless.</p>
-        <p>I also plan to make updates and changes to the game such as:</p>
-        <ul>
-            <li>Adding more levels to Immersive Ball Shooter to enhance the gaming experience.</li>
-            <li>Incorporating sound effects when shotting the balls to immerse players further into the gameplay.</li>
-            <li>Introducing background music to elevate the atmosphere and mood of the game.</li>
-            <li>Implementing harder difficulties, such as penalizing players for shooting the wrong ball by deducting time.</li>
+                    <h2 id="challenges" class="section-title">Challenges</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>Throughout the development process, I encountered several challenges:</p>
+                            <ul>
+                                <li><strong>Physics Fine-tuning:</strong> Achieving the right balance of realism and fun required extensive testing and adjustment of Unity's physics parameters.</li>
+                                <li><strong>Performance Optimization:</strong> Ensuring smooth gameplay while managing multiple physics objects and effects necessitated careful optimization of game resources.</li>
+                                <li><strong>Control Precision:</strong> Creating intuitive and precise controls that would work across different platforms required multiple iterations and user testing.</li>
+                                <li><strong>Progressive Difficulty:</strong> Balancing the game's challenge curve to keep players engaged without becoming frustratingly difficult was an ongoing process of refinement.</li>
         </ul>
-        <h2>Conclusion</h2>
-        <p>Immersive Ball Shooter represents the culmination of my passion for game development and my fascination with augmented reality. By harnessing the power of Apple Vision Pro, I hope to inspire others to explore the boundless potential of AR and redefine the way we interact with digital entertainment.</p>
+                        </div>
+                    </div>
 
+                    <h2 id="demo" class="section-title">Demo</h2>
+                    <div class="project-image-container">
+                        <img src="images/immersive_ball_shooter_demo.gif" alt="Gameplay demonstration" class="result-pic">
+                        <div class="image-caption">Gameplay demonstration showing ball physics and target interactions</div>
+                    </div>
 
+                    <h2 id="conclusion" class="section-title">Conclusion</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>The Immersive Ball Shooter project significantly expanded my game development skills, particularly in areas of physics simulation, user interface design, and game balancing. The combination of technical challenges and creative problem-solving made this project particularly rewarding.</p>
+                            <p>Future enhancements could include multiplayer functionality, additional level themes, and mobile platform adaptation. The core mechanics proved to be engaging and offer a solid foundation for further development.</p>
+                            <p>Through this project, I gained valuable experience in Unity3D development, game design principles, and the iterative development process required to create an engaging player experience.</p>
+                            <p>You can play the game online <a href="https://henrykslam.itch.io/immersive-ball-shooter" target="_blank">here</a>.</p>
+                        </div>
+                    </div>
+
+                    <div class="navigation-section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="https://henrylam.blog/distinguishing-people-with-masks" class="nav-card prev-card">
+                                    <div class="nav-direction">Previous Project</div>
+                                    <div class="nav-title">Distinguishing People with Masks</div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://henrylam.blog/maze-game-implementing-bfs-algorithm" class="nav-card next-card">
+                                    <div class="nav-direction">Next Project</div>
+                                    <div class="nav-title">Maze Game implementing BFS algorithm</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     <hr>
             <h2>My Other Projects:</h2>
-            <p></p>
+        
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/roller-madness" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/roller_madness2.png" alt="Roller Madness Game" class="project-img">
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Roller Madness Game</h3>
+                        <p class="post-snippet">A Unity3D ball rolling game with obstacles and collectibles</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
             <div class="suggested-project">
-                <a href="https://henrylam.blog/3d-box-shooter-game"class="project-link">
+            <a href="https://henrylam.blog/3d-box-shooter-game" class="project-link">
                     <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
                             <img src="images/box.png" alt="3D Box Shooter Game" class="project-img">
                         </div>
-                        <div class="col-md-8 col-12 project-details">
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
                             <h3 class="post-title">3D Box Shooter Game</h3>
                             <p class="post-snippet">The process of creating my 3D Box Shooter Game</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <!-- Project 1 -->
+        
             <div class="suggested-project">
-              <a href="https://henrylam.blog/robot-controlled-vehicle" class="project-link">
+            <a href="https://henrylam.blog/maze-game-implementing-bfs-algorithm" class="project-link">
                   <div class="row no-gutters">
-                      <div class="col-md-4 col-12 img-col">
-                          <img src="images/robot.JPG" alt="Robot Controlled Vehicle" class="project-img">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/short_path.png" alt="Maze Game" class="project-img">
                       </div>
-                      <div class="col-md-8 col-12 project-details">
-                          <h3 class="post-title">Robot-Controlled Vehicle</h3>
-                          <p class="post-snippet">A robot vehicle equipped with control circuits and sensors</p>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Maze Game implementing BFS algorithm</h3>
+                        <p class="post-snippet">A Tom and Jerry maze game implementing BFS algorithm for pathfinding</p>
                       </div>
                   </div>
               </a>
            </div>  
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/wordle-solver" class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/wordle.jpg" alt="Wordle Solver" class="project-img">
                         </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Wordle Solver</h3>
-                            <p class="post-snippet">Wordle Solver using greedy best-first searching algorithm</p>
-                        </div>
-                    </div>
-                </a>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="back-to-top">
+        <a href="#" class="btn back-to-top-btn" role="button"><i class="icon-arrow-up22"></i></a>
             </div>
-            <!-- Project 2 -->
             
-        </div>
     <!-- Footer -->
     <div id="fh5co-footer">
         <div class="container">
@@ -339,9 +584,7 @@
             </div>
         </div>
     </div>
-    <div class="gototop js-top">
-        <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-    </div>
+    
     <!-- Include any necessary JavaScript files -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
@@ -352,5 +595,87 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
     <script src="js/google_map.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Custom Script for UI Enhancements -->
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for anchor links (TOC and other internal links)
+            $('a[href^="#"][data-toggle!="tab"][data-toggle!="collapse"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 90 // Adjusted offset for navbar
+                    }, 500);
+                }
+            });
+            
+            // Back to top button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            
+            $('#back-to-top').click(function(e) {
+                e.preventDefault(); // Prevent hash in URL
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+            
+            // TOC Active State on Scroll
+            function updateActiveTocLink() {
+                var scrollPosition = $(window).scrollTop();
+                var offset = 100; // Navbar height + some margin
+                var windowHeight = $(window).height();
+                var documentHeight = $(document).height();
+                var activeSectionFound = false;
+
+                // Remove active class from all links first
+                $('#toc .nav-link').removeClass('active');
+
+                // Iterate through sections from bottom to top
+                // This ensures that the lowest section visible in the viewport gets activated
+                var sections = [];
+                $('#toc .nav-link').each(function() {
+                    var href = $(this).attr('href');
+                    if (href && href.startsWith('#')) {
+                        var section = $(href);
+                        if (section.length) {
+                            sections.push({ link: $(this), element: section });
+                        }
+                    }
+                });
+
+                for (var i = sections.length - 1; i >= 0; i--) {
+                    var sectionTop = sections[i].element.offset().top;
+
+                    // Check if the section is within the viewport or if its top is above the scroll position + offset
+                    if (sectionTop - offset <= scrollPosition) {
+                        sections[i].link.addClass('active');
+                        activeSectionFound = true;
+                        break; // Found the current section, no need to check further
+                    }
+                }
+                
+                // If scrolled to the very bottom, ensure the last TOC item is active
+                if (!activeSectionFound && (scrollPosition + windowHeight >= documentHeight - 20)) { 
+                    if (sections.length > 0) {
+                        $('#toc .nav-link').removeClass('active'); // Clear any previous active
+                        sections[sections.length - 1].link.addClass('active');
+                    }
+                }
+            }
+
+            var tocScrollTimeout;
+            $(window).on('scroll', function() {
+                clearTimeout(tocScrollTimeout);
+                tocScrollTimeout = setTimeout(updateActiveTocLink, 50); // Debounce scroll event
+            });
+            updateActiveTocLink(); // Initial call
+        });
+    </script>
 </body>
 </html>

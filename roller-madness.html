@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roller Madness</title>
+    <title>Roller Madness | Henry Lam</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
@@ -30,9 +30,8 @@
         gtag('config', 'G-K03ESX8LJE');
         </script>
         <style>
-            /* Adjust the background color to the orange theme */
+            /* Original styles - Reverted from theme system */
         body {
-            /*font-family: 'Open Sans', monospace;*/
             font-family: 'Lato', sans-serif;
             font-weight: 300;
             font-size: 18px;
@@ -40,20 +39,14 @@
             background-color: #f8f9fa;
             margin: 0;
             overflow-x: hidden;
-            line-height: 1.8; /* Increase line height for better readability */
+            line-height: 1.8;
         }
 
         .custom-toggler.navbar-toggler {
-            border-color: #ff9000; /* Change the border color to white */
-        }
-        .navbar-brand{
-            display: flex;
-            align-items: center; /* Vertically center the content */
-            height: 60px; /* Set the height of the navbar */
-            margin-right: auto;
+            border-color: #ff9000; 
         }
         .navbar-brand h1 {
-            font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
+            font-family: 'Kaushan Script', cursive; 
             font-size: 26px;
             color: #ffffff;
             margin: 0;
@@ -69,135 +62,251 @@
             margin-bottom: 0;
         }
         
-        .navbar-collapse {
-            flex-basis: 100%;
-            flex-grow: 1;
-        }
-        /* Adjust font weights and sizes for headings */
-        h1 {
+        h1, h2, h3, h4, h5, h6 {
             color: #3a170f;
             font-family: 'Lato', sans-serif;
-           
-            font-size: 2.25em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
+            margin-bottom: 1rem;
         }
+        h1 { font-size: 2.25em; line-height: 1.6; }
+        h2 { font-size: 1.7em; line-height: 1.6; }
+        h3 { font-size: 1.4em; line-height: 1.6; }
+        p { color: #666; font-size: 18px; line-height: 1.8; }
 
-        h2 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-           
-            font-size: 1.7em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
+        a {
+            color: #ff9000;
+            text-decoration: none !important;
         }
+        a:hover {
+            color: #e08000; /* Darker orange on hover */
+            text-decoration: none !important;
+        }
+        .navbar-custom {
+            background-color: #ff9000 !important;
+        }
+        .toggler-icon {
+            background: #ffffff;
+        }
+        hr { border: none; height: 1px; background-color: #ff9000; margin: 30px 0; }
 
-        h3 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-           
-            font-size: 1.4em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
+        .card, .feature-box, .method-card, .implementation-section, .results-container, .project-links, .nav-card, .suggested-project, .toc-nav {
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            border: 1px solid #ddd;
         }
-
-        /* Increase line spacing between paragraphs */
-        p {
-            color: #666;
-            font-size: 18px; /* Adjust paragraph font size */
-            line-height: 1.8; /* Increase line height for better readability */
-        }
-        img.result-pic {
-            width: 50%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-        img.lab-gif {
-            width: 30%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-        .lab-text {
-            text-align: center;
-            font-style: italic;
-            color: #888;
-        }
-   /* Override Bootstrap link styles */
-  a {
-    text-decoration: none !important; /* Remove underline */
-text-decoration-line: none !important;
-    color: #ff9000; /* Change link color to black */
-}
-
-/* Override Bootstrap link hover styles */
-a:hover {
-    color: #ff9000; /* Change link color on hover */
-text-decoration: none !important; /* Remove underline */
-text-decoration-line: none !important;
-}
-
-.toggler-icon {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: #ffffff;
-    border-radius: .1px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-  }
+        .feature-box h3, .method-icon, .result-number { color: #ff9000; }
         
-.navbar-toggler.collapsed .toggler-icon {
-    background: #ffffff;
-}
+        .toc-nav { padding: 20px; margin-bottom: 30px; }
+        .toc-header { color: #3a170f; border-bottom: 2px solid #ff9000; font-weight: bold; font-size: 1.2em; padding-bottom: 10px; margin-bottom: 15px; }
+        .toc-list { padding-left: 0; list-style: none;}
+        .toc-list .nav-link { color: #666; padding: 8px 5px; border-left: 3px solid transparent; transition: all 0.3s ease;}
+        .toc-list .nav-link:hover, .toc-list .nav-link.active {
+            color: #ff9000;
+            border-left-color: #ff9000;
+            background-color: #f8f9fa;
+        }
 
-.suggested-project {
-    margin-top: 5%;
-    margin-bottom: 30px;
-    overflow: hidden;
-    border-radius: 15px; /* Adjust the border-radius to your preference */
-  
-  }
-  .suggested-project:hover {
-    
-    transform: translateY(-5px);
-    transition: .5s ease;
-  
-  }
-  
-  
-  
-  
-  .project-img {
-    width: 50%;
-    height: auto;
-    border-radius: 15px; /* Adjust the border-radius to your preference */
-    overflow: hidden; /* Ensure the rounded corners are applied */
-    display: block;
-    object-fit: cover;
-    aspect-ratio: 1; /* Maintain a 1:1 aspect ratio (square) */
-  
-  
-  }
-  
-  .project-details {
-  
-    text-align: left;
-  
-    
-  }
-  .img-col {
-    padding-right: 0!important;
-    margin-right: -10%;
-  }
-  hr {
-    border: none;
-    height: 1px;
-    background-color: #ff9000;
-    margin: 30px 0; /* Add 30px white space above and below the <hr> element */
-  }
+        .section-title { margin-top: 40px; padding-bottom: 10px; border-bottom: 3px solid #ff9000; display: inline-block;}
+        .project-summary { font-size: 1.1em; line-height: 1.8; border-left: 4px solid #ff9000; padding-left: 15px; margin: 20px 0;}
+        .image-caption { text-align: center; font-style: italic; color: #888; margin-top: 10px;}
+        .lab-text { text-align: center; font-style: italic; color: #888;}
 
+        img.result-pic, img.lab-gif, .project-img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .project-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 6px;
+            overflow: hidden;
+            display: block;
+            object-fit: cover;
+        }
+        
+        .suggested-project {
+            margin-top: 5%;
+            margin-bottom: 30px;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            max-width: 800px;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
+        .suggested-project:hover {
+            transform: translateY(-5px);
+            transition: .5s ease;
+        }
+        
+        .project-details {
+            text-align: left;
+            padding-left: 15px;
+        }
+        
+        .img-col {
+            padding-right: 0 !important;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .suggested-project .row.no-gutters {
+            display: flex;
+            align-items: center;
+        }
+        
+        .suggested-project a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .suggested-project h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #3a170f;
+            font-weight: normal;
+        }
+        
+        .suggested-project p {
+            margin-bottom: 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Navigation section */
+        .navigation-section { margin-top: 60px; margin-bottom: 40px; }
+        .nav-card {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            display: block;
+            padding: 15px 0;
+            margin: 10px 0;
+            color: #3a170f;
+        }
+        .nav-card:hover {
+            color: #ff9000;
+            transform: translateY(-5px);
+            box-shadow: none;
+            text-decoration: none;
+        }
+        .prev-card { text-align: left; }
+        .next-card { text-align: right; }
+        .nav-direction { font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+        .nav-title { font-size: 1.2em; font-weight: bold; }
+
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; display: none; z-index: 99; }
+        .back-to-top-btn { 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2); 
+            transition: all 0.3s ease;
+            background-color: #ff9000;
+            color: #ffffff;
+        }
+        .back-to-top-btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background-color: #e08000;
+            color: #ffffff;
+        }
+
+        /* Main container spacing */
+        .main-container {
+            padding-top: 80px;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .col-lg-9 {
+                padding-top: 30px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .toc-nav {
+                display: none;
+            }
+            .col-lg-9 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .main-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .nav-card {
+                text-align: center;
+            }
+            
+            .project-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        /* Game link styling */
+        .game-link-container {
+            margin: 30px auto;
+            text-align: center;
+        }
+        
+        .game-link-container img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            max-width: 80%;
+            margin: 0 auto 15px;
+        }
+        
+        .game-link-container img:hover {
+            transform: scale(1.02);
+        }
+        
+        .game-link-container a {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff9000;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .game-link-container a:hover {
+            color: #e08000;
+        }
+
+        .feature-list {
+            padding-left: 20px;
+            list-style-type: none;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        .feature-list li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: #ff9000;
+            font-size: 1.5em;
+            line-height: 1;
+        }
 </style>
 </head>
 <body>
@@ -229,144 +338,308 @@ text-decoration-line: none !important;
     </div>
 </div>
 </nav>
-    <!-- Content specific to the Colorization of Grayscale Images project -->
-    <div class="main-container">
-        <div id="main-text">
-        <!-- Your content goes here -->
-        <h1>Roller Madness</h1>
-        <h2>Introduction</h2>
-        <p>Welcome to Roller Madness, a thrilling adventure into the world of game development! In this blog post, I'm excited to share the story behind the creation of Roller Madness, my very first game. Join me as I recount the challenges, triumphs, and invaluable lessons learned along the way.</p>
-        <p>Roller Madness is a 3D game developed using Unity. The game is a simple game where the player controls a ball and tries to collect coins while avoiding obstacles.</p>
-        <h2>Designing the Game</h2>
-        <p>Creating Roller Madness required meticulous attention to detail across various aspects of game design and implementation. </p>
-        <h3>Camera Setup</h3>
-<p>The camera setup in Roller Madness was pivotal for providing players with an immersive gameplay experience. By carefully configuring camera angles, field of view, and follow behavior, we ensured that players could navigate the game world with ease while maintaining a clear view of the action.</p>
 
-<h3>Physics</h3>
-<p>Physics played a central role in Roller Madness, governing the behavior of objects within the game environment. Leveraging Unity's robust physics engine, we simulated realistic interactions such as object collisions, gravity effects, and dynamic forces. This added depth and realism to gameplay, enhancing immersion and player engagement.</p>
-
-<h3>Player Control and Movement</h3>
-<img src="images/player_control.png" alt="Player Movement" class="result-pic">
-    <p class="lab-text">Player Movement</p>
-    <p>Crafting an immersive and intuitive first-person control scheme was pivotal in Roller Madness. Leveraging Unity's capabilities, I fine-tuned parameters such as acceleration and sensitivity to ensure seamless navigation. Players find themselves immersed in the game world, deftly maneuvering the ball to avoid obstacles and outsmart enemies with precision and agility.</p>
-    
-
-
-    <h3>Enemy Behavior</h3>
-    <img src="images/enemies.png" alt="Enemy Movement" class="result-pic">
-    <p class="lab-text">Enemy Movement</p>
-    <p>Enemies in Roller Madness exhibit dynamic bouncing behavior, adding layers of challenge and excitement. By coding their movements to bounce and pursue the player relentlessly, enemies become formidable adversaries. Players must rely on quick reflexes and strategic planning to evade them while collecting coins. Each encounter with enemies heightens the intensity, demanding skillful navigation to progress through the game.</p>
-
-
-
-    <h3>Coin Bouncing</h3>
-    <img src="images/coin_bouncing.png" alt="Coin Bouncing" class="result-pic">
-    <p class="lab-text">Coin Bouncing</p>
-    <p>The physics of coin bouncing added a layer of realism and excitement to Roller Madness. Coins are strategically dropped to test players' spatial awareness and dexterity. Through meticulous adjustment of physics parameters, collecting the bouncing coins becomes a thrilling pursuit, rewarding players for their skill and precision.</p>
-
-<h3>Lighting</h3>
-<p>Lighting played a crucial role in shaping the mood and atmosphere of Roller Madness. By leveraging Unity's versatile lighting system, we crafted dynamic and immersive environments that responded dynamically to changes in time of day and environmental conditions. Real-time shadows, reflections, and ambient occlusion added depth and realism to the game world, enhancing immersion and visual fidelity.</p>
-
-<h3>Particles and Animation</h3>
-<img src="images/particles.png" alt="Particles" class="result-pic">
-<p class="lab-text">Particles</p>
-<p>Particles and animation breathed life into Roller Madness, imbuing the game world with movement, dynamism, and personality. We used Unity's powerful particle system to create stunning visual effects such as explosions, sparks, and environmental phenomena. Additionally, animation brought characters, objects, and environmental elements to life, adding depth and personality to the gameplay experience.</p>
-
-<h2>Challenges that I faced along the way</h2>
-<p>
-
-    Implementing physics and bounces correctly emerged as the primary challenge during the development of Roller Madness. The intricacies of simulating realistic ball dynamics, including gravity, friction, and collision responses, posed significant hurdles. Fine-tuning the physics engine to ensure the ball interacted convincingly with the game environment while maintaining a fluid and responsive player experience demanded careful calibration and experimentation.</p>
-    
-    <p>  Moreover, achieving lifelike coin bounces presented its own set of challenges. Balancing factors such as restitution, friction, and mass to create natural and satisfying coin physics required meticulous adjustment and iteration. Ensuring that coins responded dynamically to player interactions, bouncing realistically off surfaces and reacting to environmental elements, added complexity to the implementation process.</p>
-    
-        <p>  Overcoming these challenges demanded a deep understanding of Unity's physics system, coupled with creative problem-solving and a willingness to iterate and refine. Through persistent experimentation and refinement, we were able to overcome the complexities of physics implementation, ultimately enhancing the realism and immersion of Roller Madness' gameplay experience.</p>
-        <h2>Play My Game</h2>
-        <div style="text-align: center;">
-            <a href="https://simmer.io/@henrylamblog/~95adfd1b-d574-3bf4-e310-7a52444a1c83" target="_blank">
-                <img src="images/roller_madness2.png" alt="Game Screenshot" style="width: 80%; height: auto;">
-            </a>
-            <br>
-            <a href="https://simmer.io/@henrylamblog/~95adfd1b-d574-3bf4-e310-7a52444a1c83" target="_blank" style="font-size: 20px; font-weight: bold;">Play Roller Madness</a>
+<!-- Content specific to the project -->
+<div class="main-container">
+    <div class="row">
+        <!-- Sticky Table of Contents -->
+        <div class="col-lg-3 d-none d-lg-block">
+            <nav id="toc" class="sticky-top toc-nav" style="top: 100px;">
+                <div class="toc-header">Contents</div>
+                <ul class="nav flex-column toc-list">
+                    <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#designing">Designing the Game</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#camera-setup">Camera Setup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#player-control">Player Control</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#enemy-behavior">Enemy Behavior</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#coin-bouncing">Coin Bouncing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#challenges">Challenges</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#play">Play the Game</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
+                </ul>
+            </nav>
         </div>
-<h3>Conclusion</h3>
-<p>In conclusion, Roller Madness has been an incredible journey of discovery, learning, and growth. Despite the challenges faced along the way, the process of creating my first game has been immensely rewarding. Throughout this project, I was able to overcome technical hurdles, refine gameplay mechanics, and create an immersive gaming experience. Roller Madness taught me valuable lessons in problem-solving, creativity, and resilience, which I will carry forward into future projects.</p>
-</div>
 
+        <!-- Main Content -->
+        <div class="col-lg-9">
+            <div id="main-text" style="max-width: 850px; margin: 0 auto;">
+                <!-- Project content -->
+                <h1 id="introduction" class="section-title">Roller Madness</h1>
+                
+                <div class="project-summary">
+                    <p>Welcome to Roller Madness, a thrilling adventure into the world of game development! This is my very first Unity game - a simple yet engaging experience where players control a ball and try to collect coins while avoiding obstacles.</p>
+                </div>
+                
+                <div class="card feature-box">
+                    <div class="card-body">
+                        <p>In this blog post, I'm excited to share the story behind the creation of Roller Madness, recounting the challenges, triumphs, and invaluable lessons learned along the way. This project marks my first steps into 3D game development using Unity, a powerful game engine that allowed me to bring my creative vision to life.</p>
+                    </div>
+                </div>
 
+                <h2 id="designing" class="section-title">Designing the Game</h2>
+                <p>Creating Roller Madness required meticulous attention to detail across various aspects of game design and implementation.</p>
+                
+                <h3 id="camera-setup" class="section-title">Camera Setup</h3>
+                <div class="card feature-box">
+                    <div class="card-body">
+                        <p>The camera setup in Roller Madness was pivotal for providing players with an immersive gameplay experience. By carefully configuring camera angles, field of view, and follow behavior, we ensured that players could navigate the game world with ease while maintaining a clear view of the action.</p>
+                    </div>
+                </div>
 
-<hr>
-            <h2>My Other Projects:</h2>
-            <p></p>
-            <!-- Project 1 -->
-            
-            <!-- Project 2 -->
-            
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/distinguishing-people-with-masks"class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/masks.png" alt="Distinguishing individuals with masks" class="project-img">
+                <h3 id="physics" class="section-title">Physics</h3>
+                <p>Physics played a central role in Roller Madness, governing the behavior of objects within the game environment. Leveraging Unity's robust physics engine, we simulated realistic interactions such as object collisions, gravity effects, and dynamic forces. This added depth and realism to gameplay, enhancing immersion and player engagement.</p>
+
+                <h3 id="player-control" class="section-title">Player Control and Movement</h3>
+                <div class="project-image-container">
+                    <img src="images/player_control.png" alt="Player Movement" class="result-pic">
+                    <div class="image-caption">Player Movement</div>
+                </div>
+                
+                <div class="card feature-box">
+                    <div class="card-body">
+                        <p>Crafting an immersive and intuitive control scheme was pivotal in Roller Madness. Leveraging Unity's capabilities, I fine-tuned parameters such as acceleration and sensitivity to ensure seamless navigation. Players find themselves immersed in the game world, deftly maneuvering the ball to avoid obstacles and outsmart enemies with precision and agility.</p>
+                    </div>
+                </div>
+
+                <h3 id="enemy-behavior" class="section-title">Enemy Behavior</h3>
+                <div class="project-image-container">
+                    <img src="images/enemies.png" alt="Enemy Movement" class="result-pic">
+                    <div class="image-caption">Enemy Movement</div>
+                </div>
+                
+                <div class="card feature-box">
+                    <div class="card-body">
+                        <p>Enemies in Roller Madness exhibit dynamic bouncing behavior, adding layers of challenge and excitement. By coding their movements to bounce and pursue the player relentlessly, enemies become formidable adversaries. Players must rely on quick reflexes and strategic planning to evade them while collecting coins. Each encounter with enemies heightens the intensity, demanding skillful navigation to progress through the game.</p>
+                    </div>
+                </div>
+
+                <h3 id="coin-bouncing" class="section-title">Coin Bouncing</h3>
+                <div class="project-image-container">
+                    <img src="images/coin_bouncing.png" alt="Coin Bouncing" class="result-pic">
+                    <div class="image-caption">Coin Bouncing</div>
+                </div>
+                
+                <div class="card feature-box">
+                    <div class="card-body">
+                        <p>The physics of coin bouncing added a layer of realism and excitement to Roller Madness. Coins are strategically dropped to test players' spatial awareness and dexterity. Through meticulous adjustment of physics parameters, collecting the bouncing coins becomes a thrilling pursuit, rewarding players for their skill and precision.</p>
+                    </div>
+                </div>
+
+                <h3 id="lighting" class="section-title">Lighting</h3>
+                <p>Lighting played a crucial role in shaping the mood and atmosphere of Roller Madness. By leveraging Unity's versatile lighting system, we crafted dynamic and immersive environments that responded dynamically to changes in time of day and environmental conditions. Real-time shadows, reflections, and ambient occlusion added depth and realism to the game world, enhancing immersion and visual fidelity.</p>
+
+                <h3 id="particles" class="section-title">Particles and Animation</h3>
+                <div class="project-image-container">
+                    <img src="images/particles.png" alt="Particles" class="result-pic">
+                    <div class="image-caption">Particles</div>
+                </div>
+                
+                <p>Particles and animation breathed life into Roller Madness, imbuing the game world with movement, dynamism, and personality. We used Unity's powerful particle system to create stunning visual effects such as explosions, sparks, and environmental phenomena. Additionally, animation brought characters, objects, and environmental elements to life, adding depth and personality to the gameplay experience.</p>
+
+                <h2 id="challenges" class="section-title">Challenges that I faced along the way</h2>
+                <div class="card feature-box">
+                    <div class="card-body">
+                        <p>Implementing physics and bounces correctly emerged as the primary challenge during the development of Roller Madness. The intricacies of simulating realistic ball dynamics, including gravity, friction, and collision responses, posed significant hurdles. Fine-tuning the physics engine to ensure the ball interacted convincingly with the game environment while maintaining a fluid and responsive player experience demanded careful calibration and experimentation.</p>
+                        
+                        <p>Moreover, achieving lifelike coin bounces presented its own set of challenges. Balancing factors such as restitution, friction, and mass to create natural and satisfying coin physics required meticulous adjustment and iteration. Ensuring that coins responded dynamically to player interactions, bouncing realistically off surfaces and reacting to environmental elements, added complexity to the implementation process.</p>
+                        
+                        <p>Overcoming these challenges demanded a deep understanding of Unity's physics system, coupled with creative problem-solving and a willingness to iterate and refine. Through persistent experimentation and refinement, we were able to overcome the complexities of physics implementation, ultimately enhancing the realism and immersion of Roller Madness' gameplay experience.</p>
+                    </div>
+                </div>
+
+                <h2 id="play" class="section-title">Play My Game</h2>
+                <div class="game-link-container">
+                    <a href="https://simmer.io/@henrylamblog/~95adfd1b-d574-3bf4-e310-7a52444a1c83" target="_blank">
+                        <img src="images/roller_madness2.png" alt="Game Screenshot">
+                    </a>
+                    <br>
+                    <a href="https://simmer.io/@henrylamblog/~95adfd1b-d574-3bf4-e310-7a52444a1c83" target="_blank">Play Roller Madness</a>
+                </div>
+
+                <h2 id="conclusion" class="section-title">Conclusion</h2>
+                <div class="card feature-box">
+                    <div class="card-body">
+                        <p>In conclusion, Roller Madness has been an incredible journey of discovery, learning, and growth. Despite the challenges faced along the way, the process of creating my first game has been immensely rewarding. Throughout this project, I was able to overcome technical hurdles, refine gameplay mechanics, and create an immersive gaming experience. Roller Madness taught me valuable lessons in problem-solving, creativity, and resilience, which I will carry forward into future projects.</p>
+                    </div>
+                </div>
+
+                <div class="navigation-section">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="https://henrylam.blog/robot-controlled-vehicle" class="nav-card prev-card">
+                                <div class="nav-direction">Previous Project</div>
+                                <div class="nav-title">Robot-Controlled Vehicle</div>
+                            </a>
                         </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Distinguishing individuals with masks</h3>
-                            <p class="post-snippet">A machine learning project to differentiate people wearing masks</p>
+                        <div class="col-md-6">
+                            <a href="https://henrylam.blog/3d-box-shooter-game" class="nav-card next-card">
+                                <div class="nav-direction">Next Project</div>
+                                <div class="nav-title">3D Box Shooter Game</div>
+                            </a>
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/carbon-credit-tokenization" class="project-link">
-                    
-
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-
-                            <img src="images/carbon2.jpg" alt="Carbon Credit Tokenization" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Carbon Credit Tokenization</h3>
-                            <p class="post-snippet">Research project on the tokenization of carbon credits</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/colorization-of-grayscale-images" class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/Automatic-Colorization.png" alt="Colorization of Grayscale Images" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Colorization of Grayscale Images</h3>
-                            <p class="post-snippet">A comparative analysis of colorization techniques for grayscale images</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-    </div>
-    <!-- Footer -->
-    <div id="fh5co-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>&copy; <span style="font-size: 16px;"><a href="http://henrylam.blog">henrylam.blog</a></span><br><span style="font-size: 12px;">Made by Henry Lam</span></p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="gototop js-top">
-        <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+
+    <hr>
+    <h2>My Other Projects:</h2>
+
+    <div class="suggested-project">
+        <a href="https://henrylam.blog/distinguishing-people-with-masks" class="project-link">
+            <div class="row no-gutters">
+                <div class="col-md-3 col-sm-4 col-12 img-col">
+                    <img src="images/masks.png" alt="Distinguishing individuals with masks" class="project-img">
+                </div>
+                <div class="col-md-9 col-sm-8 col-12 project-details">
+                    <h3 class="post-title">Distinguishing individuals with masks</h3>
+                    <p class="post-snippet">A machine learning project to differentiate people wearing masks</p>
+                </div>
+            </div>
+        </a>
     </div>
-    <!-- Include any necessary JavaScript files -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.easypiechart.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-    <script src="js/google_map.js"></script>
-    <script src="js/main.js"></script>
+    
+    <div class="suggested-project">
+        <a href="https://henrylam.blog/carbon-credit-tokenization" class="project-link">
+            <div class="row no-gutters">
+                <div class="col-md-3 col-sm-4 col-12 img-col">
+                    <img src="images/carbon2.jpg" alt="Carbon Credit Tokenization" class="project-img">
+                </div>
+                <div class="col-md-9 col-sm-8 col-12 project-details">
+                    <h3 class="post-title">Carbon Credit Tokenization</h3>
+                    <p class="post-snippet">Research project on the tokenization of carbon credits</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="suggested-project">
+        <a href="https://henrylam.blog/colorization-of-grayscale-images" class="project-link">
+            <div class="row no-gutters">
+                <div class="col-md-3 col-sm-4 col-12 img-col">
+                    <img src="images/Automatic-Colorization.png" alt="Colorization of Grayscale Images" class="project-img">
+                </div>
+                <div class="col-md-9 col-sm-8 col-12 project-details">
+                    <h3 class="post-title">Colorization of Grayscale Images</h3>
+                    <p class="post-snippet">A comparative analysis of colorization techniques for grayscale images</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- Back to Top Button -->
+<div id="back-to-top" class="back-to-top">
+    <a href="#" class="btn back-to-top-btn" role="button"><i class="icon-arrow-up22"></i></a>
+</div>
+
+<!-- Footer -->
+<div id="fh5co-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; <span style="font-size: 16px;"><a href="http://henrylam.blog">henrylam.blog</a></span><br><span style="font-size: 12px;">Made by Henry Lam</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+</div>
+
+<!-- Include any necessary JavaScript files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.easypiechart.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="js/google_map.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Custom Script for UI Enhancements -->
+<script>
+    $(document).ready(function() {
+        // Smooth scrolling for anchor links (TOC and other internal links)
+        $('a[href^="#"][data-toggle!="tab"][data-toggle!="collapse"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if( target.length ) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top - 90 // Adjusted offset for navbar
+                }, 500);
+            }
+        });
+        
+        // Back to top button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        
+        $('#back-to-top').click(function(e) {
+            e.preventDefault(); // Prevent hash in URL
+            $('html, body').animate({scrollTop: 0}, 800);
+            return false;
+        });
+        
+        // TOC Active State on Scroll
+        function updateActiveTocLink() {
+            var scrollPosition = $(window).scrollTop();
+            var offset = 100; // Navbar height + some margin
+            var windowHeight = $(window).height();
+            var documentHeight = $(document).height();
+            var activeSectionFound = false;
+
+            // Remove active class from all links first
+            $('#toc .nav-link').removeClass('active');
+
+            // Iterate through sections from bottom to top
+            // This ensures that the lowest section visible in the viewport gets activated
+            var sections = [];
+            $('#toc .nav-link').each(function() {
+                var href = $(this).attr('href');
+                if (href && href.startsWith('#')) {
+                    var section = $(href);
+                    if (section.length) {
+                        sections.push({ link: $(this), element: section });
+                    }
+                }
+            });
+
+            for (var i = sections.length - 1; i >= 0; i--) {
+                var sectionTop = sections[i].element.offset().top;
+
+                // Check if the section is within the viewport or if its top is above the scroll position + offset
+                if (sectionTop - offset <= scrollPosition) {
+                    sections[i].link.addClass('active');
+                    activeSectionFound = true;
+                    break; // Found the current section, no need to check further
+                }
+            }
+            
+            // If scrolled to the very bottom, ensure the last TOC item is active
+            if (!activeSectionFound && (scrollPosition + windowHeight >= documentHeight - 20)) { 
+                if (sections.length > 0) {
+                    $('#toc .nav-link').removeClass('active'); // Clear any previous active
+                    sections[sections.length - 1].link.addClass('active');
+                }
+            }
+        }
+
+        var tocScrollTimeout;
+        $(window).on('scroll', function() {
+            clearTimeout(tocScrollTimeout);
+            tocScrollTimeout = setTimeout(updateActiveTocLink, 50); // Debounce scroll event
+        });
+        updateActiveTocLink(); // Initial call
+    });
+</script>
 </body>
 </html>

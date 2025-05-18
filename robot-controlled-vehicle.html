@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robot-Controlled Vehicle</title>
+    <title>Robot-Controlled Vehicle | Henry Lam</title>
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
@@ -32,9 +32,8 @@
     gtag('config', 'G-K03ESX8LJE');
     </script>
     <style>
-        /* Adjust the background color to the orange theme */
+        /* Original styles - Reverted from theme system */
         body {
-            /*font-family: 'Open Sans', monospace;*/
             font-family: 'Lato', sans-serif;
             font-weight: 300;
             font-size: 18px;
@@ -42,20 +41,14 @@
             background-color: #f8f9fa;
             margin: 0;
             overflow-x: hidden;
-            line-height: 1.8; /* Increase line height for better readability */
+            line-height: 1.8;
         }
 
         .custom-toggler.navbar-toggler {
-            border-color: #ff9000; /* Change the border color to white */
-        }
-        .navbar-brand{
-            display: flex;
-            align-items: center; /* Vertically center the content */
-            height: 60px; /* Set the height of the navbar */
-            margin-right: auto;
+            border-color: #ff9000; 
         }
         .navbar-brand h1 {
-            font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
+            font-family: 'Kaushan Script', cursive; 
             font-size: 26px;
             color: #ffffff;
             margin: 0;
@@ -71,138 +64,230 @@
             margin-bottom: 0;
         }
         
-        .navbar-collapse {
-            flex-basis: 100%;
-            flex-grow: 1;
-        }
-        /* Adjust font weights and sizes for headings */
-        h1 {
+        h1, h2, h3, h4, h5, h6 {
             color: #3a170f;
             font-family: 'Lato', sans-serif;
-
-            font-size: 2.25em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
+            margin-bottom: 1rem;
         }
+        h1 { font-size: 2.25em; line-height: 1.6; }
+        h2 { font-size: 1.7em; line-height: 1.6; }
+        h3 { font-size: 1.4em; line-height: 1.6; }
+        p { color: #666; font-size: 18px; line-height: 1.8; }
 
-        h2 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-
-            font-size: 1.7em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
+        a {
+            color: #ff9000;
+            text-decoration: none !important;
         }
-
-        h3 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-
-            font-size: 1.4em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
+        a:hover {
+            color: #e08000; /* Darker orange on hover */
+            text-decoration: none !important;
         }
-
-        /* Increase line spacing between paragraphs */
-        p {
-            color: #666;
-            font-size: 18px; /* Adjust paragraph font size */
-            line-height: 1.8; /* Increase line height for better readability */
+        .navbar-custom {
+            background-color: #ff9000 !important;
         }
+        .toggler-icon {
+            background: #ffffff;
+        }
+        hr { border: none; height: 1px; background-color: #ff9000; margin: 30px 0; }
 
-
-
+        .card, .feature-box, .method-card, .implementation-section, .results-container, .project-links, .nav-card, .suggested-project, .toc-nav {
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+        .feature-box h3, .method-icon, .result-number { color: #ff9000; }
         
-        img.result-pic {
-            width: 60%;
+        .toc-nav { padding: 20px; margin-bottom: 30px; }
+        .toc-header { color: #3a170f; border-bottom: 2px solid #ff9000; font-weight: bold; font-size: 1.2em; padding-bottom: 10px; margin-bottom: 15px; }
+        .toc-list { padding-left: 0; list-style: none;}
+        .toc-list .nav-link { color: #666; padding: 8px 5px; border-left: 3px solid transparent; transition: all 0.3s ease;}
+        .toc-list .nav-link:hover, .toc-list .nav-link.active {
+            color: #ff9000;
+            border-left-color: #ff9000;
+            background-color: #f8f9fa;
+        }
+
+        .section-title { margin-top: 40px; padding-bottom: 10px; border-bottom: 3px solid #ff9000; display: inline-block;}
+        .project-summary { font-size: 1.1em; line-height: 1.8; border-left: 4px solid #ff9000; padding-left: 15px; margin: 20px 0;}
+        .image-caption { text-align: center; font-style: italic; color: #888; margin-top: 10px;}
+        .lab-text { text-align: center; font-style: italic; color: #888;}
+
+        img.result-pic, img.lab-gif, .project-img {
+            border-radius: 10px;
+            max-width: 100%;
             height: auto;
             display: block;
-            margin: 20px auto;
+            margin-left: auto;
+            margin-right: auto;
         }
+        
         img.result-pic-horizontal {
             width: 80%;
             height: auto;
             display: block;
             margin: 20px auto;
-        }
-        .lab-text {
-            text-align: center;
-            font-style: italic;
-            color: #888;
-        }
-        /* Override Bootstrap link styles */
-        a {
-            text-decoration: none !important; /* Remove underline */
-        text-decoration-line: none !important;
-            color: #ff9000; /* Change link color to black */
+            border-radius: 10px;
+            max-width: 100%;
         }
         
-        /* Override Bootstrap link hover styles */
-        a:hover {
-            color: #ff9000; /* Change link color on hover */
-        text-decoration: none !important; /* Remove underline */
-        text-decoration-line: none !important;
-        }
-
-        .toggler-icon {
+        .project-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 6px;
+            overflow: hidden;
             display: block;
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            background: #ffffff;
-            border-radius: .1px;
-            opacity: 1;
-            left: 0;
-            transform: rotate(0deg);
-            transition: .25s ease-in-out;
-          }
-                
-        .navbar-toggler.collapsed .toggler-icon {
-            background: #ffffff;
+            object-fit: cover;
         }
-  
+        
         .suggested-project {
             margin-top: 5%;
             margin-bottom: 30px;
-            overflow: hidden;
-            border-radius: 15px; /* Adjust the border-radius to your preference */
-
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            max-width: 800px;
+            margin-left: 0;
+            margin-right: auto;
         }
+        
         .suggested-project:hover {
-            
             transform: translateY(-5px);
             transition: .5s ease;
-
-        }
-        
-       
-        
-        
-        .project-img {
-            width: 50%;
-            height: auto;
-            border-radius: 15px; /* Adjust the border-radius to your preference */
-		    overflow: hidden; /* Ensure the rounded corners are applied */
-            display: block;
-            object-fit: cover;
-            aspect-ratio: 1; /* Maintain a 1:1 aspect ratio (square) */
-
-
         }
         
         .project-details {
-        
             text-align: left;
-
-            
+            padding-left: 15px;
         }
+        
         .img-col {
-            padding-right: 0!important;
-            margin-right: -10%;
+            padding-right: 0 !important;
+            display: flex;
+            justify-content: flex-end;
         }
-        hr {
+        
+        .suggested-project .row.no-gutters {
+            display: flex;
+            align-items: center;
+        }
+        
+        .suggested-project a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .suggested-project h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #3a170f;
+            font-weight: normal;
+        }
+        
+        .suggested-project p {
+            margin-bottom: 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Navigation section */
+        .navigation-section { margin-top: 60px; margin-bottom: 40px; }
+        .nav-card {
+            background: transparent;
+            box-shadow: none;
             border: none;
-            height: 1px;
+            display: block;
+            padding: 15px 0;
+            margin: 10px 0;
+            color: #3a170f;
+        }
+        .nav-card:hover {
+            color: #ff9000;
+            transform: translateY(-5px);
+            box-shadow: none;
+            text-decoration: none;
+        }
+        .prev-card { text-align: left; }
+        .next-card { text-align: right; }
+        .nav-direction { font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+        .nav-title { font-size: 1.2em; font-weight: bold; }
+
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; display: none; z-index: 99; }
+        .back-to-top-btn { 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2); 
+            transition: all 0.3s ease;
             background-color: #ff9000;
-            margin: 30px 0; /* Add 30px white space above and below the <hr> element */
-          }
+            color: #ffffff;
+        }
+        .back-to-top-btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background-color: #e08000;
+            color: #ffffff;
+        }
+
+        /* Main container spacing */
+        .main-container {
+            padding-top: 80px;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .col-lg-9 {
+                padding-top: 30px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .toc-nav {
+                display: none;
+            }
+            .col-lg-9 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .main-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .nav-card {
+                text-align: center;
+            }
+            
+            .project-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -234,95 +319,169 @@
             </div>
         </div>
     </nav>
-    <!-- Content specific to the Colorization of Grayscale Images project -->
+    
+    <!-- Content specific to the project -->
     <div class="main-container">
-        <div id="main-text">
-            <!-- Your content goes here -->
-            <h1>Robot-Controlled Vehicle</h1>
-            <h2>Embarking on a Journey of Robotics Innovation</h2>
-            <p>As part of our project, we embarked on an exciting journey to create a robot vehicle equipped with advanced control circuits and sensors. Our goal was to design a versatile robot capable of navigating through a predefined course with precision and efficiency. Let me walk you through the details of our project and the process of bringing our robot to life.</p>
-            <p>Our endeavor began with a solid foundation in the fundamentals of robotics, which we gained through weeks of intensive coursework. We delved into topics ranging from basic components and electrical principles to advanced concepts like pulse-width modulation and logic design.</p>
-            <p>Throughout the course, we explored critical areas such as energy regulation, sensor integration, and sequential logic, each building upon the last to provide a comprehensive understanding of robot control systems. Hands-on lab sessions reinforced our theoretical knowledge, allowing us to apply principles learned in the classroom to real-world scenarios.</p>
-            <h2>Building the Robot Vehicle</h3>
-            <p>In our pursuit of creating a versatile robot vehicle, we meticulously assembled components and configured control circuits on a breadboard. At the heart of our design lay the Arduino Nano board, a powerful microcontroller that acted as the brain of our robot. We carefully integrated two light sensors onto the vehicle, strategically positioning them to perceive and interact with the environment effectively.</p>
-            <img src="images/build_vehicle.JPG" alt="Building the Vehicle" class="result-pic">
-            <p class="lab-text">Building the Vehicle</p>
-            <p>The assembly process involved connecting various components such as the Arduino board, motor drivers, light sensors, and power source on the breadboard. Each component played a critical role in the robot's functionality, contributing to its ability to perceive and respond to its surroundings.</p>
-            <img src="images/breadboard.JPG" alt="Configuring the Breadboard" class="result-pic-horizontal">
-            <p class="lab-text">Configuring the Breadboard</p>
-            <h2>Understanding the Light Sensors</h3>
-            <p>A thorough understanding of light sensors was crucial for our robot to navigate autonomously. We incorporated line tracking sensors, allowing the robot to detect white lines on the demo mat guiding its movement along the predefined course. These sensors were connected to Arduino input terminals, facilitating real-time processing of sensor data for precise course tracking.</p>
-            <img src="images/sensors.png" alt="Light Sensors" class="result-pic-horizontal">
-            <p class="lab-text">Light Sensors</p>
-            <h2>Arduino Control Logic</h3>
-            <p>Programming the Arduino board was fundamental to our robot's control system, enabling intelligent decision-making and motor control. We developed custom code to interpret sensor inputs and execute motor commands. Through logical decision-making and signal modulation, we ensured our robot could navigate the course autonomously with minimal intervention.</p>
-            <p>The Arduino acted as the central processing unit, continuously monitoring sensor inputs and executing predefined algorithms to govern the robot's behavior. It processed data from the line tracking sensors, determining the appropriate course of action based on predefined logic. Through conditional statements and feedback loops, we ensured the robot could adapt to dynamic environments and navigate complex courses. The Arduino controlled motor drivers, regulating speed and direction using pulse-width modulation signals, allowing the robot to traverse the course with stability.</p>
-            <img src="images/final_vehicle.JPG" alt="Finalized Robot-Controlled Vehicle" class="result-pic-horizontal">
-            <p class="lab-text">Finalized Robot-Controlled Vehicle</p>
-            <h2>Executing the Run</h3>
-            <p>With our hardware and software components in place, we conducted multiple tests to ensure that the vehicle could sense the line on the ground and move accordingly. From powering up to reaching the end of the course, our robot executed each task with precision and accuracy, a testament to our meticulous design and programming efforts. However, we encountered challenges with the placement of the light sensors when navigating perfect perpendicular lines, requiring further adjustments and fine-tuning.</p>
-            <!-- <div style="text-align: center;"> -->
-                <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/LrUEvqedrPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+        <div class="row">
+            <!-- Sticky Table of Contents -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <nav id="toc" class="sticky-top toc-nav" style="top: 100px;">
+                    <div class="toc-header">Contents</div>
+                    <ul class="nav flex-column toc-list">
+                        <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#building">Building the Robot Vehicle</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sensors">Understanding Light Sensors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#arduino">Arduino Control Logic</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#executing">Executing the Run</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
+                    </ul>
+                </nav>
             </div>
-            <!-- </div> -->
-            
-            
-            <p></p>
-            <p></p>
-            <h2>Conclusion:</h2>
-            <p>Our project exemplifies the fusion of hardware and software to create a functional and efficient robot vehicle. Through meticulous design and programming, we successfully developed a robot capable of maneuvering through complex courses with ease. While we celebrate our achievements, we recognize that innovation is an ongoing process. As we continue to refine our design and explore new possibilities, we remain committed to pushing the boundaries of robotics and automation.</p>
-            <p>Reflecting on this journey, I must say that it has been an incredibly enjoyable experience delving into the world of hardware and building our robot vehicle. Throughout this process, I've gained invaluable insights and practical skills that have deepened my understanding of robotics. As we conclude this project, I'm excited to apply what I've learned to future endeavors, embracing the spirit of innovation and discovery in the realm of technology.</p>
-            
-        </div>  
-        <hr>
-            <h2>My Other Projects:</h2>
-            <p></p>
-            <!-- Project 1 -->
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/assembling-iphone-from-parts" class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/iphone.PNG" alt="Assembling iPhone from parts" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Assembling iPhone from parts</h3>
-                            <p class="post-snippet">My story of building an iPhone from scratch</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Project 2 -->
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/3d-box-shooter-game"class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/box.png" alt="3D Box Shooter Game" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">3D Box Shooter Game</h3>
-                            <p class="post-snippet">The process of creating my 3D Box Shooter Game</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Project 3 -->
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/roller-madness"class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/roller_madness2.png" alt="Roller Madness Game" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Roller Madness Game</h3>
-                            <p class="post-snippet">The process of creating my first Unity3D game</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>     
 
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <div id="main-text" style="max-width: 850px; margin: 0 auto;">
+                    <!-- Project content -->
+                    <h1 id="introduction" class="section-title">Robot-Controlled Vehicle</h1>
+                    
+                    <div class="project-summary">
+                        <p>As part of our project, we embarked on an exciting journey to create a robot vehicle equipped with advanced control circuits and sensors. Our goal was to design a versatile robot capable of navigating through a predefined course with precision and efficiency.</p>
+                    </div>
+
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>Our endeavor began with a solid foundation in the fundamentals of robotics, which we gained through weeks of intensive coursework. We delved into topics ranging from basic components and electrical principles to advanced concepts like pulse-width modulation and logic design.</p>
+                            <p>Throughout the course, we explored critical areas such as energy regulation, sensor integration, and sequential logic, each building upon the last to provide a comprehensive understanding of robot control systems. Hands-on lab sessions reinforced our theoretical knowledge, allowing us to apply principles learned in the classroom to real-world scenarios.</p>
+                        </div>
+                    </div>
+
+                    <h2 id="building" class="section-title">Building the Robot Vehicle</h2>
+                    <p>In our pursuit of creating a versatile robot vehicle, we meticulously assembled components and configured control circuits on a breadboard. At the heart of our design lay the Arduino Nano board, a powerful microcontroller that acted as the brain of our robot. We carefully integrated two light sensors onto the vehicle, strategically positioning them to perceive and interact with the environment effectively.</p>
+                    
+                    <div class="project-image-container">
+                        <img src="images/build_vehicle.JPG" alt="Building the Vehicle" class="result-pic">
+                        <div class="image-caption">Building the Vehicle</div>
+                    </div>
+                    
+                    <p>The assembly process involved connecting various components such as the Arduino board, motor drivers, light sensors, and power source on the breadboard. Each component played a critical role in the robot's functionality, contributing to its ability to perceive and respond to its surroundings.</p>
+                    
+                    <div class="project-image-container">
+                        <img src="images/breadboard.JPG" alt="Configuring the Breadboard" class="result-pic-horizontal">
+                        <div class="image-caption">Configuring the Breadboard</div>
+                    </div>
+
+                    <h2 id="sensors" class="section-title">Understanding the Light Sensors</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>A thorough understanding of light sensors was crucial for our robot to navigate autonomously. We incorporated line tracking sensors, allowing the robot to detect white lines on the demo mat guiding its movement along the predefined course. These sensors were connected to Arduino input terminals, facilitating real-time processing of sensor data for precise course tracking.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-image-container">
+                        <img src="images/sensors.png" alt="Light Sensors" class="result-pic-horizontal">
+                        <div class="image-caption">Light Sensors</div>
+                    </div>
+
+                    <h2 id="arduino" class="section-title">Arduino Control Logic</h2>
+                    <p>Programming the Arduino board was fundamental to our robot's control system, enabling intelligent decision-making and motor control. We developed custom code to interpret sensor inputs and execute motor commands. Through logical decision-making and signal modulation, we ensured our robot could navigate the course autonomously with minimal intervention.</p>
+                    
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>The Arduino acted as the central processing unit, continuously monitoring sensor inputs and executing predefined algorithms to govern the robot's behavior. It processed data from the line tracking sensors, determining the appropriate course of action based on predefined logic. Through conditional statements and feedback loops, we ensured the robot could adapt to dynamic environments and navigate complex courses. The Arduino controlled motor drivers, regulating speed and direction using pulse-width modulation signals, allowing the robot to traverse the course with stability.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-image-container">
+                        <img src="images/final_vehicle.JPG" alt="Finalized Robot-Controlled Vehicle" class="result-pic-horizontal">
+                        <div class="image-caption">Finalized Robot-Controlled Vehicle</div>
+                    </div>
+
+                    <h2 id="executing" class="section-title">Executing the Run</h2>
+                    <p>With our hardware and software components in place, we conducted multiple tests to ensure that the vehicle could sense the line on the ground and move accordingly. From powering up to reaching the end of the course, our robot executed each task with precision and accuracy, a testament to our meticulous design and programming efforts. However, we encountered challenges with the placement of the light sensors when navigating perfect perpendicular lines, requiring further adjustments and fine-tuning.</p>
+                    
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LrUEvqedrPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    
+                    <h2 id="conclusion" class="section-title">Conclusion</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>Our project exemplifies the fusion of hardware and software to create a functional and efficient robot vehicle. Through meticulous design and programming, we successfully developed a robot capable of maneuvering through complex courses with ease. While we celebrate our achievements, we recognize that innovation is an ongoing process. As we continue to refine our design and explore new possibilities, we remain committed to pushing the boundaries of robotics and automation.</p>
+                            <p>Reflecting on this journey, I must say that it has been an incredibly enjoyable experience delving into the world of hardware and building our robot vehicle. Throughout this process, I've gained invaluable insights and practical skills that have deepened my understanding of robotics. As we conclude this project, I'm excited to apply what I've learned to future endeavors, embracing the spirit of innovation and discovery in the realm of technology.</p>
+                        </div>
+                    </div>
+
+                    <div class="navigation-section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="https://henrylam.blog/immersive-ball-shooter" class="nav-card prev-card">
+                                    <div class="nav-direction">Previous Project</div>
+                                    <div class="nav-title">Immersive Ball Shooter</div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://henrylam.blog/roller-madness" class="nav-card next-card">
+                                    <div class="nav-direction">Next Project</div>
+                                    <div class="nav-title">Roller Madness Game</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <h2>My Other Projects:</h2>
+        
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/assembling-iphone-from-parts" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/iphone.PNG" alt="Assembling iPhone from parts" class="project-img">
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Assembling iPhone from parts</h3>
+                        <p class="post-snippet">My story of building an iPhone from scratch</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/3d-box-shooter-game" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/box.png" alt="3D Box Shooter Game" class="project-img">
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">3D Box Shooter Game</h3>
+                        <p class="post-snippet">The process of creating my 3D Box Shooter Game</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/roller-madness" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/roller_madness2.png" alt="Roller Madness Game" class="project-img">
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Roller Madness Game</h3>
+                        <p class="post-snippet">The process of creating my first Unity3D game</p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="back-to-top">
+        <a href="#" class="btn back-to-top-btn" role="button"><i class="icon-arrow-up22"></i></a>
+    </div>
+    
     <!-- Footer -->
     <div id="fh5co-footer">
         <div class="container">
@@ -333,9 +492,11 @@
             </div>
         </div>
     </div>
+    
     <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
     </div>
+    
     <!-- Include any necessary JavaScript files -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
@@ -346,6 +507,88 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
     <script src="js/google_map.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Custom Script for UI Enhancements -->
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for anchor links (TOC and other internal links)
+            $('a[href^="#"][data-toggle!="tab"][data-toggle!="collapse"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 90 // Adjusted offset for navbar
+                    }, 500);
+                }
+            });
+            
+            // Back to top button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            
+            $('#back-to-top').click(function(e) {
+                e.preventDefault(); // Prevent hash in URL
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+            
+            // TOC Active State on Scroll
+            function updateActiveTocLink() {
+                var scrollPosition = $(window).scrollTop();
+                var offset = 100; // Navbar height + some margin
+                var windowHeight = $(window).height();
+                var documentHeight = $(document).height();
+                var activeSectionFound = false;
+
+                // Remove active class from all links first
+                $('#toc .nav-link').removeClass('active');
+
+                // Iterate through sections from bottom to top
+                // This ensures that the lowest section visible in the viewport gets activated
+                var sections = [];
+                $('#toc .nav-link').each(function() {
+                    var href = $(this).attr('href');
+                    if (href && href.startsWith('#')) {
+                        var section = $(href);
+                        if (section.length) {
+                            sections.push({ link: $(this), element: section });
+                        }
+                    }
+                });
+
+                for (var i = sections.length - 1; i >= 0; i--) {
+                    var sectionTop = sections[i].element.offset().top;
+
+                    // Check if the section is within the viewport or if its top is above the scroll position + offset
+                    if (sectionTop - offset <= scrollPosition) {
+                        sections[i].link.addClass('active');
+                        activeSectionFound = true;
+                        break; // Found the current section, no need to check further
+                    }
+                }
+                
+                // If scrolled to the very bottom, ensure the last TOC item is active
+                if (!activeSectionFound && (scrollPosition + windowHeight >= documentHeight - 20)) { 
+                    if (sections.length > 0) {
+                        $('#toc .nav-link').removeClass('active'); // Clear any previous active
+                        sections[sections.length - 1].link.addClass('active');
+                    }
+                }
+            }
+
+            var tocScrollTimeout;
+            $(window).on('scroll', function() {
+                clearTimeout(tocScrollTimeout);
+                tocScrollTimeout = setTimeout(updateActiveTocLink, 50); // Debounce scroll event
+            });
+            updateActiveTocLink(); // Initial call
+        });
+    </script>
 </body>
 </html>
 

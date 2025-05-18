@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assembling iPhone from parts</title>
+    <title>Assembling iPhone from parts | Henry Lam</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
@@ -30,9 +30,8 @@
         gtag('config', 'G-K03ESX8LJE');
         </script>
         <style>
-            /* Adjust the background color to the orange theme */
+            /* Original styles - Reverted from theme system */
         body {
-            /*font-family: 'Open Sans', monospace;*/
             font-family: 'Lato', sans-serif;
             font-weight: 300;
             font-size: 18px;
@@ -40,20 +39,14 @@
             background-color: #f8f9fa;
             margin: 0;
             overflow-x: hidden;
-            line-height: 1.8; /* Increase line height for better readability */
+            line-height: 1.8;
         }
 
         .custom-toggler.navbar-toggler {
-            border-color: #ff9000; /* Change the border color to white */
-        }
-        .navbar-brand{
-            display: flex;
-            align-items: center; /* Vertically center the content */
-            height: 60px; /* Set the height of the navbar */
-            margin-right: auto;
+            border-color: #ff9000; 
         }
         .navbar-brand h1 {
-            font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
+            font-family: 'Kaushan Script', cursive; 
             font-size: 26px;
             color: #ffffff;
             margin: 0;
@@ -69,141 +62,211 @@
             margin-bottom: 0;
         }
         
-        .navbar-collapse {
-            flex-basis: 100%;
-            flex-grow: 1;
-        }
-        /* Adjust font weights and sizes for headings */
-        h1 {
+        h1, h2, h3, h4, h5, h6 {
             color: #3a170f;
             font-family: 'Lato', sans-serif;
-           
-            font-size: 2.25em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
+            margin-bottom: 1rem;
+        }
+        h1 { font-size: 2.25em; line-height: 1.6; }
+        h2 { font-size: 1.7em; line-height: 1.6; }
+        h3 { font-size: 1.4em; line-height: 1.6; }
+        p { color: #666; font-size: 18px; line-height: 1.8; }
+
+        a {
+            color: #ff9000;
+            text-decoration: none !important;
+        }
+        a:hover {
+            color: #e08000; /* Darker orange on hover */
+            text-decoration: none !important;
+        }
+        .navbar-custom {
+            background-color: #ff9000 !important;
+        }
+        .toggler-icon {
+            background: #ffffff;
+        }
+        hr { border: none; height: 1px; background-color: #ff9000; margin: 30px 0; }
+
+        .card, .feature-box, .method-card, .implementation-section, .results-container, .project-links, .nav-card, .suggested-project, .toc-nav {
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+        .feature-box h3, .method-icon, .result-number { color: #ff9000; }
+        
+        .toc-nav { padding: 20px; margin-bottom: 30px; }
+        .toc-header { color: #3a170f; border-bottom: 2px solid #ff9000; font-weight: bold; font-size: 1.2em; padding-bottom: 10px; margin-bottom: 15px; }
+        .toc-list { padding-left: 0; list-style: none;}
+        .toc-list .nav-link { color: #666; padding: 8px 5px; border-left: 3px solid transparent; transition: all 0.3s ease;}
+        .toc-list .nav-link:hover, .toc-list .nav-link.active {
+            color: #ff9000;
+            border-left-color: #ff9000;
+            background-color: #f8f9fa;
         }
 
-        h2 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-           
-            font-size: 1.7em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
-        }
+        .section-title { margin-top: 40px; padding-bottom: 10px; border-bottom: 3px solid #ff9000; display: inline-block;}
+        .project-summary { font-size: 1.1em; line-height: 1.8; border-left: 4px solid #ff9000; padding-left: 15px; margin: 20px 0;}
+        .image-caption { text-align: center; font-style: italic; color: #888; margin-top: 10px;}
+        .lab-text { text-align: center; font-style: italic; color: #888;}
 
-        h3 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-           
-            font-size: 1.4em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
-        }
-
-        /* Increase line spacing between paragraphs */
-        p {
-            color: #666;
-            font-size: 18px; /* Adjust paragraph font size */
-            line-height: 1.8; /* Increase line height for better readability */
+        img.result-pic, img.lab-gif, img.parts-pic, .project-img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         img.result-pic {
             width: 70%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
         }
+        
         img.parts-pic {
             width: 60%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-
         }
-        img.lab-gif {
-            width: 30%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-        .lab-text {
-            text-align: center;
-            font-style: italic;
-            color: #888;
-        }/* Override Bootstrap link styles */
-  a {
-    text-decoration: none !important; /* Remove underline */
-text-decoration-line: none !important;
-    color: #ff9000; /* Change link color to black */
-}
-
-/* Override Bootstrap link hover styles */
-a:hover {
-    color: #ff9000; /* Change link color on hover */
-text-decoration: none !important; /* Remove underline */
-text-decoration-line: none !important;
-}
-
-.toggler-icon {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: #ffffff;
-    border-radius: .1px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-  }
         
-.navbar-toggler.collapsed .toggler-icon {
-    background: #ffffff;
-}
+        .project-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 6px;
+            overflow: hidden;
+            display: block;
+            object-fit: cover;
+        }
+        
+        .suggested-project {
+            margin-top: 5%;
+            margin-bottom: 30px;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            max-width: 800px;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
+        .suggested-project:hover {
+            transform: translateY(-5px);
+            transition: .5s ease;
+        }
+        
+        .project-details {
+            text-align: left;
+            padding-left: 15px;
+        }
+        
+        .img-col {
+            padding-right: 0 !important;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .suggested-project .row.no-gutters {
+            display: flex;
+            align-items: center;
+        }
+        
+        .suggested-project a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .suggested-project h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #3a170f;
+            font-weight: normal;
+        }
+        
+        .suggested-project p {
+            margin-bottom: 0;
+            color: #666;
+            font-size: 16px;
+        }
 
-.suggested-project {
-    margin-top: 5%;
-    margin-bottom: 30px;
-    overflow: hidden;
-    border-radius: 15px; /* Adjust the border-radius to your preference */
-  
-  }
-  .suggested-project:hover {
-    
-    transform: translateY(-5px);
-    transition: .5s ease;
-  
-  }
-  
-  
-  
-  
-  .project-img {
-    width: 50%;
-    height: auto;
-    border-radius: 15px; /* Adjust the border-radius to your preference */
-    overflow: hidden; /* Ensure the rounded corners are applied */
-    display: block;
-    object-fit: cover;
-    aspect-ratio: 1; /* Maintain a 1:1 aspect ratio (square) */
-  
-  
-  }
-  
-  .project-details {
-  
-    text-align: left;
-  
-    
-  }
-  .img-col {
-    padding-right: 0!important;
-    margin-right: -10%;
-  }
-  hr {
-    border: none;
-    height: 1px;
-    background-color: #ff9000;
-    margin: 30px 0; /* Add 30px white space above and below the <hr> element */
-  }
+        /* Navigation section */
+        .navigation-section { margin-top: 60px; margin-bottom: 40px; }
+        .nav-card {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            display: block;
+            padding: 15px 0;
+            margin: 10px 0;
+            color: #3a170f;
+        }
+        .nav-card:hover {
+            color: #ff9000;
+            transform: translateY(-5px);
+            box-shadow: none;
+            text-decoration: none;
+        }
+        .prev-card { text-align: left; }
+        .next-card { text-align: right; }
+        .nav-direction { font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+        .nav-title { font-size: 1.2em; font-weight: bold; }
+
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; display: none; z-index: 99; }
+        .back-to-top-btn { 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2); 
+            transition: all 0.3s ease;
+            background-color: #ff9000;
+            color: #ffffff;
+        }
+        .back-to-top-btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background-color: #e08000;
+            color: #ffffff;
+        }
+
+        /* Main container spacing */
+        .main-container {
+            padding-top: 80px;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .col-lg-9 {
+                padding-top: 30px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .toc-nav {
+                display: none;
+            }
+            .col-lg-9 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .main-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .nav-card {
+                text-align: center;
+            }
+            
+            .project-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
 </style>
 </head>
 <body>
@@ -235,135 +298,325 @@ text-decoration-line: none !important;
     </div>
 </div>
 </nav>
-    <!-- Content specific to the Colorization of Grayscale Images project -->
-    <div class="main-container">
-        <div id="main-text">
-        <!-- Your content goes here -->
-        <h1>Assembling iPhone from parts</h1>
-        <p>As a lifelong enthusiast of technology, the evolution of smartphones has always fascinated me. In recent years, my smartphone has become an indispensable tool, seamlessly integrating into every aspect of my life. Yet, amidst the convenience and innovation, I've often pondered the intricate process behind the creation of these devices. How are they meticulously assembled, piece by piece, to form the sleek and sophisticated gadgets we hold in our hands?</p>
-        <p>Driven by curiosity and a thirst for knowledge, I embarked on a journey to unravel the mystery behind smartphone assembly. My quest led me to explore the intricate world of iPhone construction, where precision engineering meets cutting-edge technology.</p>
-        <h2>The Journey Begins</h2>
-        <p>The journey began with research – delving into the intricate anatomy of the iPhone and understanding each component's role in its functionality. From the vibrant display to the powerful processor, every element plays a crucial part in delivering the seamless user experience that defines the iPhone.</p>
-        <p>Through extensive research and study, I gained a comprehensive understanding of the internal components that make up an iPhone, including:</p>
-        <img src="images/iphone_parts.jpg" alt="iPhone parts" class="parts-pic">
-        <p class="lab-text">iPhone parts</p>
-        <ul>
-            <li>iPhone motherboard</li>
-            <li>iPhone display</li>
-            <li>iPhone battery</li>
-            <li>iPhone camera</li>
-            <li>iPhone speaker</li>
-            <li>iPhone buttons</li>
-            <li>iPhone housing</li>
-            <li>iPhone screws</li>
-            <li>iPhone adhesive</li>
-            <li>iPhone tools</li>
-        </ul>
-        
-        <h2>Sourcing Components</h2>
-        <p>Armed with knowledge, I embarked on the next phase of my endeavor: sourcing the necessary components. Assembling an iPhone from scratch requires meticulous attention to detail and access to genuine parts. Scouring online marketplaces and specialized stores, I carefully curated a collection of components, ensuring authenticity and quality.</p>
-        <p>I traveled to Shenzhen, China, home to the world's biggest electronic market – Huaqiangbei electronics market. Here, I endeavored to find, buy, and gather the different iPhone parts. It was a daunting task, especially considering it was my first time visiting the bustling market and conversing with sellers in Mandarin. However, armed with bravery and determination, I navigated through the labyrinthine alleys, searching for the best prices and negotiating with vendors.</p>
-        <img src="images/huaqiangbei.png" alt="Huaqiangebei electronics market" class="result-pic">
-        <p class="lab-text">Huaqiangebei electronics market</p>
-        <p>While some parts, like the motherboard, proved elusive in the physical market, I turned to Taobao, China's largest online marketplace, to find one for a reasonable price.</p>
-        <h2>Assembly Process</h2>
-        <p>With all the components in hand, I was ready to tackle the challenging task of assembly. This was where the real excitement began – bringing together the pieces to create a fully functional iPhone.</p>
-        <img src="images/tools2.JPG" alt="Tools for assembling iPhone" class="result-pic">
-        <p class="lab-text">Tools for assembling iPhone</p>
-        <h3>Assembling the Motherboard</h3>
-        <p>The first step in the assembly process was to assemble the motherboard. Gathering all the necessary parts, I carefully attached the display to the motherboard and connected the camera, speaker, and buttons. With everything in place, I secured the motherboard to the housing using screws and adhesive, ensuring a snug fit and optimal functionality.</p>
-        <h3>Installing the Battery</h3>
-        <p>After successfully assembling the motherboard, the next crucial step was installing the battery. Handling the battery with care, I placed it into the housing and connected it to the motherboard. Taking extra precautions, I ensured that the battery was securely fastened in place using adhesive, guaranteeing stability and safety.</p>
-        <p>Each step required precision and patience as I meticulously pieced together the intricate puzzle of circuitry, glass, and metal. From affixing the display to securing the motherboard, every connection was scrutinized, every component aligned with meticulous care.</p>
-        <img src="images/open_phone.png" alt="Installing the display" class="result-pic">
-        <p class="lab-text">Installing the display</p>
-        <p>Yet, the journey was not without its challenges. Navigating the labyrinth of cables and connectors tested my patience, while fine-tuning the assembly demanded unwavering attention to detail. However, with perseverance and determination, I overcame each obstacle, inching closer to my goal with every twist and turn.</p>
-        <p>This marked significant progress in the assembly process, bringing me one step closer to completing my iPhone from parts. Each meticulous step filled me with a sense of accomplishment, knowing that I was creating something truly remarkable from scratch.</p>
-        <h2>Culmination</h2>
-        <p>Finally, the moment of truth arrived – the culmination of hours of research, dedication, and meticulous craftsmanship. With bated breath, I powered on the device, a surge of anticipation coursing through me. And as the screen flickered to life, illuminating the room with its vibrant glow, a sense of triumph washed over me.</p>
-        <img src="images/assembled.png" alt="Starting up the assembled iPhone" class="result-pic">
-        <p class="lab-text">Starting up the assembled iPhone</p>
-        <p>In that moment, I realized the true beauty of the journey – the joy of exploration, the thrill of discovery, and the satisfaction of creation. As I held the assembled iPhone in my hands, I marveled at the convergence of technology and craftsmanship, a testament to human ingenuity and innovation.</p>
-        <h2>Conclusion</h2>
-        <p>My journey to assemble an iPhone from parts was more than just a technical endeavor – it was a testament to the power of curiosity, the spirit of exploration, and the limitless potential of human creativity. It reaffirmed my belief in the power of curiosity to drive innovation and push the boundaries of what is possible. And as I reflect on the challenges and triumphs of my journey, I am filled with a sense of pride and gratitude for the opportunity to be part of something truly extraordinary.</p>
+
+<!-- Content specific to the project -->
+<div class="main-container">
+    <div class="row">
+        <!-- Sticky Table of Contents -->
+        <div class="col-lg-3 d-none d-lg-block">
+            <nav id="toc" class="sticky-top toc-nav" style="top: 100px;">
+                <div class="toc-header">Contents</div>
+                <ul class="nav flex-column toc-list">
+                    <li class="nav-item"><a class="nav-link" href="#intro">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#journey-begins">The Journey Begins</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#components">Sourcing Components</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#assembly">Assembly Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#culmination">Culmination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
+                </ul>
+            </nav>
         </div>
 
+        <!-- Main Content -->
+        <div class="col-lg-9">
+            <div id="main-text" style="max-width: 850px; margin: 0 auto;">
+                <!-- Project content -->
+                <h1 id="intro" class="section-title">Assembling iPhone from parts</h1>
 
+                <div class="project-summary">
+                    <p>As a lifelong enthusiast of technology, I embarked on a journey to understand how smartphones are assembled by building an iPhone from individual parts sourced from the Huaqiangbei electronics market in Shenzhen, China.</p>
+                </div>
 
-       
+                <div class="card feature-box">
+                    <div class="card-body">
+                        <p>As a lifelong enthusiast of technology, the evolution of smartphones has always fascinated me. In recent years, my smartphone has become an indispensable tool, seamlessly integrating into every aspect of my life. Yet, amidst the convenience and innovation, I've often pondered the intricate process behind the creation of these devices. How are they meticulously assembled, piece by piece, to form the sleek and sophisticated gadgets we hold in our hands?</p>
+                        <p>Driven by curiosity and a thirst for knowledge, I embarked on a journey to unravel the mystery behind smartphone assembly. My quest led me to explore the intricate world of iPhone construction, where precision engineering meets cutting-edge technology.</p>
+                    </div>
+                </div>
 
-        <hr>
-            <h2>My Other Projects:</h2>
-            <p></p>
-            <!-- Project 1 -->
-            
-            <!-- Project 2 -->
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/3d-box-shooter-game"class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/box.png" alt="3D Box Shooter Game" class="project-img">
+                <h2 id="journey-begins" class="section-title">The Journey Begins</h2>
+                <p>The journey began with research – delving into the intricate anatomy of the iPhone and understanding each component's role in its functionality. From the vibrant display to the powerful processor, every element plays a crucial part in delivering the seamless user experience that defines the iPhone.</p>
+                <p>Through extensive research and study, I gained a comprehensive understanding of the internal components that make up an iPhone, including:</p>
+                
+                <div class="project-image-container">
+                    <img src="images/iphone_parts.jpg" alt="iPhone parts" class="parts-pic">
+                    <div class="image-caption">iPhone parts</div>
+                </div>
+                
+                <div class="results-container">
+                    <ul>
+                        <li>iPhone motherboard</li>
+                        <li>iPhone display</li>
+                        <li>iPhone battery</li>
+                        <li>iPhone camera</li>
+                        <li>iPhone speaker</li>
+                        <li>iPhone buttons</li>
+                        <li>iPhone housing</li>
+                        <li>iPhone screws</li>
+                        <li>iPhone adhesive</li>
+                        <li>iPhone tools</li>
+                    </ul>
+                </div>
+                
+                <h2 id="components" class="section-title">Sourcing Components</h2>
+                <p>Armed with knowledge, I embarked on the next phase of my endeavor: sourcing the necessary components. Assembling an iPhone from scratch requires meticulous attention to detail and access to genuine parts. Scouring online marketplaces and specialized stores, I carefully curated a collection of components, ensuring authenticity and quality.</p>
+                
+                <div class="card feature-box">
+                    <div class="card-body">
+                        <p>I traveled to Shenzhen, China, home to the world's biggest electronic market – Huaqiangbei electronics market. Here, I endeavored to find, buy, and gather the different iPhone parts. It was a daunting task, especially considering it was my first time visiting the bustling market and conversing with sellers in Mandarin. However, armed with bravery and determination, I navigated through the labyrinthine alleys, searching for the best prices and negotiating with vendors.</p>
+                    </div>
+                </div>
+                
+                <div class="project-image-container">
+                    <img src="images/huaqiangbei.png" alt="Huaqiangebei electronics market" class="result-pic">
+                    <div class="image-caption">Huaqiangebei electronics market</div>
+                </div>
+                
+                <p>While some parts, like the motherboard, proved elusive in the physical market, I turned to Taobao, China's largest online marketplace, to find one for a reasonable price.</p>
+                
+                <h2 id="assembly" class="section-title">Assembly Process</h2>
+                <p>With all the components in hand, I was ready to tackle the challenging task of assembly. This was where the real excitement began – bringing together the pieces to create a fully functional iPhone.</p>
+                
+                <div class="project-image-container">
+                    <img src="images/tools2.JPG" alt="Tools for assembling iPhone" class="result-pic">
+                    <div class="image-caption">Tools for assembling iPhone</div>
+                </div>
+                
+                <div class="accordion mt-4" id="assemblyAccordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link architecture-btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Assembling the Motherboard
+                                </button>
+                            </h3>
                         </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">3D Box Shooter Game</h3>
-                            <p class="post-snippet">The process of creating my 3D Box Shooter Game</p>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#assemblyAccordion">
+                            <div class="card-body">
+                                <p>The first step in the assembly process was to assemble the motherboard. Gathering all the necessary parts, I carefully attached the display to the motherboard and connected the camera, speaker, and buttons. With everything in place, I secured the motherboard to the housing using screws and adhesive, ensuring a snug fit and optimal functionality.</p>
+                            </div>
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/roller-madness"class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/roller_madness2.png" alt="Roller Madness Game" class="project-img">
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link collapsed architecture-btn" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Installing the Battery
+                                </button>
+                            </h3>
                         </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Roller Madness Game</h3>
-                            <p class="post-snippet">The process of creating my first Unity3D game</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/distinguishing-people-with-masks"class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/masks.png" alt="Distinguishing individuals with masks" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Distinguishing individuals with masks</h3>
-                            <p class="post-snippet">A machine learning project to differentiate people wearing masks</p>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#assemblyAccordion">
+                            <div class="card-body">
+                                <p>After successfully assembling the motherboard, the next crucial step was installing the battery. Handling the battery with care, I placed it into the housing and connected it to the motherboard. Taking extra precautions, I ensured that the battery was securely fastened in place using adhesive, guaranteeing stability and safety.</p>
+                            </div>
                         </div>
                     </div>
-                </a>
-            </div>
-            <!-- Project 3 -->
-            
-        </div>  
+                </div>
+                
+                <p>Each step required precision and patience as I meticulously pieced together the intricate puzzle of circuitry, glass, and metal. From affixing the display to securing the motherboard, every connection was scrutinized, every component aligned with meticulous care.</p>
+                
+                <div class="project-image-container">
+                    <img src="images/open_phone.png" alt="Installing the display" class="result-pic">
+                    <div class="image-caption">Installing the display</div>
+                </div>
+                
+                <p>Yet, the journey was not without its challenges. Navigating the labyrinth of cables and connectors tested my patience, while fine-tuning the assembly demanded unwavering attention to detail. However, with perseverance and determination, I overcame each obstacle, inching closer to my goal with every twist and turn.</p>
+                <p>This marked significant progress in the assembly process, bringing me one step closer to completing my iPhone from parts. Each meticulous step filled me with a sense of accomplishment, knowing that I was creating something truly remarkable from scratch.</p>
+                
+                <h2 id="culmination" class="section-title">Culmination</h2>
+                <div class="card feature-box">
+                    <div class="card-body">
+                        <p>Finally, the moment of truth arrived – the culmination of hours of research, dedication, and meticulous craftsmanship. With bated breath, I powered on the device, a surge of anticipation coursing through me. And as the screen flickered to life, illuminating the room with its vibrant glow, a sense of triumph washed over me.</p>
+                    </div>
+                </div>
+                
+                <div class="project-image-container">
+                    <img src="images/assembled.png" alt="Starting up the assembled iPhone" class="result-pic">
+                    <div class="image-caption">Starting up the assembled iPhone</div>
+                </div>
+                
+                <p>In that moment, I realized the true beauty of the journey – the joy of exploration, the thrill of discovery, and the satisfaction of creation. As I held the assembled iPhone in my hands, I marveled at the convergence of technology and craftsmanship, a testament to human ingenuity and innovation.</p>
+                
+                <h2 id="conclusion" class="section-title">Conclusion</h2>
+                <div class="card feature-box">
+                    <div class="card-body">
+                        <p>My journey to assemble an iPhone from parts was more than just a technical endeavor – it was a testament to the power of curiosity, the spirit of exploration, and the limitless potential of human creativity. It reaffirmed my belief in the power of curiosity to drive innovation and push the boundaries of what is possible. And as I reflect on the challenges and triumphs of my journey, I am filled with a sense of pride and gratitude for the opportunity to be part of something truly extraordinary.</p>
+                    </div>
+                </div>
 
-    </div>
-    <!-- Footer -->
-    <div id="fh5co-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>&copy; <span style="font-size: 16px;"><a href="http://henrylam.blog">henrylam.blog</a></span><br><span style="font-size: 12px;">Made by Henry Lam</span></p>
+                <div class="navigation-section">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="https://henrylam.blog/3d-box-shooter-game" class="nav-card prev-card">
+                                <div class="nav-direction">Previous Project</div>
+                                <div class="nav-title">3D Box Shooter Game</div>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="https://henrylam.blog/carbon-credit-tokenization" class="nav-card next-card">
+                                <div class="nav-direction">Next Project</div>
+                                <div class="nav-title">Carbon Credit Tokenization</div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="gototop js-top">
-        <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+
+    <hr>
+    <h2>My Other Projects:</h2>
+        
+    <div class="suggested-project">
+        <a href="https://henrylam.blog/3d-box-shooter-game" class="project-link">
+            <div class="row no-gutters">
+                <div class="col-md-3 col-sm-4 col-12 img-col">
+                    <img src="images/box.png" alt="3D Box Shooter Game" class="project-img">
+                </div>
+                <div class="col-md-9 col-sm-8 col-12 project-details">
+                    <h3 class="post-title">3D Box Shooter Game</h3>
+                    <p class="post-snippet">The process of creating my 3D Box Shooter Game</p>
+                </div>
+            </div>
+        </a>
     </div>
-    <!-- Include any necessary JavaScript files -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.easypiechart.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-    <script src="js/google_map.js"></script>
-    <script src="js/main.js"></script>
+    
+    <div class="suggested-project">
+        <a href="https://henrylam.blog/roller-madness" class="project-link">
+            <div class="row no-gutters">
+                <div class="col-md-3 col-sm-4 col-12 img-col">
+                    <img src="images/roller_madness2.png" alt="Roller Madness Game" class="project-img">
+                </div>
+                <div class="col-md-9 col-sm-8 col-12 project-details">
+                    <h3 class="post-title">Roller Madness Game</h3>
+                    <p class="post-snippet">The process of creating my first Unity3D game</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="suggested-project">
+        <a href="https://henrylam.blog/distinguishing-people-with-masks" class="project-link">
+            <div class="row no-gutters">
+                <div class="col-md-3 col-sm-4 col-12 img-col">
+                    <img src="images/masks.png" alt="Distinguishing individuals with masks" class="project-img">
+                </div>
+                <div class="col-md-9 col-sm-8 col-12 project-details">
+                    <h3 class="post-title">Distinguishing individuals with masks</h3>
+                    <p class="post-snippet">A machine learning project to differentiate people wearing masks</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- Back to Top Button -->
+<div id="back-to-top" class="back-to-top">
+    <a href="#" class="btn back-to-top-btn" role="button"><i class="icon-arrow-up22"></i></a>
+</div>
+
+<!-- Footer -->
+<div id="fh5co-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; <span style="font-size: 16px;"><a href="http://henrylam.blog">henrylam.blog</a></span><br><span style="font-size: 12px;">Made by Henry Lam</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include any necessary JavaScript files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.easypiechart.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="js/google_map.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Custom Script for UI Enhancements -->
+<script>
+    $(document).ready(function() {
+        // Smooth scrolling for anchor links (TOC and other internal links)
+        $('a[href^="#"][data-toggle!="tab"][data-toggle!="collapse"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if( target.length ) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top - 90 // Adjusted offset for navbar
+                }, 500);
+            }
+        });
+        
+        // Back to top button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        
+        $('#back-to-top').click(function(e) {
+            e.preventDefault(); // Prevent hash in URL
+            $('html, body').animate({scrollTop: 0}, 800);
+            return false;
+        });
+        
+        // TOC Active State on Scroll
+        function updateActiveTocLink() {
+            var scrollPosition = $(window).scrollTop();
+            var offset = 100; // Navbar height + some margin
+            var windowHeight = $(window).height();
+            var documentHeight = $(document).height();
+            var activeSectionFound = false;
+
+            // Remove active class from all links first
+            $('#toc .nav-link').removeClass('active');
+
+            // Iterate through sections from bottom to top
+            // This ensures that the lowest section visible in the viewport gets activated
+            var sections = [];
+            $('#toc .nav-link').each(function() {
+                var href = $(this).attr('href');
+                if (href && href.startsWith('#')) {
+                    var section = $(href);
+                    if (section.length) {
+                        sections.push({ link: $(this), element: section });
+                    }
+                }
+            });
+
+            for (var i = sections.length - 1; i >= 0; i--) {
+                var sectionTop = sections[i].element.offset().top;
+
+                // Check if the section is within the viewport or if its top is above the scroll position + offset
+                if (sectionTop - offset <= scrollPosition) {
+                    sections[i].link.addClass('active');
+                    activeSectionFound = true;
+                    break; // Found the current section, no need to check further
+                }
+            }
+            
+            // If scrolled to the very bottom, ensure the last TOC item is active
+            if (!activeSectionFound && (scrollPosition + windowHeight >= documentHeight - 20)) { 
+                if (sections.length > 0) {
+                    $('#toc .nav-link').removeClass('active'); // Clear any previous active
+                    sections[sections.length - 1].link.addClass('active');
+                }
+            }
+        }
+
+        var tocScrollTimeout;
+        $(window).on('scroll', function() {
+            clearTimeout(tocScrollTimeout);
+            tocScrollTimeout = setTimeout(updateActiveTocLink, 50); // Debounce scroll event
+        });
+        updateActiveTocLink(); // Initial call
+    });
+</script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbon Credit Tokenization</title>
+    <title>Carbon Credit Tokenization | Henry Lam</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
@@ -31,9 +31,8 @@
     gtag('config', 'G-K03ESX8LJE');
     </script>
     <style>
-        /* Adjust the background color to the orange theme */
+        /* Original styles - Reverted from theme system */
         body {
-            /*font-family: 'Open Sans', monospace;*/
             font-family: 'Lato', sans-serif;
             font-weight: 300;
             font-size: 18px;
@@ -41,20 +40,14 @@
             background-color: #f8f9fa;
             margin: 0;
             overflow-x: hidden;
-            line-height: 1.8; /* Increase line height for better readability */
+            line-height: 1.8;
         }
 
         .custom-toggler.navbar-toggler {
-            border-color: #ff9000; /* Change the border color to white */
-        }
-        .navbar-brand{
-            display: flex;
-            align-items: center; /* Vertically center the content */
-            height: 60px; /* Set the height of the navbar */
-            margin-right: auto;
+            border-color: #ff9000; 
         }
         .navbar-brand h1 {
-            font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
+            font-family: 'Kaushan Script', cursive; 
             font-size: 26px;
             color: #ffffff;
             margin: 0;
@@ -70,147 +63,204 @@
             margin-bottom: 0;
         }
         
-        .navbar-collapse {
-            flex-basis: 100%;
-            flex-grow: 1;
-        }
-        /* Adjust font weights and sizes for headings */
-        h1 {
+        h1, h2, h3, h4, h5, h6 {
             color: #3a170f;
             font-family: 'Lato', sans-serif;
-           
-            font-size: 2.25em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
+            margin-bottom: 1rem;
         }
+        h1 { font-size: 2.25em; line-height: 1.6; }
+        h2 { font-size: 1.7em; line-height: 1.6; }
+        h3 { font-size: 1.4em; line-height: 1.6; }
+        p { color: #666; font-size: 18px; line-height: 1.8; }
 
-        h2 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-           
-            font-size: 1.7em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
-        }
-
-        h3 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-           
-            font-size: 1.4em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
-        }
-
-        /* Increase line spacing between paragraphs */
-        p {
-            color: #666;
-            font-size: 18px; /* Adjust paragraph font size */
-            line-height: 1.8; /* Increase line height for better readability */
-        }
-        img.result-pic {
-            width: 80%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-        img.lab-gif {
-            width: 30%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-        .lab-text {
-            text-align: center;
-            font-style: italic;
-            color: #888;
-        }
-        /* Override Bootstrap link styles */
         a {
-            text-decoration: none !important; /* Remove underline */
-        text-decoration-line: none !important;
-            color: #ff9000; /* Change link color to black */
+            color: #ff9000;
+            text-decoration: none !important;
+        }
+        a:hover {
+            color: #e08000; /* Darker orange on hover */
+            text-decoration: none !important;
+        }
+        .navbar-custom {
+            background-color: #ff9000 !important;
+        }
+        .toggler-icon {
+            background: #ffffff;
+        }
+        hr { border: none; height: 1px; background-color: #ff9000; margin: 30px 0; }
+
+        .card, .feature-box, .method-card, .implementation-section, .results-container, .project-links, .nav-card, .suggested-project, .toc-nav {
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+        .feature-box h3, .method-icon, .result-number { color: #ff9000; }
+        
+        .toc-nav { padding: 20px; margin-bottom: 30px; }
+        .toc-header { color: #3a170f; border-bottom: 2px solid #ff9000; font-weight: bold; font-size: 1.2em; padding-bottom: 10px; margin-bottom: 15px; }
+        .toc-list { padding-left: 0; list-style: none;}
+        .toc-list .nav-link { color: #666; padding: 8px 5px; border-left: 3px solid transparent; transition: all 0.3s ease;}
+        .toc-list .nav-link:hover, .toc-list .nav-link.active {
+            color: #ff9000;
+            border-left-color: #ff9000;
+            background-color: #f8f9fa;
+        }
+
+        .section-title { margin-top: 40px; padding-bottom: 10px; border-bottom: 3px solid #ff9000; display: inline-block;}
+        .project-summary { font-size: 1.1em; line-height: 1.8; border-left: 4px solid #ff9000; padding-left: 15px; margin: 20px 0;}
+        .image-caption { text-align: center; font-style: italic; color: #888; margin-top: 10px;}
+        .lab-text { text-align: center; font-style: italic; color: #888;}
+
+        img.result-pic, img.lab-gif, .project-img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        /* Override Bootstrap link hover styles */
-        a:hover {
-            color: #ff9000; /* Change link color on hover */
-        text-decoration: none !important; /* Remove underline */
-        text-decoration-line: none !important;
-        }
-
-        .toggler-icon {
+        .project-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 6px;
+            overflow: hidden;
             display: block;
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            background: #ffffff;
-            border-radius: .1px;
-            opacity: 1;
-            left: 0;
-            transform: rotate(0deg);
-            transition: .25s ease-in-out;
-          }
-                
-        .navbar-toggler.collapsed .toggler-icon {
-            background: #ffffff;
+            object-fit: cover;
         }
-
-
         
         .suggested-project {
             margin-top: 5%;
             margin-bottom: 30px;
-            overflow: hidden;
-            border-radius: 15px; /* Adjust the border-radius to your preference */
-
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            max-width: 800px;
+            margin-left: 0;
+            margin-right: auto;
         }
+        
         .suggested-project:hover {
-            
             transform: translateY(-5px);
             transition: .5s ease;
-
-        }
-        
-       
-        
-        
-        .project-img {
-            width: 50%;
-            height: auto;
-            border-radius: 15px; /* Adjust the border-radius to your preference */
-		    overflow: hidden; /* Ensure the rounded corners are applied */
-            display: block;
-            object-fit: cover;
-            aspect-ratio: 1; /* Maintain a 1:1 aspect ratio (square) */
-
-
         }
         
         .project-details {
-        
             text-align: left;
-
-            
+            padding-left: 15px;
         }
+        
         .img-col {
-            padding-right: 0!important;
-            margin-right: -10%;
+            padding-right: 0 !important;
+            display: flex;
+            justify-content: flex-end;
         }
-        hr {
+        
+        .suggested-project .row.no-gutters {
+            display: flex;
+            align-items: center;
+        }
+        
+        .suggested-project a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .suggested-project h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #3a170f;
+            font-weight: normal;
+        }
+        
+        .suggested-project p {
+            margin-bottom: 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Navigation section */
+        .navigation-section { margin-top: 60px; margin-bottom: 40px; }
+        .nav-card {
+            background: transparent;
+            box-shadow: none;
             border: none;
-            height: 1px;
+            display: block;
+            padding: 15px 0;
+            margin: 10px 0;
+            color: #3a170f;
+        }
+        .nav-card:hover {
+            color: #ff9000;
+            transform: translateY(-5px);
+            box-shadow: none;
+            text-decoration: none;
+        }
+        .prev-card { text-align: left; }
+        .next-card { text-align: right; }
+        .nav-direction { font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+        .nav-title { font-size: 1.2em; font-weight: bold; }
+
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; display: none; z-index: 99; }
+        .back-to-top-btn { 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2); 
+            transition: all 0.3s ease;
             background-color: #ff9000;
-            margin: 30px 0; /* Add 30px white space above and below the <hr> element */
-          }
+            color: #ffffff;
+        }
+        .back-to-top-btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background-color: #e08000;
+            color: #ffffff;
+        }
 
+        /* Main container spacing */
+        .main-container {
+            padding-top: 80px;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .col-lg-9 {
+                padding-top: 30px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .toc-nav {
+                display: none;
+            }
+            .col-lg-9 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .main-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .nav-card {
+                text-align: center;
+            }
+            
+            .project-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K03ESX8LJE"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-K03ESX8LJE');
-    </script>
 </head>
 <body>
     <!-- Navbar -->
@@ -241,106 +291,176 @@
             </div>
         </div>
     </nav>
-    <!-- Content specific to the Colorization of Grayscale Images project -->
+    
+    <!-- Content specific to the project -->
     <div class="main-container">
-        <div id="main-text">
-            <!-- Your content goes here -->
-            <h1>Carbon Credit Tokenization: Transforming Climate Action with Blockchain</h1>
+        <div class="row">
+            <!-- Sticky Table of Contents -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <nav id="toc" class="sticky-top toc-nav" style="top: 100px;">
+                    <div class="toc-header">Contents</div>
+                    <ul class="nav flex-column toc-list">
+                        <li class="nav-item"><a class="nav-link" href="#intro">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#background">Background</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ecosystem">Current Ecosystem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#problems">Problems</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#benefits">Benefits of Blockchain</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#solutions">Solutions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#limits">Limits</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-            <p>I've always had interest in blockchain technology, so as a cool fun research project, we embarked on a journey to explore its potential applications in addressing pressing global challenges. Given the urgency of climate change and the need for innovative solutions, we delved into the realm of carbon credit tokenization.</p>
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <div id="main-text" style="max-width: 850px; margin: 0 auto;">
+                    <!-- Project content -->
+                    <h1 id="intro" class="section-title">Carbon Credit Tokenization: Transforming Climate Action with Blockchain</h1>
 
-            <h2>Background</h2>
-            <p>In the global fight against climate change, the emergence of carbon credits has been a pivotal strategy, particularly highlighted by agreements such as the Paris Agreement and frameworks like the Kyoto Protocol. Carbon credits function as tradable certificates representing the right to emit a specific amount of carbon dioxide or its equivalent greenhouse gases.</p>
+                    <div class="project-summary">
+                        <p>A research project exploring how blockchain technology can revolutionize carbon credit markets, making them more transparent, accessible, and effective in addressing climate change.</p>
+                    </div>
 
-            <h2>Current Carbon Credit Ecosystem</h2>
-            <p>The current carbon credit ecosystem involves various stakeholders, including project developers, brokers, traders, and end buyers. Project developers create carbon credits through decarbonization projects, which are then traded through intermediaries to end buyers, typically large companies seeking to offset their carbon emissions.</p>
-            <img src="images/20211125-carbon-market-structure.jpg" alt="Stucture of current carbon market" class="result-pic">
-            <p class="lab-text">Stucture of current carbon market</p>
-            <h2>Problems of the Current Carbon Credit System</h2>
-            <ul>
-                <li>Verification Issues: Fragmented verification processes and varying standards lead to uncertainty and reduced legitimacy.</li>
-                <li>Standardization Challenges: Lack of standardization in calculating carbon credits undermines the effectiveness of the system.</li>
-                <li>Third-Party Risks: Involvement of third-party brokers introduces risks of fraud and high transaction costs, reducing trust and transparency.</li>
-            </ul>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>I've always had interest in blockchain technology, so as a cool fun research project, we embarked on a journey to explore its potential applications in addressing pressing global challenges. Given the urgency of climate change and the need for innovative solutions, we delved into the realm of carbon credit tokenization.</p>
+                        </div>
+                    </div>
 
-            <h2>Consequences of Current Problems</h2>
-            <p>The consequences of these challenges include reduced credibility, inefficiency, and a lack of integrity and transparency in the carbon credit market, hindering its effectiveness in combating climate change.</p>
+                    <h2 id="background" class="section-title">Background</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>In the global fight against climate change, the emergence of carbon credits has been a pivotal strategy, particularly highlighted by agreements such as the Paris Agreement and frameworks like the Kyoto Protocol. Carbon credits function as tradable certificates representing the right to emit a specific amount of carbon dioxide or its equivalent greenhouse gases.</p>
+                        </div>
+                    </div>
 
-            <h2>Benefits of Blockchain Technology for Carbon Credit Tokenization</h2>
-            <ul>
-                <li>Removal of Intermediaries: Blockchain facilitates direct transactions between project developers and end buyers, eliminating the need for intermediaries and reducing transaction costs.</li>
-                <li>Enhanced Transparency: The transparent and decentralized nature of blockchain enables the public to track carbon credit transactions and ensure the integrity of projects.</li>
-                <li>Funding Opportunities: Tokenized carbon credits can attract funding from the consumer market and incentivize businesses to participate in carbon reduction projects.</li>
-            </ul>
+                    <h2 id="ecosystem" class="section-title">Current Carbon Credit Ecosystem</h2>
+                    <p>The current carbon credit ecosystem involves various stakeholders, including project developers, brokers, traders, and end buyers. Project developers create carbon credits through decarbonization projects, which are then traded through intermediaries to end buyers, typically large companies seeking to offset their carbon emissions.</p>
+                    
+                    <div class="project-image-container">
+                        <img src="images/20211125-carbon-market-structure.jpg" alt="Structure of current carbon market" class="result-pic">
+                        <div class="image-caption">Structure of current carbon market</div>
+                    </div>
+                    
+                    <h2 id="problems" class="section-title">Problems of the Current Carbon Credit System</h2>
+                    <div class="results-container">
+                        <ul class="feature-list">
+                            <li>Verification Issues: Fragmented verification processes and varying standards lead to uncertainty and reduced legitimacy.</li>
+                            <li>Standardization Challenges: Lack of standardization in calculating carbon credits undermines the effectiveness of the system.</li>
+                            <li>Third-Party Risks: Involvement of third-party brokers introduces risks of fraud and high transaction costs, reducing trust and transparency.</li>
+                        </ul>
+                    </div>
 
-            <h2>Solutions of Carbon Credit Tokenization</h2>
-            <p>To address verification challenges, existing standards like the Golden Standard can be applied to quantify carbon credits. Smart contracts can ensure transparency and traceability in transactions, while Non-Fungible Tokens (NFTs) offer a secure and tradable representation of carbon credits. Decentralized Autonomous Organizations (DAOs) can further streamline token transactions and promote active trading.</p>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>The consequences of these challenges include reduced credibility, inefficiency, and a lack of integrity and transparency in the carbon credit market, hindering its effectiveness in combating climate change.</p>
+                        </div>
+                    </div>
 
-            <h2>Limits</h2>
-            <p>Challenges such as liquidity issues and the need for standardization pose limitations to the widespread adoption of carbon credit tokenization.</p>
+                    <h2 id="benefits" class="section-title">Benefits of Blockchain Technology for Carbon Credit Tokenization</h2>
+                    <div class="results-container">
+                        <ul class="feature-list">
+                            <li>Removal of Intermediaries: Blockchain facilitates direct transactions between project developers and end buyers, eliminating the need for intermediaries and reducing transaction costs.</li>
+                            <li>Enhanced Transparency: The transparent and decentralized nature of blockchain enables the public to track carbon credit transactions and ensure the integrity of projects.</li>
+                            <li>Funding Opportunities: Tokenized carbon credits can attract funding from the consumer market and incentivize businesses to participate in carbon reduction projects.</li>
+                        </ul>
+                    </div>
 
-            <h2>Conclusion</h2>
-            <p>Carbon credit tokenization holds immense potential in revolutionizing the carbon credit market, making transactions more efficient, transparent, and accessible. While blockchain technology offers promising solutions, collaboration and standardization efforts are crucial for its successful implementation.</p>
+                    <h2 id="solutions" class="section-title">Solutions of Carbon Credit Tokenization</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>To address verification challenges, existing standards like the Golden Standard can be applied to quantify carbon credits. Smart contracts can ensure transparency and traceability in transactions, while Non-Fungible Tokens (NFTs) offer a secure and tradable representation of carbon credits. Decentralized Autonomous Organizations (DAOs) can further streamline token transactions and promote active trading.</p>
+                        </div>
+                    </div>
 
-            <p>In summary, while challenges remain, the integration of blockchain technology into carbon credit systems offers a pathway towards more effective climate mitigation strategies and sustainable development goals.</p>
+                    <h2 id="limits" class="section-title">Limits</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>Challenges such as liquidity issues and the need for standardization pose limitations to the widespread adoption of carbon credit tokenization.</p>
+                        </div>
+                    </div>
 
-            <p>You can read our written report <a href="https://drive.google.com/file/d/1W6-yw5w0_51-KAirxSmTcplalFEY0Vo-/view?usp=sharing" target="_blank">here</a>.</p>
+                    <h2 id="conclusion" class="section-title">Conclusion</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>Carbon credit tokenization holds immense potential in revolutionizing the carbon credit market, making transactions more efficient, transparent, and accessible. While blockchain technology offers promising solutions, collaboration and standardization efforts are crucial for its successful implementation.</p>
+                            <p>In summary, while challenges remain, the integration of blockchain technology into carbon credit systems offers a pathway towards more effective climate mitigation strategies and sustainable development goals.</p>
+                            <p>You can read our written report <a href="https://drive.google.com/file/d/1W6-yw5w0_51-KAirxSmTcplalFEY0Vo-/view?usp=sharing" target="_blank">here</a>.</p>
+                        </div>
+                    </div>
 
+                    <div class="navigation-section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="https://henrylam.blog/assembling-iphone-from-parts" class="nav-card prev-card">
+                                    <div class="nav-direction">Previous Project</div>
+                                    <div class="nav-title">Assembling iPhone from Parts</div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://henrylam.blog/colorization-of-grayscale-images" class="nav-card next-card">
+                                    <div class="nav-direction">Next Project</div>
+                                    <div class="nav-title">Colorization of Grayscale Images</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <hr>
-            <h2>My Other Projects:</h2>
-            <p></p>
-            <!-- Project 1 -->
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/colorization-of-grayscale-images" class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/Automatic-Colorization.png" alt="Colorization of Grayscale Images" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Colorization of Grayscale Images</h3>
-                            <p class="post-snippet">A comparative analysis of colorization techniques for grayscale images</p>
-                        </div>
+        <h2>My Other Projects:</h2>
+        
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/colorization-of-grayscale-images" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/Automatic-Colorization.png" alt="Colorization of Grayscale Images" class="project-img">
                     </div>
-                </a>
-            </div>
-            <!-- Project 2 -->
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/maze-game-implementing-bfs-algorithm" class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/short_path.png" alt="Maze Game" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Maze Game</h3>
-                            <p class="post-snippet">Tom and Jerry Maze Game implementing BFS algorithm</p>
-                        </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Colorization of Grayscale Images</h3>
+                        <p class="post-snippet">A comparative analysis of colorization techniques for grayscale images</p>
                     </div>
-                </a>
-            </div>
-            <!-- Project 3 -->
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/robot-controlled-vehicle" class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/robot.JPG" alt="Robot Controlled Vehicle" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Robot-Controlled Vehicle</h3>
-                            <p class="post-snippet">A robot vehicle equipped with control circuits and sensors</p>
-                        </div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/maze-game-implementing-bfs-algorithm" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/short_path.png" alt="Maze Game" class="project-img">
                     </div>
-                </a>
-            </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Maze Game</h3>
+                        <p class="post-snippet">Tom and Jerry Maze Game implementing BFS algorithm</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/robot-controlled-vehicle" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/robot.JPG" alt="Robot Controlled Vehicle" class="project-img">
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Robot-Controlled Vehicle</h3>
+                        <p class="post-snippet">A robot vehicle equipped with control circuits and sensors</p>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
-</div>
-</div>
 
-
-<div id="suggestions-row" class="row">
-    <div id="suggestions-main-col" class="col-md-8 offset-md-2 col-12">
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="back-to-top">
+        <a href="#" class="btn back-to-top-btn" role="button"><i class="icon-arrow-up22"></i></a>
     </div>
+    
     <!-- Footer -->
     <div id="fh5co-footer">
         <div class="container">
@@ -351,9 +471,7 @@
             </div>
         </div>
     </div>
-    <div class="gototop js-top">
-        <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-    </div>
+    
     <!-- Include any necessary JavaScript files -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
@@ -364,5 +482,87 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
     <script src="js/google_map.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Custom Script for UI Enhancements -->
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for anchor links (TOC and other internal links)
+            $('a[href^="#"][data-toggle!="tab"][data-toggle!="collapse"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 90 // Adjusted offset for navbar
+                    }, 500);
+                }
+            });
+            
+            // Back to top button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            
+            $('#back-to-top').click(function(e) {
+                e.preventDefault(); // Prevent hash in URL
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+            
+            // TOC Active State on Scroll
+            function updateActiveTocLink() {
+                var scrollPosition = $(window).scrollTop();
+                var offset = 100; // Navbar height + some margin
+                var windowHeight = $(window).height();
+                var documentHeight = $(document).height();
+                var activeSectionFound = false;
+
+                // Remove active class from all links first
+                $('#toc .nav-link').removeClass('active');
+
+                // Iterate through sections from bottom to top
+                // This ensures that the lowest section visible in the viewport gets activated
+                var sections = [];
+                $('#toc .nav-link').each(function() {
+                    var href = $(this).attr('href');
+                    if (href && href.startsWith('#')) {
+                        var section = $(href);
+                        if (section.length) {
+                            sections.push({ link: $(this), element: section });
+                        }
+                    }
+                });
+
+                for (var i = sections.length - 1; i >= 0; i--) {
+                    var sectionTop = sections[i].element.offset().top;
+
+                    // Check if the section is within the viewport or if its top is above the scroll position + offset
+                    if (sectionTop - offset <= scrollPosition) {
+                        sections[i].link.addClass('active');
+                        activeSectionFound = true;
+                        break; // Found the current section, no need to check further
+                    }
+                }
+                
+                // If scrolled to the very bottom, ensure the last TOC item is active
+                if (!activeSectionFound && (scrollPosition + windowHeight >= documentHeight - 20)) { 
+                    if (sections.length > 0) {
+                        $('#toc .nav-link').removeClass('active'); // Clear any previous active
+                        sections[sections.length - 1].link.addClass('active');
+                    }
+                }
+            }
+
+            var tocScrollTimeout;
+            $(window).on('scroll', function() {
+                clearTimeout(tocScrollTimeout);
+                tocScrollTimeout = setTimeout(updateActiveTocLink, 50); // Debounce scroll event
+            });
+            updateActiveTocLink(); // Initial call
+        });
+    </script>
 </body>
 </html>

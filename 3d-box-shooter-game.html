@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Box Shooter Game</title>
+    <title>3D Box Shooter Game | Henry Lam</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
@@ -31,9 +31,8 @@
     gtag('config', 'G-K03ESX8LJE');
     </script>
     <style>
-        /* Adjust the background color to the orange theme */
+        /* Original styles - Reverted from theme system */
         body {
-            /*font-family: 'Open Sans', monospace;*/
             font-family: 'Lato', sans-serif;
             font-weight: 300;
             font-size: 18px;
@@ -41,20 +40,14 @@
             background-color: #f8f9fa;
             margin: 0;
             overflow-x: hidden;
-            line-height: 1.8; /* Increase line height for better readability */
+            line-height: 1.8;
         }
 
         .custom-toggler.navbar-toggler {
-            border-color: #ff9000; /* Change the border color to white */
-        }
-        .navbar-brand{
-            display: flex;
-            align-items: center; /* Vertically center the content */
-            height: 60px; /* Set the height of the navbar */
-            margin-right: auto;
+            border-color: #ff9000; 
         }
         .navbar-brand h1 {
-            font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
+            font-family: 'Kaushan Script', cursive; 
             font-size: 26px;
             color: #ffffff;
             margin: 0;
@@ -70,135 +63,206 @@
             margin-bottom: 0;
         }
         
-        .navbar-collapse {
-            flex-basis: 100%;
-            flex-grow: 1;
-        }
-        /* Adjust font weights and sizes for headings */
-        h1 {
+        h1, h2, h3, h4, h5, h6 {
             color: #3a170f;
             font-family: 'Lato', sans-serif;
-           
-            font-size: 2.25em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
+            margin-bottom: 1rem;
         }
+        h1 { font-size: 2.25em; line-height: 1.6; }
+        h2 { font-size: 1.7em; line-height: 1.6; }
+        h3 { font-size: 1.4em; line-height: 1.6; }
+        p { color: #666; font-size: 18px; line-height: 1.8; }
 
-        h2 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-           
-            font-size: 1.7em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
-        }
-
-        h3 {
-            color: #3a170f;
-            font-family: 'Lato', sans-serif;
-           
-            font-size: 1.4em; /* Increase font size */
-            line-height: 1.6; /* Increase line height for better readability */
-        }
-
-        /* Increase line spacing between paragraphs */
-        p {
-            color: #666;
-            font-size: 18px; /* Adjust paragraph font size */
-            line-height: 1.8; /* Increase line height for better readability */
-        }
-
-        img.result-pic {
-            width: 80%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-        img.lab-gif {
-            width: 30%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-        .lab-text {
-            text-align: center;
-            font-style: italic;
-            color: #888;
-        }
-        /* Override Bootstrap link styles */
         a {
-            text-decoration: none !important; /* Remove underline */
-        text-decoration-line: none !important;
-            color: #ff9000; /* Change link color to black */
+            color: #ff9000;
+            text-decoration: none !important;
+        }
+        a:hover {
+            color: #e08000; /* Darker orange on hover */
+            text-decoration: none !important;
+        }
+        .navbar-custom {
+            background-color: #ff9000 !important;
+        }
+        .toggler-icon {
+            background: #ffffff;
+        }
+        hr { border: none; height: 1px; background-color: #ff9000; margin: 30px 0; }
+
+        .card, .feature-box, .method-card, .implementation-section, .results-container, .project-links, .nav-card, .suggested-project, .toc-nav {
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+        .feature-box h3, .method-icon, .result-number { color: #ff9000; }
+        
+        .toc-nav { padding: 20px; margin-bottom: 30px; }
+        .toc-header { color: #3a170f; border-bottom: 2px solid #ff9000; font-weight: bold; font-size: 1.2em; padding-bottom: 10px; margin-bottom: 15px; }
+        .toc-list { padding-left: 0; list-style: none;}
+        .toc-list .nav-link { color: #666; padding: 8px 5px; border-left: 3px solid transparent; transition: all 0.3s ease;}
+        .toc-list .nav-link:hover, .toc-list .nav-link.active {
+            color: #ff9000;
+            border-left-color: #ff9000;
+            background-color: #f8f9fa;
+        }
+
+        .section-title { margin-top: 40px; padding-bottom: 10px; border-bottom: 3px solid #ff9000; display: inline-block;}
+        .project-summary { font-size: 1.1em; line-height: 1.8; border-left: 4px solid #ff9000; padding-left: 15px; margin: 20px 0;}
+        .image-caption { text-align: center; font-style: italic; color: #888; margin-top: 10px;}
+        .lab-text { text-align: center; font-style: italic; color: #888;}
+        
+        .architecture-btn { color: #3a170f; font-weight: bold; text-decoration: none; width: 100%; text-align: left; }
+        .architecture-btn:hover, .architecture-btn:focus { color: #ff9000; text-decoration: none; }
+
+        img.result-pic, img.lab-gif, .project-img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        /* Override Bootstrap link hover styles */
-        a:hover {
-            color: #ff9000; /* Change link color on hover */
-        text-decoration: none !important; /* Remove underline */
-        text-decoration-line: none !important;
-        }
-
-        .toggler-icon {
+        .project-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 6px;
+            overflow: hidden;
             display: block;
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            background: #ffffff;
-            border-radius: .1px;
-            opacity: 1;
-            left: 0;
-            transform: rotate(0deg);
-            transition: .25s ease-in-out;
-          }
-                
-        .navbar-toggler.collapsed .toggler-icon {
-            background: #ffffff;
+            object-fit: cover;
         }
-
+        
         .suggested-project {
             margin-top: 5%;
             margin-bottom: 30px;
-            overflow: hidden;
-            border-radius: 15px; /* Adjust the border-radius to your preference */
-          
-          }
-          .suggested-project:hover {
-            
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            max-width: 800px;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
+        .suggested-project:hover {
             transform: translateY(-5px);
             transition: .5s ease;
-          
-          }
-          
-          
-          
-          
-          .project-img {
-            width: 50%;
-            height: auto;
-            border-radius: 15px; /* Adjust the border-radius to your preference */
-            overflow: hidden; /* Ensure the rounded corners are applied */
-            display: block;
-            object-fit: cover;
-            aspect-ratio: 1; /* Maintain a 1:1 aspect ratio (square) */
-          
-          
-          }
-          
-          .project-details {
-          
+        }
+        
+        .project-details {
             text-align: left;
-          
-            
-          }
-          .img-col {
-            padding-right: 0!important;
-            margin-right: -10%;
-          }
-          hr {
+            padding-left: 15px;
+        }
+        
+        .img-col {
+            padding-right: 0 !important;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .suggested-project .row.no-gutters {
+            display: flex;
+            align-items: center;
+        }
+        
+        .suggested-project a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .suggested-project h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #3a170f;
+            font-weight: normal;
+        }
+        
+        .suggested-project p {
+            margin-bottom: 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Navigation section */
+        .navigation-section { margin-top: 60px; margin-bottom: 40px; }
+        .nav-card {
+            background: transparent;
+            box-shadow: none;
             border: none;
-            height: 1px;
+            display: block;
+            padding: 15px 0;
+            margin: 10px 0;
+            color: #3a170f;
+        }
+        .nav-card:hover {
+            color: #ff9000;
+            transform: translateY(-5px);
+            box-shadow: none;
+            text-decoration: none;
+        }
+        .prev-card { text-align: left; }
+        .next-card { text-align: right; }
+        .nav-direction { font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+        .nav-title { font-size: 1.2em; font-weight: bold; }
+
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; display: none; z-index: 99; }
+        .back-to-top-btn { 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2); 
+            transition: all 0.3s ease;
             background-color: #ff9000;
-            margin: 30px 0; /* Add 30px white space above and below the <hr> element */
-          }
+            color: #ffffff;
+        }
+        .back-to-top-btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background-color: #e08000;
+            color: #ffffff;
+        }
+
+        /* Main container spacing */
+        .main-container {
+            padding-top: 80px;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .col-lg-9 {
+                padding-top: 30px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .toc-nav {
+                display: none;
+            }
+            .col-lg-9 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .main-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .nav-card {
+                text-align: center;
+            }
+            
+            .project-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -230,131 +294,194 @@
             </div>
         </div>
     </nav>
-    <!-- Content specific to the Colorization of Grayscale Images project -->
+    
+    <!-- Content specific to the project -->
     <div class="main-container">
-        <div id="main-text">
-        <!-- Your content goes here -->
-        <h1>Creating 3D Box Shooter</h1>
-        <h2>Introduction</h2>
-        <p>Embarking on the journey of game development can be an exciting yet daunting task, especially when venturing into the realm of creating a first-person shooter game. In this blog post, I share my personal journey of building Box Shooter, a game developed by me using C# scripts in Unity.        </p>
-
-        <h2>Learning the basics</h2>
-        <p>My journey into the world of programming and Unity commenced with humble beginnings. I embarked on this adventure with a thirst for knowledge and a curiosity to explore the realms of game development. Initially, I immersed myself in a plethora of tutorials and documentation, absorbing the foundational principles of C# scripting and Unity game development. Each tutorial and document I encountered served as a stepping stone, gradually shaping my understanding of the intricate mechanics that underpin immersive gaming experiences.</p>
-
-        <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=9TEgo0EqkNYEuQpr&amp;list=PLFt_AvWsXl0fnA91TcmkRyhhixX9CO3Lw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="row">
+            <!-- Sticky Table of Contents -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <nav id="toc" class="sticky-top toc-nav" style="top: 100px;">
+                    <div class="toc-header">Contents</div>
+                    <ul class="nav flex-column toc-list">
+                        <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#learning">Learning the Basics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#designing">Designing the Game</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#challenges">Challenges</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#playing">Playing the Game</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#reflecting">Reflecting on the Journey</a></li>
+                    </ul>
+                </nav>
             </div>
-<p></p>
-          <p>This YouTube tutorial series really helped me understand the basics and fundamentals of C# in Unity. It provided clear explanations and practical examples that facilitated my learning process, allowing me to grasp essential concepts such as object-oriented programming, game physics, and user interface design. Through engaging tutorials and hands-on exercises, I gained confidence in my programming skills and developed a deeper appreciation for the creative possibilities offered by Unity game development.</p>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <div id="main-text" style="max-width: 850px; margin: 0 auto;">
+                    <!-- Project content -->
+                    <h1 id="introduction" class="section-title">Creating 3D Box Shooter</h1>
+
+                    <div class="project-summary">
+                        <p>Embarking on the journey of game development can be an exciting yet daunting task, especially when venturing into the realm of creating a first-person shooter game. In this blog post, I share my personal journey of building Box Shooter, a game developed by me using C# scripts in Unity.</p>
+                    </div>
+
+                    <h2 id="learning" class="section-title">Learning the basics</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>My journey into the world of programming and Unity commenced with humble beginnings. I embarked on this adventure with a thirst for knowledge and a curiosity to explore the realms of game development. Initially, I immersed myself in a plethora of tutorials and documentation, absorbing the foundational principles of C# scripting and Unity game development. Each tutorial and document I encountered served as a stepping stone, gradually shaping my understanding of the intricate mechanics that underpin immersive gaming experiences.</p>
+                        </div>
+                    </div>
+
+                    <div class="video-container mt-4 mb-4">
+                        <iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?si=9TEgo0EqkNYEuQpr&amp;list=PLFt_AvWsXl0fnA91TcmkRyhhixX9CO3Lw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="image-caption">Tutorial series that helped me learn C# in Unity</div>
+                    </div>
+
+                    <p>This YouTube tutorial series really helped me understand the basics and fundamentals of C# in Unity. It provided clear explanations and practical examples that facilitated my learning process, allowing me to grasp essential concepts such as object-oriented programming, game physics, and user interface design. Through engaging tutorials and hands-on exercises, I gained confidence in my programming skills and developed a deeper appreciation for the creative possibilities offered by Unity game development.</p>
           
-
-            <p>   As I delved deeper into the intricacies of programming and Unity, I found myself drawn to the hands-on aspect of learning through experimentation. Armed with newfound knowledge, I eagerly dived into sample projects, eager to apply theoretical concepts to practical scenarios. Through trial and error, I honed my skills, gaining invaluable insights into the nuances of coding and game development. With each experiment, I encountered challenges that tested my problem-solving abilities and propelled me towards greater proficiency.</p>
+                    <p>As I delved deeper into the intricacies of programming and Unity, I found myself drawn to the hands-on aspect of learning through experimentation. Armed with newfound knowledge, I eagerly dived into sample projects, eager to apply theoretical concepts to practical scenarios. Through trial and error, I honed my skills, gaining invaluable insights into the nuances of coding and game development. With each experiment, I encountered challenges that tested my problem-solving abilities and propelled me towards greater proficiency.</p>
             
-                <p> Throughout this initial phase of learning, I embraced a growth mindset, viewing challenges as opportunities for growth rather than obstacles to overcome. With each obstacle conquered, I emerged more resilient and equipped with a deeper understanding of the dynamic interplay between code and game mechanics. As I reflect on this journey of discovery, I am filled with a sense of excitement and anticipation, eager to continue honing my skills and unraveling the endless possibilities that await in the vast landscape of game development.</p>
+                    <p>Throughout this initial phase of learning, I embraced a growth mindset, viewing challenges as opportunities for growth rather than obstacles to overcome. With each obstacle conquered, I emerged more resilient and equipped with a deeper understanding of the dynamic interplay between code and game mechanics. As I reflect on this journey of discovery, I am filled with a sense of excitement and anticipation, eager to continue honing my skills and unraveling the endless possibilities that await in the vast landscape of game development.</p>
 
-        <h2>Designing the game</h2>
-        <p>Box Shooter is an exhilarating first-person shooter game designed to challenge players' reflexes, decision-making, and precision. The game is divided into two distinct levels, each presenting its own set of challenges and objectives.</p>
+                    <h2 id="designing" class="section-title">Designing the game</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>Box Shooter is an exhilarating first-person shooter game designed to challenge players' reflexes, decision-making, and precision. The game is divided into two distinct levels, each presenting its own set of challenges and objectives.</p>
+                        </div>
+                    </div>
 
-            <h3>Level 1</h3>
-            <p>
-                In Level 1, players are thrust into a dynamic environment with a countdown timer set at 15 seconds. The primary objective is to accumulate 50 points by shooting green boxes, each worth 5 points. However, players must navigate the level cautiously, as encountering orange boxes deducts 3 seconds from their remaining time.
+                    <div class="accordion mt-4" id="levelAccordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link architecture-btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Level 1
+                                    </button>
+                                </h3>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#levelAccordion">
+                                <div class="card-body">
+                                    <p>In Level 1, players are thrust into a dynamic environment with a countdown timer set at 15 seconds. The primary objective is to accumulate 50 points by shooting green boxes, each worth 5 points. However, players must navigate the level cautiously, as encountering orange boxes deducts 3 seconds from their remaining time.</p>
+                                    <p>To aid players in their quest, white boxes occasionally appear, rewarding them with an additional 3 seconds. Level 1 serves as an introduction to the game mechanics and sets the stage for the escalating challenges of Level 2.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link collapsed architecture-btn" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Level 2
+                                    </button>
+                                </h3>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#levelAccordion">
+                                <div class="card-body">
+                                    <p>Upon successfully reaching Level 2, players face a heightened level of difficulty as they strive to maximize their score within a limited timeframe. The gameplay dynamics remain consistent with Level 1, with players aiming to accrue as many points as possible by shooting green boxes.</p>
+                                    <p>However, Level 2 introduces a higher level of challenge by decreasing the spawn rate of white boxes while increasing the appearance of yellow boxes. Yellow boxes present a unique challenge, requiring players to exercise caution, as they may hinder progress or impede scoring opportunities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                To aid players in their quest, white boxes occasionally appear, rewarding them with an additional 3 seconds. Level 1 serves as an introduction to the game mechanics and sets the stage for the escalating challenges of Level 2.
-                
-                
-        </p>
-            <h3>Level 2</h3>
-            <p>
-                Upon successfully reaching Level 2, players face a heightened level of difficulty as they strive to maximize their score within a limited timeframe. The gameplay dynamics remain consistent with Level 1, with players aiming to accrue as many points as possible by shooting green boxes.
+                    <h2 id="challenges" class="section-title">Challenges</h2>
+                    <div class="results-container">
+                        <ol class="feature-list">
+                            <li><strong>Game Balancing:</strong> Achieving a delicate balance between difficulty and accessibility was paramount. Adjusting variables such as box spawn rates, point values, and time penalties ensured that the game provided a challenging yet rewarding experience for players of all skill levels.</li>
+                            <li><strong>Level Progression:</strong> Designing a seamless transition from Level 1 to Level 2 required careful consideration of pacing and player engagement. Gradually increasing the level of challenge while maintaining continuity in gameplay mechanics ensured a smooth and immersive experience.</li>
+                            <li><strong>Enemy Behavior:</strong> Implementing varied enemy behaviors, such as the erratic movement of yellow boxes, added depth and unpredictability to the gameplay. Balancing the frequency and intensity of enemy encounters kept players on their toes and heightened the sense of tension and excitement.</li>
+                            <li><strong>User Feedback:</strong> Incorporating visual and auditory feedback mechanisms, such as score updates and sound effects, enhanced player immersion and engagement. Clear and intuitive feedback mechanisms allowed players to make informed decisions and react swiftly to changing circumstances.</li>
+                        </ol>
+                    </div>
+                    
+                    <h2 id="playing" class="section-title">Playing the Game</h2>
+                    <div class="project-links card">
+                        <div class="card-body text-center">
+                            <div class="project-image-container">
+                                <a href="https://simmer.io/@henrylamblog/~3e060bc9-96db-eee0-25cd-13388cceb169" target="_blank">
+                                    <img src="images/box.png" alt="Game Screenshot" class="result-pic">
+                                </a>
+                                <div class="image-caption">3D Box Shooter gameplay screenshot</div>
+                            </div>
+                            <div class="project-buttons mt-4">
+                                <a href="https://simmer.io/@henrylamblog/~3e060bc9-96db-eee0-25cd-13388cceb169" target="_blank" class="btn project-btn"><i class="icon-gamepad"></i> Play 3D Box Shooter</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2 id="reflecting" class="section-title">Reflecting on the Journey</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>As I reflect on the journey of creating 3D Box Shooter, I am reminded of the immense learning and growth that accompanied each stage of development. From grappling with complex scripting concepts to refining the game's visual and auditory elements, every challenge served as a stepping stone towards mastery in game development.</p>
+                        </div>
+                    </div>
 
-                However, Level 2 introduces a higher level of challenge by decreasing the spawn rate of white boxes while increasing the appearance of yellow boxes. Yellow boxes present a unique challenge, requiring players to exercise caution, as they may hinder progress or impede scoring opportunities.</p>
-                <h2>Challenges</h2>
-
-                <ol>
-                  <li>
-                    <strong>Game Balancing:</strong> Achieving a delicate balance between difficulty and accessibility was paramount. Adjusting variables such as box spawn rates, point values, and time penalties ensured that the game provided a challenging yet rewarding experience for players of all skill levels.
-                  </li>
-                  <li>
-                    <strong>Level Progression:</strong> Designing a seamless transition from Level 1 to Level 2 required careful consideration of pacing and player engagement. Gradually increasing the level of challenge while maintaining continuity in gameplay mechanics ensured a smooth and immersive experience.
-                  </li>
-                  <li>
-                    <strong>Enemy Behavior:</strong> Implementing varied enemy behaviors, such as the erratic movement of yellow boxes, added depth and unpredictability to the gameplay. Balancing the frequency and intensity of enemy encounters kept players on their toes and heightened the sense of tension and excitement.
-                  </li>
-                  <li>
-                    <strong>User Feedback:</strong> Incorporating visual and auditory feedback mechanisms, such as score updates and sound effects, enhanced player immersion and engagement. Clear and intuitive feedback mechanisms allowed players to make informed decisions and react swiftly to changing circumstances.
-                  </li>
-                </ol>
-                
-                <h2>Playing the Game</h2>
-                <div style="text-align: center;">
-                    <a href="https://simmer.io/@henrylamblog/~3e060bc9-96db-eee0-25cd-13388cceb169" target="_blank">
-                        <img src="images/box.png" alt="Game Screenshot" style="width: 80%; height: auto;">
-                    </a>
-                    <br>
-                    <a href="https://simmer.io/@henrylamblog/~3e060bc9-96db-eee0-25cd-13388cceb169" target="_blank" style="font-size: 20px; font-weight: bold;">Play 3D Box Shooter</a>
+                    <div class="navigation-section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="https://henrylam.blog/roller-madness" class="nav-card prev-card">
+                                    <div class="nav-direction">Previous Project</div>
+                                    <div class="nav-title">Roller Madness Game</div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://henrylam.blog/immersive-ball-shooter" class="nav-card next-card">
+                                    <div class="nav-direction">Next Project</div>
+                                    <div class="nav-title">Immersive Ball Shooter</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                
-<p></p>
-                <h2>Reflecting on the Journey</h2>
-        <p>As I reflect on the journey of creating 3D Box Shooter, I am reminded of the immense learning and growth that accompanied each stage of development. From grappling with complex scripting concepts to refining the game's visual and auditory elements, every challenge served as a stepping stone towards mastery in game development.</p>
-
-        
+            </div>
         </div>
 
-
         <hr>
-            <h2>My Other Projects:</h2>
-            <p></p>
-            <!-- Project 1 -->
-            
-            <!-- Project 2 -->
-            
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/roller-madness"class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/roller_madness2.png" alt="Roller Madness Game" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Roller Madness Game</h3>
-                            <p class="post-snippet">The process of creating my first Unity3D game</p>
-                        </div>
+        <h2>My Other Projects:</h2>
+        
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/roller-madness" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/roller_madness2.png" alt="Roller Madness Game" class="project-img">
                     </div>
-                </a>
-            </div>
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/distinguishing-people-with-masks"class="project-link">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/masks.png" alt="Distinguishing individuals with masks" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Distinguishing individuals with masks</h3>
-                            <p class="post-snippet">A machine learning project to differentiate people wearing masks</p>
-                        </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Roller Madness Game</h3>
+                        <p class="post-snippet">The process of creating my first Unity3D game</p>
                     </div>
-                </a>
-            </div>
-            <div class="suggested-project">
-                <a href="https://henrylam.blog/carbon-credit-tokenization" class="project-link">
-                    
-
-                    <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-
-                            <img src="images/carbon2.jpg" alt="Carbon Credit Tokenization" class="project-img">
-                        </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Carbon Credit Tokenization</h3>
-                            <p class="post-snippet">Research project on the tokenization of carbon credits</p>
-                        </div>
+                </div>
+            </a>
+        </div>
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/distinguishing-people-with-masks" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/masks.png" alt="Distinguishing individuals with masks" class="project-img">
                     </div>
-                </a>
-            </div>
-            <!-- Project 3 -->
-            
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Distinguishing individuals with masks</h3>
+                        <p class="post-snippet">A machine learning project to differentiate people wearing masks</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/carbon-credit-tokenization" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/carbon2.jpg" alt="Carbon Credit Tokenization" class="project-img">
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Carbon Credit Tokenization</h3>
+                        <p class="post-snippet">Research project on the tokenization of carbon credits</p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="back-to-top">
+        <a href="#" class="btn back-to-top-btn" role="button"><i class="icon-arrow-up22"></i></a>
+    </div>
+    
     <!-- Footer -->
     <div id="fh5co-footer">
         <div class="container">
@@ -365,9 +492,7 @@
             </div>
         </div>
     </div>
-    <div class="gototop js-top">
-        <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-    </div>
+    
     <!-- Include any necessary JavaScript files -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
@@ -378,5 +503,87 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
     <script src="js/google_map.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Custom Script for UI Enhancements -->
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for anchor links (TOC and other internal links)
+            $('a[href^="#"][data-toggle!="tab"][data-toggle!="collapse"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 90 // Adjusted offset for navbar
+                    }, 500);
+                }
+            });
+            
+            // Back to top button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            
+            $('#back-to-top').click(function(e) {
+                e.preventDefault(); // Prevent hash in URL
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+            
+            // TOC Active State on Scroll
+            function updateActiveTocLink() {
+                var scrollPosition = $(window).scrollTop();
+                var offset = 100; // Navbar height + some margin
+                var windowHeight = $(window).height();
+                var documentHeight = $(document).height();
+                var activeSectionFound = false;
+
+                // Remove active class from all links first
+                $('#toc .nav-link').removeClass('active');
+
+                // Iterate through sections from bottom to top
+                // This ensures that the lowest section visible in the viewport gets activated
+                var sections = [];
+                $('#toc .nav-link').each(function() {
+                    var href = $(this).attr('href');
+                    if (href && href.startsWith('#')) {
+                        var section = $(href);
+                        if (section.length) {
+                            sections.push({ link: $(this), element: section });
+                        }
+                    }
+                });
+
+                for (var i = sections.length - 1; i >= 0; i--) {
+                    var sectionTop = sections[i].element.offset().top;
+
+                    // Check if the section is within the viewport or if its top is above the scroll position + offset
+                    if (sectionTop - offset <= scrollPosition) {
+                        sections[i].link.addClass('active');
+                        activeSectionFound = true;
+                        break; // Found the current section, no need to check further
+                    }
+                }
+                
+                // If scrolled to the very bottom, ensure the last TOC item is active
+                if (!activeSectionFound && (scrollPosition + windowHeight >= documentHeight - 20)) { 
+                    if (sections.length > 0) {
+                        $('#toc .nav-link').removeClass('active'); // Clear any previous active
+                        sections[sections.length - 1].link.addClass('active');
+                    }
+                }
+            }
+
+            var tocScrollTimeout;
+            $(window).on('scroll', function() {
+                clearTimeout(tocScrollTimeout);
+                tocScrollTimeout = setTimeout(updateActiveTocLink, 50); // Debounce scroll event
+            });
+            updateActiveTocLink(); // Initial call
+        });
+    </script>
 </body>
 </html>

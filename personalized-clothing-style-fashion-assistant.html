@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Clothing Style and Fashion Assistant | Henry Lam</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K03ESX8LJE"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K03ESX8LJE');
+    </script>
+    <style>
+        /* Original styles - Reverted from theme system */
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 18px;
+            color: #666;
+            background-color: #f8f9fa;
+            margin: 0;
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
+
+        .custom-toggler.navbar-toggler {
+            border-color: #ff9000; 
+        }
+        .navbar-brand h1 {
+            font-family: 'Kaushan Script', cursive; 
+            font-size: 26px;
+            color: #ffffff;
+            margin: 0;
+        }
+    
+        .navbar-nav .nav-item .nav-link {
+            font-family: 'Lato', sans-serif;
+            color: #ffffff;
+            font-size: 18px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: #3a170f;
+            font-family: 'Lato', sans-serif;
+            margin-bottom: 1rem;
+        }
+        h1 { font-size: 2.25em; line-height: 1.6; }
+        h2 { font-size: 1.7em; line-height: 1.6; }
+        h3 { font-size: 1.4em; line-height: 1.6; }
+        p { color: #666; font-size: 18px; line-height: 1.8; }
+
+        a {
+            color: #ff9000;
+            text-decoration: none !important;
+        }
+        a:hover {
+            color: #e08000; /* Darker orange on hover */
+            text-decoration: none !important;
+        }
+        .navbar-custom {
+            background-color: #ff9000 !important;
+        }
+        .toggler-icon {
+            background: #ffffff;
+        }
+        hr { border: none; height: 1px; background-color: #ff9000; margin: 30px 0; }
+
+        .card, .feature-box, .method-card, .implementation-section, .results-container, .project-links, .nav-card, .suggested-project, .toc-nav {
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+        .feature-box h3, .method-icon, .result-number { color: #ff9000; }
+        
+        .toc-nav { padding: 20px; margin-bottom: 30px; }
+        .toc-header { color: #3a170f; border-bottom: 2px solid #ff9000; font-weight: bold; font-size: 1.2em; padding-bottom: 10px; margin-bottom: 15px; }
+        .toc-list { padding-left: 0; list-style: none;}
+        .toc-list .nav-link { color: #666; padding: 8px 5px; border-left: 3px solid transparent; transition: all 0.3s ease;}
+        .toc-list .nav-link:hover, .toc-list .nav-link.active {
+            color: #ff9000;
+            border-left-color: #ff9000;
+            background-color: #f8f9fa;
+        }
+
+        .section-title { margin-top: 40px; padding-bottom: 10px; border-bottom: 3px solid #ff9000; display: inline-block;}
+        .project-summary { font-size: 1.1em; line-height: 1.8; border-left: 4px solid #ff9000; padding-left: 15px; margin: 20px 0;}
+        .image-caption { text-align: center; font-style: italic; color: #888; margin-top: 10px;}
+        .lab-text { text-align: center; font-style: italic; color: #888;}
+        
+        .architecture-btn { color: #3a170f; font-weight: bold; text-decoration: none; width: 100%; text-align: left; }
+        .architecture-btn:hover, .architecture-btn:focus { color: #ff9000; text-decoration: none; }
+        
+        #implementationTabs { margin-bottom: 20px; }
+        #implementationTabs .nav-link { color: #666; border: none; border-bottom: 3px solid transparent; transition: all 0.3s ease; }
+        #implementationTabs .nav-link:hover { border-bottom-color: #ff9000; color: #ff9000; }
+        #implementationTabs .nav-link.active { color: #ff9000; background-color: transparent; border-bottom-color: #ff9000; }
+        .implementation-section { padding: 20px; }
+
+        .feature-list { padding-left: 20px; list-style-type: none; }
+        .feature-list li { position: relative; padding-left: 25px; margin-bottom: 10px; }
+        .feature-list li::before { content: "\2022"; position: absolute; left: 0; color: #ff9000; font-size: 1.5em; line-height: 1; }
+
+        .results-container { margin: 30px 0; padding: 20px; }
+        .result-card { text-align: center; padding: 20px 10px; margin-bottom: 15px; background: linear-gradient(145deg, #fff, #f8f9fa); border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+        .result-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .results-note { text-align: center; font-style: italic; color: #888; margin-top: 20px; }
+        
+        .timeline { position: relative; margin: 30px 0; padding-left: 30px; }
+        .timeline::before { content: ''; position: absolute; top: 0; left: 11px; height: 100%; width: 2px; background-color: #ddd; }
+        .timeline-item { position: relative; margin-bottom: 30px; }
+        .timeline-marker { position: absolute; top: 6px; left: -30px; width: 20px; height: 20px; border-radius: 50%; background-color: #ff9000; border: 3px solid #fff; box-shadow: 0 0 0 2px #ff9000; }
+        .timeline-content { padding: 0 0 0 15px; }
+        .timeline-content h3 { margin-top: 0; font-size: 1.3em; color: #3a170f; }
+
+        .project-btn, .back-to-top-btn {
+            background-color: #ff9000;
+            color: #ffffff;
+        }
+        .project-btn:hover, .back-to-top-btn:hover {
+            background-color: #e08000;
+            color: #ffffff;
+        }
+        .project-links .card-body { text-align:center; }
+
+        .navigation-section { margin-top: 60px; margin-bottom: 40px; }
+        .nav-card {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            display: block;
+            padding: 15px 0;
+            margin: 10px 0;
+            color: #3a170f;
+        }
+        .nav-card:hover {
+            color: #ff9000;
+            transform: translateY(-5px);
+            box-shadow: none;
+            text-decoration: none;
+        }
+        .prev-card { text-align: left; }
+        .next-card { text-align: right; }
+        .nav-direction { font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+        .nav-title { font-size: 1.2em; font-weight: bold; }
+
+        .related-projects-title { text-align: center; margin: 40px 0 30px; position: relative; }
+        .related-projects-title::after { content: ''; display: block; width: 50px; height: 3px; background-color: #ff9000; margin: 15px auto; }
+        
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; display: none; z-index: 99; }
+        .back-to-top-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+        .back-to-top-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        
+        img.result-pic, img.lab-gif, .project-img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .suggested-project .project-details h3.post-title { color: #3a170f; }
+        .suggested-project .project-details p.post-snippet { color: #666; }
+
+        .suggested-project {
+            margin-top: 5%;
+            margin-bottom: 30px;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            max-width: 800px;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
+        .suggested-project:hover {
+            transform: translateY(-5px);
+            transition: .5s ease;
+        }
+        
+        .project-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 6px;
+            overflow: hidden;
+            display: block;
+            object-fit: cover;
+        }
+        
+        .project-details {
+            text-align: left;
+            padding-left: 15px;
+        }
+        
+        .img-col {
+            padding-right: 0 !important;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .suggested-project .row.no-gutters {
+            display: flex;
+            align-items: center;
+        }
+        
+        .suggested-project a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .suggested-project h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #3a170f;
+            font-weight: normal;
+        }
+        
+        .suggested-project p {
+            margin-bottom: 0;
+            color: #666;
+            font-size: 16px;
+        }
+        /* End of complete overhaul */
+
+        /* Additional styling for headers and content spacing */
+        .main-container {
+            padding-top: 80px; /* Add space below the navbar */
+        }
+        
+        /* Additional space above the Other Projects section */
+        hr + h2 {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Fix for navigation cards */
+        .navigation-section {
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .nav-card {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            display: block;
+            padding: 15px 0;
+            margin: 10px 0;
+            color: #3a170f;
+        }
+        
+        .nav-card:hover {
+            color: #ff9000;
+            transform: translateY(-5px);
+            box-shadow: none;
+            text-decoration: none;
+        }
+        
+        /* Ensure proper margins for the project buttons */
+        .project-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* Update footer styling for consistency */
+        #fh5co-footer {
+            background: #f8f9fa;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .col-lg-9 {
+                padding-top: 30px; /* Add some top padding when TOC is shown */
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .toc-nav {
+                display: none;
+            }
+            .col-lg-9 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .main-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .method-card, 
+            .result-card {
+                margin-bottom: 20px;
+            }
+        
+            .project-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-card {
+                text-align: center;
+            }
+            
+            .project-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        /* Method cards styling */
+        .method-row {
+            margin-bottom: 20px; /* Space between rows of methodology cards */
+        }
+        .method-card {
+            padding: 25px 20px; /* Add internal padding (top/bottom, left/right) */
+            text-align: center; 
+            height: 100%; /* Ensure cards in the same row have equal height */
+            display: flex; 
+            flex-direction: column; 
+            justify-content: flex-start; /* Align content to the top */
+            border-radius: 10px; /* Ensure border-radius is applied if not already by .card */
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Slightly softer shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .method-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+        }
+        .method-icon {
+            font-size: 2.8em; /* Adjust icon size */
+            margin-bottom: 18px; /* Space below icon */
+            line-height: 1; /* Ensure icon vertical alignment */
+        }
+        .method-card h3 {
+            font-size: 1.2em; /* Adjust heading size */
+            margin-bottom: 12px;
+            color: #3a170f; 
+            font-weight: 700; /* Make heading bolder */
+        }
+        .method-card p {
+            font-size: 0.9em; 
+            color: #666; 
+            margin-bottom: 0; 
+            line-height: 1.6;
+        }
+    </style>
+    <style>
+        /* Custom width for this page's main container */
+        .main-container-wider-custom {
+            max-width: 1140px !important; /* Overrides external CSS and ensures #main-text can reach its 850px potential */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-custom navbar-light fixed-top" style="background-color: #ff9000;">
+        <div class="container">
+            <a class="navbar-brand" href="/"><h1>Henry Lam</h1></a>
+
+            <!-- Toggle button for smaller devices -->
+            <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a id="about-nav" class="nav-link theme2" href="https://henrylam.blog/#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="resume-nav" class="nav-link theme2" href="https://henrylam.blog/#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="projects-nav" class="nav-link theme2" href="https://henrylam.blog/#projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Content specific to the Personalized Clothing Style and Fashion Assistant project -->
+    <div class="main-container main-container-wider-custom">
+        <div class="row">
+            <!-- Sticky Table of Contents -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <nav id="toc" class="sticky-top toc-nav" style="top: 100px;">
+                    <div class="toc-header">Contents</div>
+                    <ul class="nav flex-column toc-list">
+                        <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#problem">Problem Definition</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#methodology">Methodology</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#architecture">System Architecture</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#implementation">Implementation Details</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#evaluation">Evaluation & Results</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#conclusions">Conclusions</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <div id="main-text" style="max-width: 850px; margin: 0 auto;">
+                    <!-- Project content -->
+                    <h1 id="overview" class="section-title">StyleMap HK: Personalized Clothing Style and Fashion Assistant</h1>
+
+                    <div class="project-summary">
+                        <p>In Hong Kong's densely packed urban environment, finding clothes that match both style preferences and fit requirements can be challenging. StyleMap HK addresses this problem by developing an integrated solution that combines personalized clothing recommendations based on individual measurements and style preferences with local store mapping functionality to guide users to physical retail locations where suitable items can be found.</p>
+                    </div>
+
+                    <div class="project-image-container">
+                        <img src="images/recommendation_system.png" alt="StyleMap HK Interface" class="result-pic">
+                        <div class="image-caption">StyleMap HK mobile application interface showing personalized recommendations</div>
+                    </div>
+
+                    <h2 id="problem" class="section-title">Problem Definition</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>Despite the rise of online shopping, many consumers still prefer to try on clothes before purchasing, especially when concerned about fit and style. However, navigating Hong Kong's complex retail landscape can be overwhelming. StyleMap HK bridges this gap by combining personalized styling recommendations with geolocation services to create a seamless shopping experience.</p>
+                        </div>
+                    </div>
+
+                    <h2 id="methodology" class="section-title">Methodology</h2>
+                    <p>Our approach integrates multiple data collection and processing methods:</p>
+                    <div class="row method-row">
+                        <div class="col-md-6">
+                            <div class="method-card">
+                                <div class="method-icon"><i class="icon-user"></i></div>
+                                <h3>User Profile Creation</h3>
+                                <p>Collection of body measurements, personal style preferences, demographic data, and shopping habits</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="method-card">
+                                <div class="method-icon"><i class="icon-map"></i></div>
+                                <h3>Store Mapping</h3>
+                                <p>Comprehensive database of Hong Kong clothing retailers with detailed inventory categorization</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row method-row">
+                        <div class="col-md-6">
+                            <div class="method-card">
+                                <div class="method-icon"><i class="icon-camera"></i></div>
+                                <h3>Image Recognition</h3>
+                                <p>Machine learning algorithms to analyze clothing attributes from visual data</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="method-card">
+                                <div class="method-icon"><i class="icon-cog"></i></div>
+                                <h3>Recommendation System</h3>
+                                <p>AI-driven matching algorithm connecting user profiles with appropriate clothing items and stores</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="architecture" class="section-title">System Architecture</h2>
+                    <p>StyleMap HK features a three-tier architecture:</p>
+                    
+                    <div class="accordion" id="architectureAccordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link architecture-btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        1. Front-End Layer
+                                    </button>
+                                </h3>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#architectureAccordion">
+                                <div class="card-body">
+                                    <ul class="feature-list">
+                                        <li>Mobile application built with React Native for cross-platform compatibility</li>
+                                        <li>User-friendly interface for profile creation, clothing browsing, and store navigation</li>
+                                        <li>AR components for virtual try-on capabilities using smartphone cameras</li>
+                                        <li>Interactive maps showing retail locations with real-time data</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link collapsed architecture-btn" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        2. Application Layer
+                                    </button>
+                                </h3>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#architectureAccordion">
+                                <div class="card-body">
+                                    <ul class="feature-list">
+                                        <li>Recommendation engine using collaborative and content-based filtering</li>
+                                        <li>Image processing module for garment recognition and classification</li>
+                                        <li>Geolocation services for proximity-based store recommendations</li>
+                                        <li>Route optimization algorithms for efficient shopping itineraries</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link collapsed architecture-btn" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        3. Data Layer
+                                    </button>
+                                </h3>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#architectureAccordion">
+                                <div class="card-body">
+                                    <ul class="feature-list">
+                                        <li>User profile database storing measurements, preferences, and history</li>
+                                        <li>Clothing database with detailed attribute categorization</li>
+                                        <li>Store inventory database updated through retail partnerships</li>
+                                        <li>Spatial database for physical store locations and mapping</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="implementation" class="section-title">Implementation Details</h2>
+                    
+                    <ul class="nav nav-tabs" id="implementationTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">User Profiling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="image-tab" data-toggle="tab" href="#image" role="tab" aria-controls="image" aria-selected="false">Image Recognition</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="recommendation-tab" data-toggle="tab" href="#recommendation" role="tab" aria-controls="recommendation" aria-selected="false">Recommendation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="mapping-tab" data-toggle="tab" href="#mapping" role="tab" aria-controls="mapping" aria-selected="false">Store Mapping</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="implementationTabContent">
+                        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="implementation-section">
+                                <h3>User Profiling System</h3>
+                                <p>The user profile creation includes:</p>
+                                <ul class="feature-list">
+                                    <li><strong>Body Measurements:</strong> Comprehensive collection of up to 15 key measurements</li>
+                                    <li><strong>Style Preference Assessment:</strong> Interactive questionnaire and image selection to determine style preferences</li>
+                                    <li><strong>Occasion-Based Recommendations:</strong> Customized suggestions based on specific events or needs</li>
+                                    <li><strong>Budget Considerations:</strong> Price range filtering for personalized recommendations</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="image" role="tabpanel" aria-labelledby="image-tab">
+                            <div class="implementation-section">
+                                <h3>Image Recognition System</h3>
+                                <p>Our image recognition technology:</p>
+                                <ul class="feature-list">
+                                    <li>Uses deep learning models (CNN architecture) trained on clothing datasets</li>
+                                    <li>Identifies key clothing attributes including color, pattern, style, fabric, and garment type</li>
+                                    <li>Processes both user-uploaded images and store inventory photos</li>
+                                    <li>Enables similarity matching between user preferences and available inventory</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="recommendation" role="tabpanel" aria-labelledby="recommendation-tab">
+                            <div class="implementation-section">
+                                <h3>Recommendation Algorithm</h3>
+                                <p>The recommendation system employs:</p>
+                                <ul class="feature-list">
+                                    <li><strong>Hybrid Filtering:</strong> Combination of collaborative and content-based approaches</li>
+                                    <li><strong>Body-Type Matching:</strong> Algorithms matching clothing proportions to user measurements</li>
+                                    <li><strong>Style Consistency:</strong> Ensuring recommendations align with expressed style preferences</li>
+                                    <li><strong>Contextual Awareness:</strong> Considering location, season, and social context in suggestions</li>
+                                    <li><strong>Feedback Learning:</strong> Continuous improvement based on user interactions and purchases</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="mapping" role="tabpanel" aria-labelledby="mapping-tab">
+                            <div class="implementation-section">
+                                <h3>Store Mapping Features</h3>
+                                <p>The geolocation component includes:</p>
+                                <ul class="feature-list">
+                                    <li>Comprehensive database of Hong Kong clothing retailers across all districts</li>
+                                    <li>Integration with public transportation data for convenient navigation</li>
+                                    <li>Real-time inventory checking through retail partnerships</li>
+                                    <li>Optimized shopping routes based on user preferences and store proximity</li>
+                                    <li>Price comparison across multiple retail locations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="evaluation" class="section-title">Evaluation and Results</h2>
+                    <div class="results-container">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="result-card">
+                                    <div class="result-number">87%</div>
+                                    <div class="result-label">Satisfaction Rate</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="result-card">
+                                    <div class="result-number">75%</div>
+                                    <div class="result-label">Time Reduction</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="result-card">
+                                    <div class="result-number">92%</div>
+                                    <div class="result-label">Fit Confidence</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="result-card">
+                                    <div class="result-number">82%</div>
+                                    <div class="result-label">Return Users</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="results-note">User testing conducted with 120 participants across Hong Kong</p>
+                    </div>
+
+                    <h2 id="conclusions" class="section-title">Conclusions and Future Work</h2>
+                    <p>StyleMap HK successfully bridges the gap between online fashion recommendations and physical retail experiences in Hong Kong. Future development will focus on:</p>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Store Database Expansion</h3>
+                                <p>Expanding the store database to include more independent boutiques</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>AR Enhancement</h3>
+                                <p>Enhancing the AR try-on features with more realistic rendering</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Social Features</h3>
+                                <p>Implementing social features for style sharing and community recommendations</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Retail Partnerships</h3>
+                                <p>Developing partnerships with retailers for exclusive offers and improved inventory data</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Market Expansion</h3>
+                                <p>Expanding to additional Asian metropolitan markets with similar retail environments</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links card">
+                        <div class="card-body text-center">
+                            <h2>Project Demo</h2>
+                            <div class="project-buttons">
+                                <a href="https://drive.google.com/file/d/1uFQC7euXtKnusArQNhspASEzokIZbaUX/view?usp=sharing" target="_blank" class="btn project-btn"><i class="icon-link"></i> Report Paper</a>
+                                <a href="https://youtu.be/SWbNz5Sp92k" target="_blank" class="btn project-btn"><i class="icon-video-camera"></i> Project Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-section">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="https://henrylam.blog/maze-game-implementing-bfs-algorithm" class="nav-card prev-card">
+                        <div class="nav-direction">Previous Project</div>
+                        <div class="nav-title">Maze Game</div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://henrylam.blog/search-engine" class="nav-card next-card">
+                        <div class="nav-direction">Next Project</div>
+                        <div class="nav-title">Search Engine</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+        <h2>My Other Projects:</h2>
+        
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/maze-game-implementing-bfs-algorithm" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/short_path.png" alt="Maze Game" class="project-img">
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Maze Game</h3>
+                        <p class="post-snippet">Tom and Jerry Maze Game implementing BFS algorithm</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/robot-controlled-vehicle" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/robot.JPG" alt="Robot Controlled Vehicle" class="project-img">
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Robot-Controlled Vehicle</h3>
+                        <p class="post-snippet">A robot vehicle equipped with control circuits and sensors</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="suggested-project">
+            <a href="https://henrylam.blog/assembling-iphone-from-parts" class="project-link">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/iphone.PNG" alt="Assembling iPhone from parts" class="project-img">
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Assembling iPhone from parts</h3>
+                        <p class="post-snippet">My story of building an iPhone from scratch</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="back-to-top">
+        <a href="#" class="btn back-to-top-btn" role="button"><i class="icon-arrow-up22"></i></a>
+    </div>
+    <!-- Footer -->
+    <div id="fh5co-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; <span style="font-size: 16px;"><a href="http://henrylam.blog">henrylam.blog</a></span><br><span style="font-size: 12px;">Made by Henry Lam</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include any necessary JavaScript files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="js/google_map.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Custom Script for UI Enhancements -->
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for anchor links (TOC and other internal links)
+            $('a[href^="#"][data-toggle!="tab"][data-toggle!="collapse"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 90 // Adjusted offset for navbar
+                    }, 500);
+                }
+            });
+            
+            // Back to top button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            
+            $('#back-to-top').click(function(e) {
+                e.preventDefault(); // Prevent hash in URL
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+            
+            // Implementation Details Tabs: Ensure first tab is active and prevent scroll
+            $('#implementationTabs a[data-toggle="tab"]').first().tab('show');
+            $('#implementationTabs a[data-toggle="tab"]').on('click', function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+                // The following line was an attempt to keep scroll, but it might be problematic.
+                // It's better to let the browser handle focus after tab change naturally or not scroll at all.
+                // $('html, body').scrollTop($(this).offset().top - 120); 
+            });
+            
+            // TOC Active State on Scroll
+            function updateActiveTocLink() {
+                var scrollPosition = $(window).scrollTop();
+                var offset = 100; // Navbar height + some margin
+                var windowHeight = $(window).height();
+                var documentHeight = $(document).height();
+                var activeSectionFound = false;
+
+                // Remove active class from all links first
+                $('#toc .nav-link').removeClass('active');
+
+                // Iterate through sections from bottom to top
+                // This ensures that the lowest section visible in the viewport gets activated
+                var sections = [];
+                $('#toc .nav-link').each(function() {
+                    var href = $(this).attr('href');
+                    if (href && href.startsWith('#')) {
+                        var section = $(href);
+                        if (section.length) {
+                            sections.push({ link: $(this), element: section });
+                        }
+                    }
+                });
+
+                for (var i = sections.length - 1; i >= 0; i--) {
+                    var sectionTop = sections[i].element.offset().top;
+                    var sectionHeight = sections[i].element.outerHeight(true);
+
+                    // Check if the section is within the viewport or if its top is above the scroll position + offset
+                    // and also consider if we've scrolled past the start of the section
+                    if (sectionTop - offset <= scrollPosition) {
+                        sections[i].link.addClass('active');
+                        activeSectionFound = true;
+                        break; // Found the current section, no need to check further
+                    }
+                }
+                
+                // If scrolled to the very bottom, ensure the last TOC item is active
+                // This handles cases where the last section is too short to trigger the above logic correctly
+                // or if the scroll position is very close to the bottom.
+                if (!activeSectionFound && (scrollPosition + windowHeight >= documentHeight - 20)) { // 20px tolerance
+                    if (sections.length > 0) {
+                        $('#toc .nav-link').removeClass('active'); // Clear any previous active
+                        sections[sections.length - 1].link.addClass('active');
+                        activeSectionFound = true;
+                    }
+        }
+        
+                // If no section is active (e.g., scrolled above all sections), clear all active states
+                // This case should ideally be handled by the loop not finding any section
+                // and the initial removeClass, but as a fallback:
+                if (!activeSectionFound && scrollPosition < sections[0]?.element.offset().top - offset) {
+                     $('#toc .nav-link').removeClass('active');
+        }
+            }
+
+            var tocScrollTimeout;
+            $(window).on('scroll', function() {
+                clearTimeout(tocScrollTimeout);
+                tocScrollTimeout = setTimeout(updateActiveTocLink, 50); // Debounce scroll event
+            });
+            updateActiveTocLink(); // Initial call
+
+            // System Architecture Accordion: Bootstrap handles animation if HTML/CSS is correct.
+            // Ensure Bootstrap JS is loaded. The classes .collapse, .show, .collapsing are key.
+            // The data-toggle="collapse" and href="#collapseOne" (or data-target) are essential for Bootstrap JS.
+            // My previous JS for class toggling on buttons is fine for button state but doesn't drive animation.
+            $('#architectureAccordion .architecture-btn').on('click', function(e) {
+                // Bootstrap's own JS should handle the collapse/expand. 
+                // This click handler is mostly for the button's own state if Bootstrap doesn't manage it perfectly.
+                // $(this).toggleClass('collapsed'); // This might conflict if Bootstrap is also doing it.
+                // Let Bootstrap manage the .collapsed class on the button via its events.
+            });
+             $('#architectureAccordion .collapse').on('show.bs.collapse', function () {
+                 $(this).parent().find(".architecture-btn[data-target='#"+$(this).attr("id")+"']").removeClass("collapsed");
+                 $(this).parent().find(".architecture-btn[href='#"+$(this).attr("id")+"']").removeClass("collapsed");
+             }).on('hide.bs.collapse', function () {
+                 $(this).parent().find(".architecture-btn[data-target='#"+$(this).attr("id")+"']").addClass("collapsed");
+                 $(this).parent().find(".architecture-btn[href='#"+$(this).attr("id")+"']").addClass("collapsed");
+             });
+
+            // Theme Toggle Logic (already implemented)
+            const themeToggle = document.getElementById('checkbox');
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme) {
+                document.body.classList.add(currentTheme);
+                if (currentTheme === 'dark-theme') {
+                    themeToggle.checked = true;
+                } else { // Explicitly set to light-theme if not dark
+                    document.body.classList.add('light-theme');
+        }
+            } else { // Default to light theme if nothing in local storage
+                 document.body.classList.add('light-theme');
+            }
+
+            themeToggle.addEventListener('change', function() {
+                if (this.checked) {
+                    document.body.classList.remove('light-theme');
+                    document.body.classList.add('dark-theme');
+                    localStorage.setItem('theme', 'dark-theme');
+                } else {
+                    document.body.classList.remove('dark-theme');
+                    document.body.classList.add('light-theme');
+                    localStorage.setItem('theme', 'light-theme');
+            }
+            });
+
+        });
+    </script>
+</body>
+</html>

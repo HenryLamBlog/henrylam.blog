@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maze Game implementing BFS algorithm</title>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
+    <title>Maze Game implementing BFS Algorithm | Henry Lam</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
@@ -31,9 +31,8 @@
     gtag('config', 'G-K03ESX8LJE');
     </script>
     <style>
-        /* Adjust the background color to the orange theme */
+        /* Original styles - Reverted from theme system */
         body {
-          /*font-family: 'Open Sans', monospace;*/
           font-family: 'Lato', sans-serif;
           font-weight: 300;
           font-size: 18px;
@@ -41,20 +40,14 @@
           background-color: #f8f9fa;
           margin: 0;
           overflow-x: hidden;
-          line-height: 1.8; /* Increase line height for better readability */
+            line-height: 1.8;
       }
 
       .custom-toggler.navbar-toggler {
-          border-color: #ff9000; /* Change the border color to white */
-      }
-      .navbar-brand{
-          display: flex;
-          align-items: center; /* Vertically center the content */
-          height: 60px; /* Set the height of the navbar */
-          margin-right: auto;
+            border-color: #ff9000; 
       }
       .navbar-brand h1 {
-          font-family: 'Kaushan Script', cursive; /* Apply Kaushan Script font */
+            font-family: 'Kaushan Script', cursive; 
           font-size: 26px;
           color: #ffffff;
           margin: 0;
@@ -70,284 +63,204 @@
           margin-bottom: 0;
       }
       
-      .navbar-collapse {
-          flex-basis: 100%;
-          flex-grow: 1;
-      }
-      /* Adjust font weights and sizes for headings */
-      h1 {
+        h1, h2, h3, h4, h5, h6 {
           color: #3a170f;
           font-family: 'Lato', sans-serif;
-         
-          font-size: 2.25em; /* Increase font size */
-          line-height: 1.6; /* Increase line height for better readability */
-      }
+            margin-bottom: 1rem;
+        }
+        h1 { font-size: 2.25em; line-height: 1.6; }
+        h2 { font-size: 1.7em; line-height: 1.6; }
+        h3 { font-size: 1.4em; line-height: 1.6; }
+        p { color: #666; font-size: 18px; line-height: 1.8; }
 
-      h2 {
-          color: #3a170f;
-          font-family: 'Lato', sans-serif;
-         
-          font-size: 1.7em; /* Increase font size */
-          line-height: 1.6; /* Increase line height for better readability */
-      }
+        a {
+            color: #ff9000;
+            text-decoration: none !important;
+        }
+        a:hover {
+            color: #e08000; /* Darker orange on hover */
+            text-decoration: none !important;
+        }
+        .navbar-custom {
+            background-color: #ff9000 !important;
+        }
+        .toggler-icon {
+            background: #ffffff;
+        }
+        hr { border: none; height: 1px; background-color: #ff9000; margin: 30px 0; }
 
-      h3 {
-          color: #3a170f;
-          font-family: 'Lato', sans-serif;
-         
-          font-size: 1.4em; /* Increase font size */
-          line-height: 1.6; /* Increase line height for better readability */
-      }
+        .card, .feature-box, .method-card, .implementation-section, .results-container, .project-links, .nav-card, .suggested-project, .toc-nav {
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+        .feature-box h3, .method-icon, .result-number { color: #ff9000; }
+        
+        .toc-nav { padding: 20px; margin-bottom: 30px; }
+        .toc-header { color: #3a170f; border-bottom: 2px solid #ff9000; font-weight: bold; font-size: 1.2em; padding-bottom: 10px; margin-bottom: 15px; }
+        .toc-list { padding-left: 0; list-style: none;}
+        .toc-list .nav-link { color: #666; padding: 8px 5px; border-left: 3px solid transparent; transition: all 0.3s ease;}
+        .toc-list .nav-link:hover, .toc-list .nav-link.active {
+            color: #ff9000;
+            border-left-color: #ff9000;
+            background-color: #f8f9fa;
+        }
 
-      /* Increase line spacing between paragraphs */
-      p {
-          color: #666;
-          font-size: 18px; /* Adjust paragraph font size */
-          line-height: 1.8; /* Increase line height for better readability */
-      }
-        img.result-pic {
-            width: 60%;
+        .section-title { margin-top: 40px; padding-bottom: 10px; border-bottom: 3px solid #ff9000; display: inline-block;}
+        .project-summary { font-size: 1.1em; line-height: 1.8; border-left: 4px solid #ff9000; padding-left: 15px; margin: 20px 0;}
+        .image-caption { text-align: center; font-style: italic; color: #888; margin-top: 10px;}
+        .lab-text { text-align: center; font-style: italic; color: #888;}
+
+        img.result-pic, img.lab-gif, .project-img {
+            border-radius: 10px;
+            max-width: 100%;
             height: auto;
             display: block;
-            margin: 10px auto;
+            margin-left: auto;
+            margin-right: auto;
         }
-        img.lab-gif {
-            width: 30%;
-            height: auto;
+        
+        .project-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 6px;
+            overflow: hidden;
             display: block;
-            margin: 20px auto;
-        }
-        .lab-text {
-            text-align: center;
-            font-style: italic;
-            color: #888;
-        }
-        #chart_div {
-          width: 100%;
-          height: auto;
-      }
-      /* Override Bootstrap link styles */
-      a {
-        text-decoration: none !important; /* Remove underline */
-    text-decoration-line: none !important;
-        color: #ff9000; /* Change link color to black */
-    }
-    
-    /* Override Bootstrap link hover styles */
-    a:hover {
-        color: #ff9000; /* Change link color on hover */
-    text-decoration: none !important; /* Remove underline */
-    text-decoration-line: none !important;
-    }
-
-    .toggler-icon {
-        display: block;
-        position: absolute;
-        height: 3px;
-        width: 100%;
-        background: #ffffff;
-        border-radius: .1px;
-        opacity: 1;
-        left: 0;
-        transform: rotate(0deg);
-        transition: .25s ease-in-out;
-      }
-            
-    .navbar-toggler.collapsed .toggler-icon {
-        background: #ffffff;
+            object-fit: cover;
     }
         
 .suggested-project {
   margin-top: 5%;
   margin-bottom: 30px;
-  overflow: hidden;
-  border-radius: 15px; /* Adjust the border-radius to your preference */
-
-}
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            max-width: 800px;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
 .suggested-project:hover {
-  
   transform: translateY(-5px);
   transition: .5s ease;
-
-}
-
-
-
-
-.project-img {
-  width: 50%;
-  height: auto;
-  border-radius: 15px; /* Adjust the border-radius to your preference */
-  overflow: hidden; /* Ensure the rounded corners are applied */
+        }
+        
+        .project-details {
+            text-align: left;
+            padding-left: 15px;
+        }
+        
+        .img-col {
+            padding-right: 0 !important;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .suggested-project .row.no-gutters {
+            display: flex;
+            align-items: center;
+        }
+        
+        .suggested-project a {
+            color: inherit;
+            text-decoration: none;
   display: block;
-  object-fit: cover;
-  aspect-ratio: 1; /* Maintain a 1:1 aspect ratio (square) */
+        }
+        
+        .suggested-project h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #3a170f;
+            font-weight: normal;
+        }
+        
+        .suggested-project p {
+            margin-bottom: 0;
+            color: #666;
+            font-size: 16px;
+        }
 
+        /* Navigation section */
+        .navigation-section { margin-top: 60px; margin-bottom: 40px; }
+        .nav-card {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            display: block;
+            padding: 15px 0;
+            margin: 10px 0;
+            color: #3a170f;
+        }
+        .nav-card:hover {
+            color: #ff9000;
+            transform: translateY(-5px);
+            box-shadow: none;
+            text-decoration: none;
+        }
+        .prev-card { text-align: left; }
+        .next-card { text-align: right; }
+        .nav-direction { font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+        .nav-title { font-size: 1.2em; font-weight: bold; }
 
-}
-
-.project-details {
-
-  text-align: left;
-
-  
-}
-.img-col {
-  padding-right: 0!important;
-  margin-right: -10%;
-}
-hr {
-  border: none;
-  height: 1px;
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; display: none; z-index: 99; }
+        .back-to-top-btn { 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2); 
+            transition: all 0.3s ease;
   background-color: #ff9000;
-  margin: 30px 0; /* Add 30px white space above and below the <hr> element */
-}
-    </style>
-    
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-    google.charts.load('current', {'packages':['gantt']});
-    google.charts.setOnLoadCallback(drawChart);
+            color: #ffffff;
+        }
+        .back-to-top-btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background-color: #e08000;
+            color: #ffffff;
+        }
 
-    function drawChart() {
-
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Task ID');
-      data.addColumn('string', 'Task Name');
-      data.addColumn('string', 'Resource');
-      data.addColumn('date', 'Start Date');
-      data.addColumn('date', 'End Date');
-      data.addColumn('number', 'Duration');
-      data.addColumn('number', 'Percent Complete');
-      data.addColumn('string', 'Dependencies');
-
-      data.addRows([
-        ['FunctionA_Item1', 'Implement Maze Generator/Editor', 'Function A',
-         new Date(2023, 8, 20), new Date(2023, 9, 15), null, 100, null],
-        ['FunctionA_Item2', 'Maze GUI', 'Function A',
-         new Date(2023, 8, 12), new Date(2023, 9, 20), null, 100, null],
-        ['FunctionA_Item3', 'Main Menu GUI', 'Function A',
-         new Date(2023, 8, 15), new Date(2023, 9, 13), null, 100, null],
-        ['FunctionB_Item1', 'BFS library function for path solver', 'Function B',
-         new Date(2023, 8, 27), new Date(2023, 10, 14), null, 100, null],
-        ['FunctionB_Item2', 'BFS node data structure for backtracking', 'Function B',
-         new Date(2023, 9, 7), new Date(2023, 10, 9), null, 100, null],
-        ['FunctionB_Item3', 'BFS library function for exporting to .csv', 'Function B',
-         new Date(2023, 9, 17), new Date(2023, 9, 30), null, 100, null],
-        ['FunctionC_Item1', 'Create Maze Game', 'Function C',
-         new Date(2023, 9, 17), new Date(2023, 10, 20), null, 100, null],
-        ['FunctionC_Item2', 'Implement Jerry movement', 'Function C',
-         new Date(2023, 9, 25), new Date(2023, 10, 12), null, 100, null],
-        ['FunctionC_Item3', 'Implement Tom to use function B', 'Function C',
-         new Date(2023, 9, 31), new Date(2023, 10, 20), null, 100, null],
-        ['FunctionD_Item1', 'Write Test Case', 'Function D',
-         new Date(2023, 10, 20), new Date(2023, 10, 26), null, 100, null]
-      ]);
-
-      var options = {
-        height: 400,
-        gantt: {
-          trackHeight: 30,
-          labelStyle: {
-            fontName: 'Lato'
-          },
-          tooltip: {
-            textStyle: {
-              fontName: 'Lato'
+        /* Main container spacing */
+        .main-container {
+            padding-top: 80px;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .col-lg-9 {
+                padding-top: 30px;
             }
-          }
         }
-      };
-
-      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
-
-      chart.draw(data, options);
-    }
-  </script>
-  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-  <script>
-    /**
-     * Sum elements of an array up to the index provided.
-     */
-    function sumArrayUpTo(arrData, index) {
-      var total = 0;
-      for (var i = 0; i <= index; i++) {
-        if (arrData.length > i) {
-          total += arrData[i];
+        
+        @media (max-width: 991px) {
+            .toc-nav {
+                display: none;
+            }
+            .col-lg-9 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
-      }
-      return total;
-    }
-
-    function showBurnDown(elementId, burndownData, scopeChange = []) {
-
-      var speedCanvas = document.getElementById(elementId);
-
-      Chart.defaults.global.defaultFontFamily = "Lato";
-      Chart.defaults.global.defaultFontSize = 16;
-
-      const totalDaysInSprint = 60; // 60 days from September 28 to November 26
-      const idealHoursPerDay = burndownData[0] / totalDaysInSprint;
-      let i = 0;
-
-      var speedData = {
-        labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10",
-                 "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20",
-                 "Day 21", "Day 22", "Day 23", "Day 24", "Day 25", "Day 26", "Day 27", "Day 28", "Day 29", "Day 30",
-                 "Day 31", "Day 32", "Day 33", "Day 34", "Day 35", "Day 36", "Day 37", "Day 38", "Day 39", "Day 40",
-                 "Day 41", "Day 42", "Day 43", "Day 44", "Day 45", "Day 46", "Day 47", "Day 48", "Day 49", "Day 50",
-                 "Day 51", "Day 52", "Day 53", "Day 54", "Day 55", "Day 56", "Day 57", "Day 58", "Day 59", "Day 60"],
-        datasets: [
-          {
-            label: "Burndown",
-            data: burndownData,
-            fill: false,
-            borderColor: "#FF9000",
-            backgroundColor: "#FF9000",
-            lineTension: 0,
-          },
-          {
-            label: "Ideal",
-            borderColor: "#6C8893",
-            backgroundColor: "#6C8893",
-            lineTension: 0,
-            borderDash: [5, 5],
-            fill: false,
-            data: Array.from({ length: totalDaysInSprint }, (_, index) =>
-              Math.round(burndownData[0] - (idealHoursPerDay * (index + 1)) + sumArrayUpTo(scopeChange, index))
-            )
-          },
-        ]
-      };
-
-      var chartOptions = {
-        legend: {
-          display: true,
-          position: 'top',
-          labels: {
-            boxWidth: 80,
-            fontColor: 'black'
-          }
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    min: 0,
-                    max: Math.round(burndownData[0] * 1.1)
-                }
-            }]
+        
+        @media (max-width: 767px) {
+            .main-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .nav-card {
+                text-align: center;
+            }
+            
+            .project-img {
+                width: 100px;
+                height: 100px;
+            }
         }
-      };
-
-      var lineChart = new Chart(speedCanvas, {
-        type: 'line',
-        data: speedData,
-        options: chartOptions
-      });
-
-    }
-    </script>
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -378,204 +291,319 @@ hr {
           </div>
       </div>
   </nav>
-    <!-- Content specific to the Colorization of Grayscale Images project -->
+
+    <!-- Content specific to the project -->
     <div class="main-container">
-      <div id="main-text">
-        <!-- Your content goes here -->
-        <h1>Maze Game implementing BFS algorithm</h1>
-        <h2>Introduction to the Tom and Jerry Maze Game</h2>
-          <p>"Tom and Jerry" is an iconic American cartoon film that chronicles the endless pursuit of a hapless cat, Tom, after a clever and spunky mouse named Jerry. Bringing the excitement of this classic chase to life, this fun project is inspired by the timeless rivalry between Jerry and Tom.</p>
-          <p>Here's how the game works:</p>
-          <ol>
-            <li><strong>Objective:</strong> Your goal as Jerry is to reach the exit of the maze before Tom catches you.</li>
-            <li><strong>Maze Structure:</strong> The maze is represented as a grid of interconnected pathways and barriers, reminiscent of the chaotic environment in the classic cartoon series.</li>
-            <li><strong>Tom's Strategy:</strong> Tom uses the Breadth-First Search (BFS) algorithm to constantly calculate the shortest path to reach Jerry. You'll need to outsmart him by finding alternate routes and using clever tactics to stay one step ahead.</li>
-            <li><strong>Your Controls:</strong> Use the arrow keys or WASD keys to move Jerry up, down, left, or right through the maze.</li>
-            <li><strong>Gameplay:</strong> Navigate through the maze, avoiding dead ends and obstacles, to reach the exit marked by a green square. If Tom catches you before reaching the exit, you lose the game.</li>
-            <li><strong>Victory:</strong> If you successfully reach the exit before Tom catches you, you'll be greeted with a congratulatory message, celebrating your victory over the wily cat.</li>
+        <div class="row">
+            <!-- Sticky Table of Contents -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <nav id="toc" class="sticky-top toc-nav" style="top: 100px;">
+                    <div class="toc-header">Contents</div>
+                    <ul class="nav flex-column toc-list">
+                        <li class="nav-item"><a class="nav-link" href="#intro">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#bfs-algorithm">BFS Algorithm</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#game-design">Game Design</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#implementation">Implementation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features">Game Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <div id="main-text" style="max-width: 850px; margin: 0 auto;">
+                    <!-- Project content -->
+                    <h1 id="intro" class="section-title">Maze Game implementing BFS Algorithm</h1>
+
+                    <div class="project-summary">
+                        <p>A Tom and Jerry themed maze game that uses the Breadth-First Search algorithm to find the shortest path through complex mazes, demonstrating pathfinding techniques in action.</p>
+                    </div>
+
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>This project combines algorithm implementation with game development, creating an engaging Tom and Jerry themed maze game. By implementing the Breadth-First Search (BFS) algorithm, the game demonstrates how computers can efficiently solve pathfinding problems while providing an entertaining user experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-image-container">
+                        <img src="images/maze.png" alt="Tom and Jerry Maze Game" class="result-pic">
+                        <div class="image-caption">Tom and Jerry Maze Game interface</div>
+                    </div>
+
+                    <h2 id="bfs-algorithm" class="section-title">BFS Algorithm</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>Breadth-First Search is a graph traversal algorithm that starts at a selected node (in this case, Jerry's position) and explores all neighbor nodes at the present depth before moving on to nodes at the next depth level. In the context of a maze:</p>
+                            <ol>
+                                <li>The algorithm starts at Jerry's position</li>
+                                <li>It explores all possible directions (up, down, left, right) from the current position</li>
+                                <li>For each valid move (not a wall), it continues exploring from that position</li>
+                                <li>The process continues until Tom (the target) is found or all paths are exhausted</li>
+                                <li>The algorithm tracks the path taken, allowing it to determine the shortest route</li>
           </ol>
-          <p>Are you ready to embark on this thrilling adventure and outwit Tom in a race against time? Let the maze games begin!</p>
+                        </div>
+                    </div>
 
-        <h2>Key Features and Functionalities</h2>
-        <h3>Main Menu</h3>
-        <p>Upon launching the game, the main menu consists of name tags, a picture of Tom and Jerry, and buttons to access different functionalities.</p>
-        <img src="images/main_menu.png" alt="Main Menu" class="result-pic">
-              <p class="lab-text">Main Menu</p>
-        <ul>
-          <li><strong>Open Maze:</strong> Launches the maze editor.</li>
-          <li><strong>Shortest Path:</strong> Highlights the shortest path in the maze.</li>
-          <li><strong>Maze Game:</strong> Launches the maze game.</li>
+                    <div class="project-image-container">
+                        <img src="images/short_path.png" alt="BFS Algorithm finding the shortest path" class="result-pic">
+                        <div class="image-caption">BFS Algorithm finding the shortest path from Jerry to Tom</div>
+                    </div>
+
+                    <h2 id="game-design" class="section-title">Game Design</h2>
+                    <p>The game features a Tom and Jerry theme, where Jerry (controlled by the player or AI) navigates through a maze to find Tom. The design incorporates:</p>
+                    
+                    <div class="results-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h3>Visuals</h3>
+                                        <ul>
+                                            <li>A grid-based maze layout</li>
+                                            <li>Tom and Jerry character representations</li>
+                                            <li>Visual indicators for walls and paths</li>
+                                            <li>Path visualization showing the BFS solution</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h3>Gameplay</h3>
+                                        <ul>
+                                            <li>Manual player control mode</li>
+                                            <li>AI mode demonstrating BFS pathfinding</li>
+                                            <li>Multiple maze layouts with varying complexity</li>
+                                            <li>Visual feedback for successful path finding</li>
         </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <h3>Maze Editor</h3>
-        <img src="images/maze_editor.png" alt="Maze Editor" class="result-pic">
-              <p class="lab-text">Maze Editor</p>
-        <p>The maze editor allows users to customize the maze grid, set entry and exit points, and perform actions like generating a new maze, saving, and finding a path.</p>
-
-        <h3>Shortest Path</h3>
-        <img src="images/short_path.png" alt="Shortest Path" class="result-pic">
-              <p class="lab-text">Shortest Path</p>
-        <p>This feature highlights the shortest path in the maze and provides a visual representation of the solution.</p>
-
-        <h3>Maze Game</h3>
-        <img src="images/maze_game.png" alt="Maze Game" class="result-pic">
-              <p class="lab-text">Maze Game</p>
-        <p>In the maze game, players control Jerry and navigate through the maze using the arrow keys or WASD keys. The objective is to reach the exit while evading Tom's pursuit.</p>
-
-
-        <h2>Play Maze Game</h2>
-
-        <p>Enjoy the thrill of the escaping with Jerry from Tom in this fun maze game! </p>
-        <p>You can find our code on GitHub: <a href="https://github.com/HenryLamBlog/Maze-Game">https://github.com/HenryLamBlog/Maze-Game</a></p>
-
-
-        <h2>Summary of Project Meetings</h2>
-        <h3>1st Project Scrum Meeting:</h3>
-          <ul>
-              <li>Date: September 28, 2023</li>
-              <li>Duration: 1.5 hours</li>
-              <li>Attending: Lee Tsz Kin, Chan Chun Yuen, Lam Hui Yin</li>
-              <li>Actions:
-                  <ul>
-                      <li>Created Github accounts</li>
-                      <li>Connected to IntelliJ</li>
-                      <li>Assigned roles (Function A, B, C)</li>
-                      <li>Set goals for the upcoming week</li>
+                    <h2 id="implementation" class="section-title">Implementation</h2>
+                    <p>The implementation of the maze game and BFS algorithm involved several key components:</p>
+                    
+                    <div class="accordion mt-4" id="implementationAccordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Maze Representation
+                                    </button>
+                                </h3>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#implementationAccordion">
+                                <div class="card-body">
+                                    <p>The maze is represented as a 2D grid where each cell can be:</p>
+                                    <ul>
+                                        <li>A wall (impassable)</li>
+                                        <li>An open path (passable)</li>
+                                        <li>Jerry's position (start)</li>
+                                        <li>Tom's position (goal)</li>
+                                    </ul>
+                                    <p>This structure allows for easy traversal during the BFS algorithm execution while maintaining a clear visual representation for the player.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        BFS Algorithm Implementation
+                                    </button>
+                                </h3>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#implementationAccordion">
+                                <div class="card-body">
+                                    <p>The BFS algorithm was implemented with the following components:</p>
+                                    <ul>
+                                        <li>A queue data structure to manage nodes to be explored</li>
+                                        <li>A visited set to track already explored positions</li>
+                                        <li>A parent mapping to reconstruct the path</li>
+                                        <li>Direction vectors for exploring adjacent cells</li>
+                                        <li>Path reconstruction logic to determine the shortest route</li>
+                                    </ul>
+                                    <pre><code class="language-python">def bfs(maze, start, end):
+    queue = collections.deque([start])
+    visited = {start: None}
+    
+    while queue:
+        current = queue.popleft()
+        
+        if current == end:
+            break
+            
+        for dx, dy in [(0,1), (1,0), (0,-1), (-1,0)]:
+            next_x, next_y = current[0] + dx, current[1] + dy
+            next_pos = (next_x, next_y)
+            
+            if (0 <= next_x < len(maze) and 
+                0 <= next_y < len(maze[0]) and 
+                maze[next_x][next_y] != '#' and 
+                next_pos not in visited):
+                queue.append(next_pos)
+                visited[next_pos] = current
+                
+    # Reconstruct path
+    path = []
+    current = end
+    while current != start:
+        path.append(current)
+        current = visited[current]
+    path.append(start)
+    path.reverse()
+    
+    return path</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        User Interface
+                                    </button>
+                                </h3>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#implementationAccordion">
+                                <div class="card-body">
+                                    <p>The game interface was designed to be intuitive and visually engaging:</p>
+                                    <ul>
+                                        <li>Clear representation of the maze using a grid of cells</li>
+                                        <li>Visual differentiation between walls, paths, and characters</li>
+                                        <li>Control panel for selecting game modes and maze configurations</li>
+                                        <li>Path visualization to display the BFS solution</li>
+                                        <li>Animation for Jerry's movement along the found path</li>
                   </ul>
-              </li>
-              <li>Next Meeting: October 14, 2023</li>
-          </ul>
-          <h3>2nd Project Scrum Meeting:</h3>
-          <ul>
-              <li>Date: October 14, 2023</li>
-              <li>Duration: 2 hours</li>
-              <li>Attending: Lee Tsz Kin, Chan Chun Yuen, Lam Hui Yin</li>
-              <li>Actions:
-                  <ul>
-                      <li>Completed data modeling and class diagrams</li>
-                      <li>Assigned tasks for next week</li>
-                      <li>Discussed implementation details and challenges</li>
-                  </ul>
-              </li>
-              <li>Next Meeting: October 22, 2023</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="features" class="section-title">Game Features</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <h3>Multiple Game Modes</h3>
+                            <ul>
+                                <li><strong>Manual Mode:</strong> Players can control Jerry's movement using arrow keys or on-screen buttons</li>
+                                <li><strong>AI Mode:</strong> Players can watch as the BFS algorithm automatically finds and navigates the shortest path</li>
+                                <li><strong>Step Mode:</strong> Shows the BFS algorithm working step-by-step for educational purposes</li>
           </ul>
 
-          <h3>3rd Project Scrum Meeting:</h3>
-          <ul>
-              <li>Date: October 22, 2023</li>
-              <li>Duration: 2 hours</li>
-              <li>Attending: Lee Tsz Kin, Chan Chun Yuen, Lam Hui Yin</li>
-              <li>Actions:
-                  <ul>
-                      <li>Reviewed progress from the past week</li>
-                      <li>Discussed implementation details for each function</li>
-                      <li>Identified upcoming tasks and goals</li>
-                  </ul>
-              </li>
-              <li>Next Meeting: November 24, 2023</li>
+                            <h3>Maze Customization</h3>
+                            <ul>
+                                <li>Multiple pre-defined maze layouts with varying complexity</li>
+                                <li>Ability to modify maze walls and paths</li>
+                                <li>Adjustable starting positions for Tom and Jerry</li>
           </ul>
 
-          <h3>4th Project Scrum Meeting:</h3>
-          <ul>
-              <li>Date: November 24, 2023</li>
-              <li>Duration: 2 hours</li>
-              <li>Attending: Lee Tsz Kin, Chan Chun Yuen, Lam Hui Yin</li>
-              <li>Actions:
-                  <ul>
-                      <li>Completed final implementation and bug fixes</li>
-                      <li>Prepared for the live demo and presentation</li>
-                      <li>Reviewed project progress and outcomes</li>
+                            <h3>Educational Components</h3>
+                            <ul>
+                                <li>Visual representation of the BFS algorithm in action</li>
+                                <li>Path highlighting showing the shortest route</li>
+                                <li>Step counter to demonstrate path efficiency</li>
+                                <li>Optional visualization of the BFS queue and visited nodes</li>
                   </ul>
-              </li>
-              <li>No further meetings scheduled</li>
-          </ul>
-          <h2>Charts and Visualization</h2>
-          <h3>Gantt Chart</h3>
-          <div id="chart_div"></div>
-          <p></p>
-          <h3>Burndown Chart</h3>
-          <div style="width:100%;"><canvas id="burndownChart"></canvas></div>
-          <script>
-              showBurnDown(
-              "burndownChart",
-              // burndown data
-              [200, 190, 180, 180, 160, 150, 140, 130, 130, 130, 130, 120, 120, 110, 110, 110, 110, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 
-              100, 100, 100, 100, 100, 100, 100, 100, 100,95, 90, 85, 85, 85, 85, 80, 70, 70, 65, 65, 60, 60, 60, 60, 50,40, 30, 20, 10, 0],
-              // scope change
-              [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-              );
-          </script>
+                        </div>
+                    </div>
 
-        <h2>Live Demo</h2>
-      <p>Experience the Tom and Jerry Maze Game in action through our live demonstration:</p>
-      <div class="video-container">
-          <iframe width="560" height="315"  src="https://www.youtube.com/embed/FYeezW40qag" frameborder="0" allowfullscreen></iframe>
+                    <h2 id="demo" class="section-title">Demo</h2>
+                    <div class="project-image-container">
+                        <img src="images/maze_animation.gif" alt="Maze Game Demonstration" class="result-pic">
+                        <div class="image-caption">BFS Algorithm solving the maze and Jerry following the path</div>
       </div>
-      <p></p>
 
-
-        <h2>Conclusion</h2>
-          <p>Embarking on this project has been an incredibly rewarding journey, blending nostalgia with the excitement of gaming. As we delved into the world of Tom and Jerry, we found ourselves immersed in the challenges and adventures of Jerry's escape from Tom's relentless pursuit.</p>
-          <p>Throughout the development process, we not only built a fun and engaging game but also honed our skills as developers and collaborators. Planning the game involved meticulous detail, from designing the maze structures to implementing the Breadth-First Search algorithm for Tom's pursuit.</p>
-          <p>Working as a group, we utilized tools like Gantt charts and Burndown charts to stay organized and meet our project milestones. Group meetings became opportunities to brainstorm ideas, troubleshoot challenges, and celebrate our progress. Additionally, leveraging GitHub as our version control system allowed us to collaborate seamlessly and learn valuable lessons in version control and collaboration.</p>
-          <p>Overall, this project has been a testament to the power of teamwork, creativity, and a shared passion for gaming. It has not only provided us with practical coding experience but also allowed us to relive cherished memories from our favorite childhood cartoon. As we bid farewell to our Tom and Jerry Maze Game, we carry with us a sense of accomplishment and the knowledge gained from this enriching experience.</p>
-
-          <h2>Group</h2>
-              <ul>
-                  <li>Lee Tsz Kin</li>
-                  <li>Chan Chun Yuen</li>
-                  <li>Lam Hui Yin (Henry)</li>
+                    <h2 id="conclusion" class="section-title">Conclusion</h2>
+                    <div class="card feature-box">
+                        <div class="card-body">
+                            <p>This project successfully demonstrates how graph algorithms like BFS can be applied to solve practical problems such as pathfinding in games. The Tom and Jerry theme adds an engaging wrapper around the technical implementation, making it both entertaining and educational.</p>
+                            <p>Through this implementation, I gained valuable experience in:</p>
+                            <ul>
+                                <li>Algorithm implementation in a practical context</li>
+                                <li>Game design and user interface development</li>
+                                <li>Data structure usage for efficient problem-solving</li>
+                                <li>Visualizing abstract concepts in an accessible way</li>
               </ul>
+                            <p>The maze game not only serves as a fun application but also as an educational tool that helps visualize how computers solve pathfinding problems efficiently using graph traversal algorithms.</p>
+                        </div>
+                    </div>
+
+                    <div class="navigation-section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="https://henrylam.blog/immersive-ball-shooter" class="nav-card prev-card">
+                                    <div class="nav-direction">Previous Project</div>
+                                    <div class="nav-title">Immersive Ball Shooter</div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://henrylam.blog/robot-controlled-vehicle" class="nav-card next-card">
+                                    <div class="nav-direction">Next Project</div>
+                                    <div class="nav-title">Robot-Controlled Vehicle</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
+
           <hr>
             <h2>My Other Projects:</h2>
-            <p></p>
-            <!-- Project 1 -->
+        
             <div class="suggested-project">
               <a href="https://henrylam.blog/robot-controlled-vehicle" class="project-link">
                   <div class="row no-gutters">
-                      <div class="col-md-4 col-12 img-col">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
                           <img src="images/robot.JPG" alt="Robot Controlled Vehicle" class="project-img">
                       </div>
-                      <div class="col-md-8 col-12 project-details">
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
                           <h3 class="post-title">Robot-Controlled Vehicle</h3>
                           <p class="post-snippet">A robot vehicle equipped with control circuits and sensors</p>
                       </div>
                   </div>
               </a>
            </div>  
+        
             <div class="suggested-project">
-                <a href="https://henrylam.blog/assembling-iphone-from-parts" class="project-link">
+            <a href="https://henrylam.blog/wordle-solver" class="project-link">
                     <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/iphone.PNG" alt="Assembling iPhone from parts" class="project-img">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/wordle.jpg" alt="Wordle Solver" class="project-img">
                         </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">Assembling iPhone from parts</h3>
-                            <p class="post-snippet">My story of building an iPhone from scratch</p>
-                        </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Wordle Solver</h3>
+                        <p class="post-snippet">Wordle Solver using greedy best-first searching algorithm</p>
+                    </div>
                     </div>
                 </a>
             </div>
-            <!-- Project 2 -->
+        
             <div class="suggested-project">
-                <a href="https://henrylam.blog/3d-box-shooter-game"class="project-link">
+            <a href="https://henrylam.blog/immersive-ball-shooter" class="project-link">
                     <div class="row no-gutters">
-                        <div class="col-md-4 col-12 img-col">
-                            <img src="images/box.png" alt="3D Box Shooter Game" class="project-img">
+                    <div class="col-md-3 col-sm-4 col-12 img-col">
+                        <img src="images/immersive_ball_shooter.png" alt="Immersive Ball Shooter" class="project-img">
                         </div>
-                        <div class="col-md-8 col-12 project-details">
-                            <h3 class="post-title">3D Box Shooter Game</h3>
-                            <p class="post-snippet">The process of creating my 3D Box Shooter Game</p>
-                        </div>
+                    <div class="col-md-9 col-sm-8 col-12 project-details">
+                        <h3 class="post-title">Immersive Ball Shooter</h3>
+                        <p class="post-snippet">An interactive Unity3D ball shooter game with immersive gameplay</p>
+                    </div>
                     </div>
                 </a>
             </div>
-            <!-- Project 3 -->
-            
-        </div>   
     </div>
+            
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="back-to-top">
+        <a href="#" class="btn back-to-top-btn" role="button"><i class="icon-arrow-up22"></i></a>
+    </div>
+    
     <!-- Footer -->
     <div id="fh5co-footer">
         <div class="container">
@@ -586,9 +614,7 @@ hr {
             </div>
         </div>
     </div>
-    <div class="gototop js-top">
-        <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-    </div>
+    
     <!-- Include any necessary JavaScript files -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
@@ -599,5 +625,87 @@ hr {
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
     <script src="js/google_map.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Custom Script for UI Enhancements -->
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for anchor links (TOC and other internal links)
+            $('a[href^="#"][data-toggle!="tab"][data-toggle!="collapse"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 90 // Adjusted offset for navbar
+                    }, 500);
+                }
+            });
+            
+            // Back to top button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            
+            $('#back-to-top').click(function(e) {
+                e.preventDefault(); // Prevent hash in URL
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+            
+            // TOC Active State on Scroll
+            function updateActiveTocLink() {
+                var scrollPosition = $(window).scrollTop();
+                var offset = 100; // Navbar height + some margin
+                var windowHeight = $(window).height();
+                var documentHeight = $(document).height();
+                var activeSectionFound = false;
+
+                // Remove active class from all links first
+                $('#toc .nav-link').removeClass('active');
+
+                // Iterate through sections from bottom to top
+                // This ensures that the lowest section visible in the viewport gets activated
+                var sections = [];
+                $('#toc .nav-link').each(function() {
+                    var href = $(this).attr('href');
+                    if (href && href.startsWith('#')) {
+                        var section = $(href);
+                        if (section.length) {
+                            sections.push({ link: $(this), element: section });
+                        }
+                    }
+                });
+
+                for (var i = sections.length - 1; i >= 0; i--) {
+                    var sectionTop = sections[i].element.offset().top;
+
+                    // Check if the section is within the viewport or if its top is above the scroll position + offset
+                    if (sectionTop - offset <= scrollPosition) {
+                        sections[i].link.addClass('active');
+                        activeSectionFound = true;
+                        break; // Found the current section, no need to check further
+                    }
+                }
+                
+                // If scrolled to the very bottom, ensure the last TOC item is active
+                if (!activeSectionFound && (scrollPosition + windowHeight >= documentHeight - 20)) { 
+                    if (sections.length > 0) {
+                        $('#toc .nav-link').removeClass('active'); // Clear any previous active
+                        sections[sections.length - 1].link.addClass('active');
+                    }
+                }
+            }
+
+            var tocScrollTimeout;
+            $(window).on('scroll', function() {
+                clearTimeout(tocScrollTimeout);
+                tocScrollTimeout = setTimeout(updateActiveTocLink, 50); // Debounce scroll event
+            });
+            updateActiveTocLink(); // Initial call
+        });
+    </script>
 </body>
 </html>
