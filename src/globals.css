@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    background-color: rgb(var(--color-bg));
+    color: rgb(var(--color-text));
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  /* Offset scroll targets so the fixed navbar doesn't cover them */
+  h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 5rem;
+  }
+
+  :root {
+    /* Primary: warm orange */
+    --color-primary: 245 124 0;
+    --color-primary-light: 251 163 60;
+
+    /* Secondary: muted terracotta */
+    --color-secondary: 194 120 86;
+
+    /* Accent: orange (same as primary) */
+    --color-accent: 245 124 0;
+    --color-accent-light: 251 163 60;
+
+    /* Light mode: warm cream base */
+    --color-bg: 255 252 247;
+    --color-surface: 250 245 237;
+    --color-text: 28 25 23;
+    --color-text-muted: 120 110 100;
+    --color-border: 230 222 210;
+
+    /* Semantic (darkened for WCAG AA 4.5:1 contrast on cream backgrounds) */
+    --color-success: 21 128 61;
+    --color-warning: 161 98 7;
+    --color-error: 185 28 28;
+  }
+
+  .dark {
+    /* Primary: bright orange for dark bg */
+    --color-primary: 251 146 60;
+    --color-primary-light: 253 186 116;
+
+    --color-secondary: 168 130 100;
+
+    --color-accent: 251 146 60;
+    --color-accent-light: 253 186 116;
+
+    /* Dark mode: deep warm charcoal */
+    --color-bg: 18 16 14;
+    --color-surface: 30 27 24;
+    --color-text: 245 240 235;
+    --color-text-muted: 160 150 140;
+    --color-border: 55 48 42;
+
+    --color-success: 74 222 128;
+    --color-warning: 250 204 21;
+    --color-error: 248 113 113;
+  }
+}
+
+/* Scrollbar hide utility for carousel */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
