@@ -51,7 +51,7 @@ describe('CategoryFilter', () => {
   });
 
   it('renders a sliding pill behind the active tab', () => {
-    const { container } = render(
+    render(
       <CategoryFilter categories={categories} selected="Games" onSelect={() => {}} />
     );
     const activeTab = screen.getByRole('tab', { name: 'Games' });
