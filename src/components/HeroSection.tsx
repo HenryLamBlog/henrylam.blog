@@ -67,7 +67,7 @@ export default function HeroSection() {
               strings={[
                 'Software Engineer',
                 'AI Developer',
-                'HKUST CS & AI Graduate',
+                'HKUST CS & AI',
                 'Full Stack Builder',
                 'Machine Learning Engineer',
                 'Cloud & Enterprise Developer',

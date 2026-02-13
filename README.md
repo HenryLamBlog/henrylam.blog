@@ -1,37 +1,55 @@
-# HenryLamBlog
+# henrylam.blog
 
-Welcome to Henry Lam's Blog repository!
+Personal portfolio and project blog built with React, TypeScript, and Tailwind CSS.
 
-## Introduction
+**Live:** [henrylam.blog](https://henrylam.blog)
 
-This repository contains the source code for my personal blog, where I share my thoughts, projects, and ideas on various topics related to technology, programming, and more.
+## Tech Stack
 
-## Contents
+- React 19 + TypeScript
+- Tailwind CSS + Framer Motion
+- Vite
+- Vitest + fast-check (property-based testing)
+- GitHub Pages (auto-deployed via GitHub Actions)
 
-- `index.html`: The main landing page of the blog.
-- `assembling-iphone-from-parts.html`: Article on assembling an iPhone from parts.
-- `carbon-credit-tokenization.html`: Article on carbon credit tokenization.
-- `colorization-of-grayscale-images.html`: Article on colorization of grayscale images.
-- `distinguishing-people-with-masks.html`: Article on distinguishing people with masks.
-- `immersive-ball-shooter.html`: An immersive ball shooter game.
-- `maze-game-implementing-bfs-algorithm.html`: Article on implementing a maze game with BFS algorithm.
-- `robot-controlled-vehicle.html`: Article on a robot-controlled vehicle.
-- `roller-madness.html`: A roller madness game.
-- `wordle-solver.html`: A Wordle solver.
-- Various folders containing CSS, JavaScript, images, fonts, etc.
+## Features
 
-## Usage
+- Horizontal project carousel with auto-scroll, keyboard navigation, and snap scrolling
+- Typing animation hero with rotating descriptors
+- Category filtering for projects
+- Dark/light theme with design token system
+- Blog post layouts with reading progress, table of contents, and related projects
+- Scroll-reveal animations throughout
+- Fully responsive
 
-Feel free to explore the content, read the articles, and play the games!
+## Projects
 
-## Contributing
+AI/ML, games, hardware, web, and blockchain projects including:
 
-If you have suggestions or corrections or would like to contribute to this blog, please open an issue or submit a pull request.
+- AI Fashion Assistant — deep learning recommendation system
+- Web Search Engine — BFS crawler with TF-IDF ranking
+- Immersive Ball Shooter — Apple Vision Pro with ARKit/RealityKit
+- Colorization of Grayscale Images — CNN-based computational imagery
+- Carbon Credit Tokenization — Solidity/Ethereum smart contracts
+- And more
 
-## Contacts
+## Development
 
-If you want to reach out to me, please contact me at [support@henrylam.blog](mailto:support@henrylam.blog).
+```bash
+npm install
+npm run dev
+```
 
----
+## Testing
 
-Thank you for visiting my blog!
+```bash
+npm test
+```
+
+## Deployment
+
+Pushes to `main` auto-deploy to GitHub Pages via the workflow in `.github/workflows/deploy.yml`.
+
+## Contact
+
+[contact@henrylam.blog](mailto:contact@henrylam.blog) · [LinkedIn](https://www.linkedin.com/in/lamhuiyin) · [GitHub](https://github.com/HenryLamBlog)

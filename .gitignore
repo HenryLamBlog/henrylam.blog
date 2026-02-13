@@ -12,3 +12,6 @@ dist/
 
 # Local config
 *.local
+
+# Kiro IDE
+.kiro/
