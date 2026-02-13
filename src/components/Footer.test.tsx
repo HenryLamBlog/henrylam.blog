@@ -19,9 +19,15 @@ describe('Footer', () => {
     render(<Footer />);
     const links = screen.getAllByRole('link');
     for (const link of links) {
-      expect(link).toHaveAttribute('target', '_blank');
-      expect(link).toHaveAttribute('rel', expect.stringContaining('noopener'));
-      expect(link).toHaveAttribute('rel', expect.stringContaining('noreferrer'));
+      const href = link.getAttribute('href') || '';
+      if (href.startsWith('mailto:')) {
+        // mailto links should not open in a new tab
+        expect(link).not.toHaveAttribute('target');
+      } else {
+        expect(link).toHaveAttribute('target', '_blank');
+        expect(link).toHaveAttribute('rel', expect.stringContaining('noopener'));
+        expect(link).toHaveAttribute('rel', expect.stringContaining('noreferrer'));
+      }
     }
   });
 

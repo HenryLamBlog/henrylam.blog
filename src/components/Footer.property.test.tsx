@@ -42,7 +42,10 @@ describe('Feature: portfolio-ui-redesign, Property 11: Social links have correct
         render(<Footer />);
         const links = screen.getAllByRole('link');
         const link = links[index];
-        expect(link).toHaveAttribute('target', '_blank');
+        const href = link.getAttribute('href') || '';
+        if (!href.startsWith('mailto:')) {
+          expect(link).toHaveAttribute('target', '_blank');
+        }
       }),
       { numRuns: 100 },
     );
@@ -55,9 +58,12 @@ describe('Feature: portfolio-ui-redesign, Property 11: Social links have correct
         render(<Footer />);
         const links = screen.getAllByRole('link');
         const link = links[index];
-        const rel = link.getAttribute('rel');
-        expect(rel).toContain('noopener');
-        expect(rel).toContain('noreferrer');
+        const href = link.getAttribute('href') || '';
+        if (!href.startsWith('mailto:')) {
+          const rel = link.getAttribute('rel');
+          expect(rel).toContain('noopener');
+          expect(rel).toContain('noreferrer');
+        }
       }),
       { numRuns: 100 },
     );

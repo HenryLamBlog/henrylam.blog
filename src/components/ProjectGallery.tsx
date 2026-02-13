@@ -19,8 +19,8 @@ export const CATEGORIES = ['All', 'AI/ML', 'Games', 'Hardware', 'Web', 'Blockcha
 export type Category = typeof CATEGORIES[number];
 
 export const projects: Project[] = [
-  { slug: 'fashion-assistant', title: 'AI Fashion Assistant', description: 'Final Year Project — AI-Powered Recommendations', image: '/images/Automatic-Colorization.png', tags: ['Python', 'Deep Learning', 'Recommendation Systems'], category: 'AI/ML' },
-  { slug: 'search-engine', title: 'Web Search Engine', description: 'BFS Crawler, TF-IDF, Cosine Similarity', image: '/images/short_path.png', tags: ['Python', 'Information Retrieval', 'BFS'], category: 'Web' },
+  { slug: 'fashion-assistant', title: 'AI Fashion Assistant', description: 'Final Year Project — AI-Powered Recommendations', image: '/images/portfolio-1.jpg', tags: ['Python', 'Deep Learning', 'Recommendation Systems'], category: 'AI/ML' },
+  { slug: 'search-engine', title: 'Web Search Engine', description: 'BFS Crawler, TF-IDF, Cosine Similarity', image: '/images/dataset-cover.jpg', tags: ['Python', 'Information Retrieval', 'BFS'], category: 'Web' },
   { slug: 'wordle-solver', title: 'Wordle Solver', description: 'Greedy Search Algorithm', image: '/images/wordle.jpg', tags: ['Python', 'Algorithms'], category: 'AI/ML' },
   { slug: 'immersive-ball-shooter', title: 'Immersive Ball Shooter', description: 'Apple Vision Pro', image: '/images/ball_shooter.png', tags: ['Swift', 'ARKit', 'RealityKit'], category: 'Games' },
   { slug: 'colorization-of-grayscale-images', title: 'Colorization of Grayscale Images', description: 'Computational Imagery', image: '/images/Automatic-Colorization.png', tags: ['Python', 'TensorFlow', 'CNN'], category: 'AI/ML' },

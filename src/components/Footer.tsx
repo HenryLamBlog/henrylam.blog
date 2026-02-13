@@ -10,7 +10,7 @@ const socialLinks = [
     icon: Github,
   },
   {
-    href: 'https://www.linkedin.com/in/henrylamblog',
+    href: 'https://www.linkedin.com/in/lamhuiyin',
     label: 'LinkedIn',
     icon: Linkedin,
   },
@@ -48,8 +48,7 @@ export default function Footer() {
             <motion.a
               key={label}
               href={href}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(href.startsWith('mailto:') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
               aria-label={label}
               className="text-text-muted hover:text-accent transition-colors duration-200 p-2"
               whileHover={{ scale: 1.15, filter: 'drop-shadow(0 0 8px rgba(245,124,0,0.5))' }}

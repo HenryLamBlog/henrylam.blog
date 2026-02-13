@@ -67,32 +67,40 @@ export default function HeroSection() {
               strings={[
                 'Software Engineer',
                 'AI Developer',
+                'HKUST CS & AI Graduate',
                 'Full Stack Builder',
                 'Machine Learning Engineer',
-                'Creative Technologist',
+                'Cloud & Enterprise Developer',
+                'iOS & Vision Pro Developer',
+                'React & TypeScript Developer',
+                'Python & Deep Learning',
+                'Game Developer',
+                'Hardware Tinkerer',
+                'IT Trainee @ CK Hutchison',
               ]}
               typingSpeed={100}
               erasingSpeed={50}
               pauseDuration={2000}
-            />
-            <span className="animate-pulse ml-0.5 text-accent">|</span>
+            /><span className="animate-pulse text-accent">|</span>
           </motion.p>
         </motion.div>
       </div>
 
       {/* Scroll-down indicator with infinite bounce animation */}
-      <motion.button
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 cursor-pointer bg-transparent border-none p-2"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-        onClick={() => {
-          const about = document.getElementById('about');
-          about?.scrollIntoView({ behavior: 'smooth' });
-        }}
-        aria-label="Scroll down to content"
-      >
-        <ChevronDown className="h-8 w-8 text-text-muted" />
-      </motion.button>
+      <div className="absolute bottom-8 left-0 right-0 z-10 flex justify-center">
+        <motion.button
+          className="cursor-pointer bg-transparent border-none p-2"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          onClick={() => {
+            const about = document.getElementById('about');
+            about?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          aria-label="Scroll down to content"
+        >
+          <ChevronDown className="h-8 w-8 text-text-muted" />
+        </motion.button>
+      </div>
     </header>
   );
 }
